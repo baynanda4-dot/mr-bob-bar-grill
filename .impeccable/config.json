@@ -1,0 +1,89 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "src/app/api/submit-form/route.js"
+        ],
+        "createdAt": "2026-08-16T10:22:21.596Z",
+        "reason": "border-left notice boxes are inside HTML email templates (buildEmailHtml/buildGuestConfirmationHtml), not the web UI — standard email-safe pattern since shadows/gradients are unreliable in email clients"
+      },
+      {
+        "rule": "overused-font",
+        "value": "arial",
+        "files": [
+          "src/app/api/submit-form/route.js"
+        ],
+        "createdAt": "2026-08-16T10:22:21.679Z",
+        "reason": "Arial/Helvetica is the deliberate email-safe font fallback inside HTML email templates in this file — the site's real fonts (Oswald/Spectral) aren't reliably supported by email clients"
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "src/components/home/Recognition.js"
+        ],
+        "createdAt": "2026-08-16T12:04:06.647Z",
+        "reason": "pre-existing border-l-4 pull-quote accent, part of the site-wide design system (About/Recognition/Shuttle/etc.) predating this session's edits — out of scope for the Ctrip/Tripadvisor award-years change, not touched by it"
+      },
+      {
+        "rule": "bounce-easing",
+        "value": "cubic-bezier(0.34, 1.4, 0.64, 1)",
+        "files": [
+          "src/app/globals.css"
+        ],
+        "createdAt": "2026-08-16T13:33:14.595Z",
+        "reason": "pre-existing --ease-back token, grepped and confirmed unused anywhere in the codebase — no actual bounce motion ships in the UI"
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "src/components/about/FeatureRows.js"
+        ],
+        "createdAt": "2026-08-16T13:33:14.770Z",
+        "reason": "pre-existing border-l-4 pull-quote accent, part of the site-wide design system predating this session — same pattern already sanctioned for Recognition.js, re-flagged only because other lines in this file were edited"
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "src/components/home/Shuttle.js"
+        ],
+        "createdAt": "2026-08-16T13:33:14.924Z",
+        "reason": "pre-existing border-l-4 pull-quote accent, part of the site-wide design system predating this session — same pattern already sanctioned for Recognition.js, re-flagged only because other lines in this file were edited"
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "src/components/home/WineShop.js"
+        ],
+        "createdAt": "2026-08-16T13:33:15.071Z",
+        "reason": "pre-existing border-l-4 pull-quote accent, part of the site-wide design system predating this session — same pattern already sanctioned for Recognition.js, re-flagged only because other lines in this file were edited"
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "src/components/home/Testimonials.js"
+        ],
+        "createdAt": "2026-08-17T01:14:23.448Z",
+        "reason": "Pre-existing site-wide pull-quote pattern (border-l-4 accent), used identically in 7 components (FeatureRows, Recognition, Shuttle, Welcome, WineShop, PhotoPanel, Testimonials) established well before this session, not introduced by this edit"
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "src/components/home/Welcome.js"
+        ],
+        "createdAt": "2026-08-17T07:07:18.140Z",
+        "reason": "Same pre-existing site-wide pull-quote pattern (border-l-4 accent) already ignored in Testimonials.js and used identically in 7 components across the site, established well before this session; this edit only touched the paragraph text above it, not the blockquote itself"
+      }
+    ]
+  }
+}

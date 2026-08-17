@@ -1,0 +1,531 @@
+@import "tailwindcss";
+
+@theme {
+  --color-mrbob-black: #0A0A0A;
+  --color-mrbob-yellow: #D4A017;
+  --color-mrbob-white: #FFFFFF;
+  /* Elevated surface — cards/rows sit on this instead of flat black, so a
+     dark-on-dark page still reads with depth. */
+  --color-mrbob-surface: #141210;
+
+  /* Body copy uses Inter (--font-inter, set via next/font/google in
+     layout.js); h1/h2 (the big headline/section-title moments) are routed
+     to the light-weight serif Spectral (--font-serif), h3-h6 (card titles,
+     footer labels — UI chrome, not headline moments) stay on the condensed
+     Oswald (--font-display) — both via the h1-h6 rule below instead of a
+     Tailwind className on every heading. */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-oswald), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-spectral), Georgia, "Times New Roman", serif;
+
+  /* Motion curves — expo is the house easing: fast start, long glide out. */
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-back: cubic-bezier(0.34, 1.4, 0.64, 1);
+}
+
+:root {
+  --nav-h: 72px;
+}
+
+html {
+  /* Pinned so every rem-based size (Tailwind's whole type scale) is
+     predictable. Facebook/Instagram's in-app browser has been observed to
+     inflate the root font size well beyond 16px on some Android devices,
+     which blows up large rem headings (text-5xl etc.) dramatically while
+     leaving small text comparatively unaffected — text-size-adjust alone
+     didn't stop it, this does. */
+  font-size: 16px;
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-h) + 16px);
+  /* clip, not hidden — hidden on the root breaks position: sticky */
+  overflow-x: clip;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: clip;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Confirmed on Samsung Galaxy S23 Ultra opening links inside Facebook's
+   in-app browser: large rem headings (text-5xl etc.) render far past their
+   intended size — pinning html's font-size and text-size-adjust above
+   wasn't enough to stop it. Since a single word at that size can be wider
+   than the viewport, and text doesn't break mid-word by default, it was
+   overflowing past `overflow-x: clip` on the root instead of wrapping,
+   which is what actually made it unreadable. This makes headings always
+   wrap to fit their container no matter how large the browser decides to
+   render them. */
+h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: anywhere;
+}
+
+/* Big headline moments (hero, section titles) get the light serif voice. */
+h1, h2 {
+  font-family: var(--font-serif);
+}
+
+/* Card titles, footer labels, and other small UI chrome stay on the
+   condensed display face. */
+h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+::selection {
+  background: var(--color-mrbob-yellow);
+  color: var(--color-mrbob-black);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-mrbob-yellow);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* iOS Safari's native input[type="date"] chrome carries its own intrinsic
+   width that ignores the box model, so it renders visibly wider than the
+   sibling field beside it in the same form row even though both are
+   width: 100%. Dropping the native appearance makes it size like a plain
+   text input; the tap-to-open wheel picker still works since that's tied
+   to the input type, not this styling. */
+input[type="date"] {
+  -webkit-appearance: none;
+  appearance: none;
+  min-width: 0;
+}
+
+input[type="date"]::-webkit-date-and-time-value {
+  text-align: left;
+}
+
+/* ---------------------------------------------------------------- reveal */
+
+/* Visible by default — Reveal.js only ever ADDS "reveal-armed" to opt an
+   element into the hidden pre-animation state. If that JS never runs on a
+   given device/browser for any reason, content stays at this visible
+   default instead of being stuck invisible forever. */
+[data-reveal].reveal-armed {
+  opacity: 0;
+  transform: translate3d(var(--rv-x, 0px), var(--rv-y, 28px), 0) scale(var(--rv-s, 1));
+  filter: blur(var(--rv-blur, 0px));
+  transition:
+    opacity 0.9s var(--ease-expo),
+    transform 1s var(--ease-expo),
+    filter 0.9s var(--ease-expo);
+  transition-delay: var(--rv-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+[data-reveal].reveal-armed.is-in {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+  filter: blur(0px);
+  will-change: auto;
+}
+
+/* ------------------------------------------------------- micro-utilities */
+
+.u-lift {
+  transition:
+    transform 0.5s var(--ease-expo),
+    box-shadow 0.5s var(--ease-expo),
+    border-color 0.4s var(--ease-expo);
+}
+
+.u-lift:hover {
+  transform: translate3d(0, -6px, 0);
+  box-shadow: 0 18px 40px -18px rgb(10 10 10 / 0.35);
+}
+
+.u-press {
+  /* Tells mobile browsers this is a direct-manipulation tap target, not a
+     pan/zoom surface — some real devices otherwise delay or swallow the
+     tap while disambiguating the gesture. */
+  touch-action: manipulation;
+  transition:
+    transform 0.35s var(--ease-expo),
+    background-color 0.45s var(--ease-expo),
+    color 0.45s var(--ease-expo),
+    border-color 0.45s var(--ease-expo),
+    box-shadow 0.45s var(--ease-expo);
+}
+
+.u-press:hover {
+  transform: translate3d(0, -2px, 0);
+  box-shadow: 0 12px 24px -14px rgb(10 10 10 / 0.55);
+}
+
+.u-press:active {
+  transform: translate3d(0, 0, 0) scale(0.975);
+  transition-duration: 0.1s;
+}
+
+/* Underline that wipes in from the left and out to the right. */
+.u-link {
+  position: relative;
+  display: inline-block;
+}
+
+.u-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: 100% 50%;
+  transition: transform 0.55s var(--ease-expo);
+}
+
+.u-link:hover::after,
+.u-link:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: 0 50%;
+}
+
+/* Placeholder media blocks: a slow shimmer reads as "loading with intent"
+   rather than a dead grey rectangle, plus a sheen sweep on group hover. */
+.u-media {
+  position: relative;
+  overflow: hidden;
+  background-color: #1c1a14;
+  background-image: linear-gradient(115deg, #17150f 0%, #2a2519 45%, #17150f 90%);
+  background-size: 220% 100%;
+  animation: media-drift 9s linear infinite;
+}
+
+.u-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 35%, rgb(212 160 23 / 0.25) 50%, transparent 65%);
+  transform: translate3d(-120%, 0, 0);
+  transition: transform 1.1s var(--ease-expo);
+}
+
+.group:hover .u-media::after {
+  transform: translate3d(120%, 0, 0);
+}
+
+/* Scale the inner media on card hover without moving the frame. */
+.u-zoom {
+  transition: transform 1.1s var(--ease-expo);
+}
+
+.group:hover .u-zoom {
+  transform: scale(1.06);
+}
+
+/* Arrow / chevron nudge on hover. */
+.u-nudge {
+  transition: transform 0.5s var(--ease-expo);
+}
+
+.group:hover .u-nudge {
+  transform: translate3d(5px, 0, 0);
+}
+
+/* ------------------------------------------------------ buttons & fields */
+
+/* Primary CTA — yellow pill. Deliberately NOT a black-bg button: on a
+   dominant-black page a black button is invisible, so every "main action"
+   surface here flips to yellow-first instead. Combine with `.u-press` for
+   the press/hover lift, and Tailwind classes for padding/text size. */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0;
+  background: var(--color-mrbob-yellow);
+  color: var(--color-mrbob-black);
+  font-weight: 500;
+  transition:
+    background-color 0.45s var(--ease-expo),
+    color 0.45s var(--ease-expo),
+    box-shadow 0.45s var(--ease-expo);
+}
+
+.btn-primary:hover {
+  background: var(--color-mrbob-white);
+  box-shadow: 0 16px 36px -12px rgb(212 160 23 / 0.45);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  box-shadow: none;
+}
+
+/* Secondary CTA — outline pill, for a page's second-priority action. */
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0;
+  border: 1px solid rgb(255 255 255 / 0.25);
+  color: var(--color-mrbob-white);
+  transition:
+    border-color 0.45s var(--ease-expo),
+    color 0.45s var(--ease-expo),
+    background-color 0.45s var(--ease-expo);
+}
+
+.btn-outline:hover {
+  border-color: var(--color-mrbob-yellow);
+  color: var(--color-mrbob-yellow);
+  background: rgb(212 160 23 / 0.08);
+}
+
+/* Shared form-field paint (border/bg/color/focus) — deliberately no
+   width/display here, callers keep adding their own Tailwind width
+   utilities (w-full, w-32, flex-1, ...) alongside this class, same as
+   before. */
+.field {
+  border-radius: 0.5rem;
+  border: 1px solid rgb(255 255 255 / 0.15);
+  background: rgb(255 255 255 / 0.05);
+  color: var(--color-mrbob-white);
+  /* Without this, a <select>'s native OPEN dropdown list (not the closed
+     box, which the rules above already style) renders using the browser's
+     light-mode popup — white background, and since we set the text color
+     white too, the options become invisible. This tells the browser to use
+     its dark native-control theme for the popup instead. */
+  color-scheme: dark;
+  transition:
+    border-color 0.35s var(--ease-expo),
+    background-color 0.35s var(--ease-expo);
+}
+
+.field::placeholder {
+  color: rgb(255 255 255 / 0.4);
+}
+
+.field:focus {
+  outline: none;
+  border-color: var(--color-mrbob-yellow);
+  background: rgb(255 255 255 / 0.08);
+}
+
+.field:disabled {
+  opacity: 0.5;
+}
+
+/* color-scheme above is only a hint some browsers ignore for the actual
+   <option> list — explicit colors here are the reliable cross-browser fix
+   for the popup rendering white-text-on-white background. */
+.field option,
+.field-line option {
+  background-color: var(--color-mrbob-black);
+  color: var(--color-mrbob-white);
+}
+
+/* Underline-style field — a lighter "reservation book" look than the
+   filled .field boxes, scoped to the reservation card rather than
+   replacing .field site-wide. Pair with a visible <label> above each
+   field, not a placeholder-only pattern. */
+.field-line {
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid rgb(255 255 255 / 0.2);
+  background: transparent;
+  color: var(--color-mrbob-white);
+  /* See the same rule on .field above — fixes the native <select> popup
+     rendering white-on-white. */
+  color-scheme: dark;
+  transition: border-color 0.35s var(--ease-expo);
+}
+
+.field-line::placeholder {
+  color: rgb(255 255 255 / 0.35);
+}
+
+.field-line:focus {
+  outline: none;
+  border-bottom-color: var(--color-mrbob-yellow);
+}
+
+.field-line:disabled {
+  opacity: 0.5;
+}
+
+/* Elevated glass surface for cards (promotions, live music schedule,
+   thank-you "you may also like", gallery tiles) — gives depth on a page
+   that's otherwise flat black-on-black. */
+.card-glass {
+  background: rgb(255 255 255 / 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgb(255 255 255 / 0.1);
+  border-radius: 0;
+}
+
+/* Hides the scrollbar on a native horizontal-scroll carousel while keeping
+   touch-swipe/trackpad/mouse-drag scrolling fully functional — only the
+   scrollbar chrome is hidden, not the scroll behavior itself. */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* --------------------------------------------------------------- marquee */
+
+.marquee-viewport {
+  overflow: hidden;
+}
+
+/* Undoing this class (not just the animation) is how the reduced-motion
+   fallback goes back to a normal, manually-scrollable flex row. */
+.marquee-track.is-animated {
+  width: max-content;
+  animation: marquee-x var(--marquee-duration, 40s) linear infinite;
+  will-change: transform;
+}
+
+.marquee-track.is-animated[data-direction="right"] {
+  animation-direction: reverse;
+}
+
+.marquee-row:hover .marquee-track.is-animated,
+.marquee-row:focus-within .marquee-track.is-animated {
+  animation-play-state: paused;
+}
+
+/* ---------------------------------------------------- submit progress bar */
+
+.progress-sweep-bar {
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 2px;
+  overflow: hidden;
+}
+
+.progress-sweep-bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 30%;
+  background: rgba(255, 255, 255, 0.85);
+  animation: progress-sweep 1.1s ease-in-out infinite;
+}
+
+/* ------------------------------------------------------------- keyframes */
+
+@keyframes progress-sweep {
+  0% {
+    left: -30%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes marquee-x {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes media-drift {
+  from { background-position: 0% 0; }
+  to { background-position: 220% 0; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 24px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes floatCue {
+  0%, 100% { transform: translate3d(0, 0, 0); opacity: 0.55; }
+  50% { transform: translate3d(0, 8px, 0); opacity: 1; }
+}
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 10px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.9s var(--ease-expo) forwards;
+}
+
+.animate-fade-in-delay {
+  animation: fadeInUp 0.9s var(--ease-expo) 0.15s forwards;
+  opacity: 0;
+}
+
+/* Entrance for above-the-fold content — pair with an inline animationDelay. */
+.animate-rise {
+  animation: fadeInUp 1.1s var(--ease-expo) both;
+}
+
+.animate-page-in {
+  /* backwards, not both — "both" left transform: translate3d(0,0,0) applied
+     permanently after the animation ended (its "to" keyframe), which is a
+     no-op visually but still establishes a containing block for any
+     position:fixed descendant, breaking every fixed-position element
+     nested in page content (lightboxes, sticky CTAs, etc.) once the page
+     had finished loading. "backwards" only needs to hold the "from" state
+     before the animation starts; once it ends the element reverts to its
+     un-animated (transform: none) styles, which look identical anyway. */
+  animation: pageIn 0.55s var(--ease-expo) backwards;
+}
+
+.animate-cue {
+  animation: floatCue 2.4s var(--ease-quart) infinite;
+}
+
+/* ------------------------------------------------------- reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+
+  .u-lift:hover,
+  .u-press:hover,
+  .u-press:active,
+  .group:hover .u-zoom {
+    transform: none;
+  }
+}
