@@ -30,9 +30,23 @@ export const LOCATIONS = [
     postalCode: "80361",
     latitude: -8.7747354,
     longitude: 115.2226125,
-    sameAs: ["https://www.instagram.com/mrbobbarandgrill/"],
+    sameAs: [
+      "https://www.instagram.com/mrbobbarandgrill/",
+      // Confirmed 2026-08-18: Claimed listing, 4.7/5 from 1,537 reviews —
+      // location ID 11717118 verified consistent between this URL and the
+      // official Tripadvisor widget embed the client shared (curl itself
+      // gets a 403 from Tripadvisor's bot protection, expected, not a sign
+      // the link is wrong).
+      "https://www.tripadvisor.com/Restaurant_Review-g1465999-d11717118-Reviews-Mr_Bob_Bar_And_Grill_Tanjung_Benoa-Tanjung_Benoa_Nusa_Dua_Peninsula_Bali.html",
+    ],
     facebook: "https://www.facebook.com/share/1DZndFn8kG/",
     hasMap: "https://www.google.com/maps/search/?api=1&query=-8.7747354,115.2226125",
+    // Google's official "share this Business Profile" short link (confirmed
+    // 2026-08-18) — lands on the Search knowledge panel for the exact same
+    // listing (Knowledge Graph ID /g/11c55jtqmw, verified by redirect chain),
+    // which shows the real 4.7/1,109 rating and offers "Write a review"
+    // right there. Used as the homepage's "leave a review" CTA.
+    googleReviewUrl: "https://share.google/IZKH8COZ5xjsl8w6r",
     // The Google-generated embed for the actual verified "Mr Bob Bar and
     // Grill Nusa Dua (Main Restaurant)" listing (has its own Place ID baked
     // in), not a generic lat/lng pin drop — richer card with the real name
@@ -75,7 +89,7 @@ export const OPENING_HOURS = {
     "Sunday",
   ],
   opens: "12:00",
-  closes: "21:00",
+  closes: "22:00",
 };
 
 // Shared LocalBusiness facts that don't vary — priceRange/paymentAccepted

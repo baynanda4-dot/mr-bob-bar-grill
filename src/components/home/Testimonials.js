@@ -27,10 +27,9 @@ function ReviewCard({ review }) {
 
 export default function Testimonials() {
   const location = LOCATIONS[0];
-  // Only shown once hasMap is set (see src/lib/site.js) — no reviews link
-  // is shown until there's a real place to send guests to instead of a
-  // guessed URL.
-  const mapsHref = location.hasMap || null;
+  // Only shown once set (see src/lib/site.js) — no reviews link is shown
+  // until there's a real place to send guests to instead of a guessed URL.
+  const reviewHref = location.googleReviewUrl || location.hasMap || null;
 
   return (
     <section className="overflow-hidden border-t border-white/10 py-20 md:py-24">
@@ -60,10 +59,15 @@ export default function Testimonials() {
         ))}
       </Marquee>
 
-      {mapsHref ? (
-        <Reveal as="p" delay={80} className="mb-8 px-6 text-center">
-          <a href={mapsHref} target="_blank" rel="noopener noreferrer" className="u-link text-sm text-mrbob-yellow">
-            Read More Reviews on Google Maps
+      {reviewHref ? (
+        <Reveal delay={80} className="mb-8 flex justify-center px-6">
+          <a
+            href={reviewHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-outline u-press px-8 py-3 text-center text-sm tracking-widest"
+          >
+            Leave a Google Review
           </a>
         </Reveal>
       ) : (
