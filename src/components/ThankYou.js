@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import GoogleAdsConversion from "@/components/GoogleAdsConversion";
 
 /**
  * Shared confirmation-page shell for every successful form submission (see
@@ -9,10 +10,16 @@ import Link from "next/link";
  * this is a transient per-guest confirmation, not a page meant to be found
  * or lingered on. Home navigation is already covered by the Navbar logo, so
  * there's no separate "back to homepage" link here.
+ *
+ * trackConversion fires the Google Ads lead-form conversion event — passed
+ * only by the reservation and group-reservation thank-you pages (real
+ * booking intent), not contact's (a generic enquiry, not what the ad
+ * campaign is optimizing for).
  */
-export default function ThankYou({ heading, body, links = [] }) {
+export default function ThankYou({ heading, body, links = [], trackConversion = false }) {
   return (
     <main className="flex min-h-[60vh] flex-col items-center justify-center px-6 py-24 text-center">
+      {trackConversion && <GoogleAdsConversion />}
       <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-emerald-500 sm:h-24 sm:w-24">
         <svg
           viewBox="0 0 24 24"

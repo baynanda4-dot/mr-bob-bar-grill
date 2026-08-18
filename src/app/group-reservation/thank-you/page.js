@@ -12,6 +12,7 @@ export default function GroupReservationThankYouPage() {
       heading="Your Group Reservation Request Has Been Received"
       body="Thank you for your request. Our team will get back to you shortly to confirm availability."
       links={THANK_YOU_LINKS["group-reservation"]}
+      trackConversion
     />
   );
 }

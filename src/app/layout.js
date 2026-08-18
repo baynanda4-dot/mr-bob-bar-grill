@@ -4,7 +4,7 @@ import "./globals.css";
 import StructuredData from "@/components/StructuredData";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { SITE_NAME, SITE_URL } from "@/lib/site";
+import { GOOGLE_ADS_CONVERSION_ID, SITE_NAME, SITE_URL } from "@/lib/site";
 
 // Condensed face for nav, buttons, and small uppercase labels (routed via
 // the h3-h6 rule in globals.css) — kept for UI chrome, not for the large
@@ -93,6 +93,22 @@ export default function RootLayout({ children }) {
             flash their hidden state and never get stuck hidden without JS. */}
         <Script id="no-js" strategy="beforeInteractive">
           {`document.documentElement.classList.remove('no-js')`}
+        </Script>
+        {/* Google Ads base tag — loads after hydration (Next's recommended
+            strategy for analytics/tag-manager scripts) so it never competes
+            with the LCP hero image for bandwidth. Fires no conversion by
+            itself; the actual "form submitted" event lives on the
+            reservation/group-reservation thank-you pages, which only ever
+            render after a real successful submission. */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_CONVERSION_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-tag" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GOOGLE_ADS_CONVERSION_ID}');`}
         </Script>
         <StructuredData />
         <Navbar />

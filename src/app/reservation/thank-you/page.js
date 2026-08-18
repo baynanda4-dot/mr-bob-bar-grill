@@ -12,6 +12,7 @@ export default function ReservationThankYouPage() {
       heading="Your Table Is Confirmed"
       body="Thank you for reserving a table with Mr Bob Bar and Grill. We're looking forward to welcoming you."
       links={THANK_YOU_LINKS.reservation}
+      trackConversion
     />
   );
 }

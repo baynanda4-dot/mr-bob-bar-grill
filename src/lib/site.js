@@ -4,6 +4,13 @@ export const SITE_URL =
 
 export const SITE_NAME = "Mr Bob Bar and Grill";
 
+// Google Ads conversion ID (confirmed 2026-08-18) — the base gtag.js loads
+// site-wide from layout.js; the reservation/group-reservation thank-you
+// pages fire the actual conversion event against this same ID once the
+// conversion label (the "AW-.../xxxxxxxxxx" suffix from Google Ads' event
+// snippet) is provided.
+export const GOOGLE_ADS_CONVERSION_ID = "AW-11302454935";
+
 // LOCATIONS[0] (the "main" outlet) is the ONLY one that takes reservations —
 // ReservationForm, the confirmation emails, and StructuredData.js's JSON-LD
 // Restaurant entity all key off LOCATIONS[0] specifically, by design, not by
