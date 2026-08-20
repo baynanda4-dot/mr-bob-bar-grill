@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
+import LocalizedLink from "./LocalizedLink";
 import { onScrollFrame } from "./motion/ticker";
 
 // Mobile only — each page's own hero button scrolls away with it, so this
@@ -11,7 +11,7 @@ import { onScrollFrame } from "./motion/ticker";
 // the navbar hides on scroll-down and shows on scroll-up/idle, so this one
 // shows on scroll-down/idle and hides only while actively scrolling up (an
 // "up" gesture reads as heading back toward the hero's own button).
-export default function StickyReserveButton({ href = "/reservation", label = "RESERVE TABLE" }) {
+export default function StickyReserveButton({ href = "/reservation", label }) {
   const [hidden, setHidden] = useState(true);
   const [atTarget, setAtTarget] = useState(false);
   const lastY = useRef(0);
@@ -98,13 +98,13 @@ export default function StickyReserveButton({ href = "/reservation", label = "RE
       }`}
       style={{ paddingBottom: "max(1rem, env(safe-area-inset-bottom))" }}
     >
-      <Link
+      <LocalizedLink
         href={href}
         onClick={handleClick}
         className="btn-primary u-press block w-full py-4 text-center text-sm tracking-widest shadow-[0_4px_24px_-4px_rgb(0_0_0/0.6)]"
       >
         {label}
-      </Link>
+      </LocalizedLink>
     </div>
   );
 }

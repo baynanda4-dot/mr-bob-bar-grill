@@ -9,7 +9,7 @@ import { useState } from "react";
  * lifted here (not per-item) so "Expand All / Collapse All" can drive every
  * panel at once.
  */
-export default function InteractiveMenu({ sections }) {
+export default function InteractiveMenu({ sections, expandAllLabel, collapseAllLabel }) {
   const [openKeys, setOpenKeys] = useState(() => new Set([0]));
 
   const toggle = (index) => {
@@ -28,11 +28,11 @@ export default function InteractiveMenu({ sections }) {
     <div>
       <div className="mb-6 flex justify-end gap-3 text-xs uppercase tracking-widest">
         <button type="button" onClick={expandAll} className="u-link text-mrbob-yellow">
-          Expand All
+          {expandAllLabel}
         </button>
         <span className="text-white/20">/</span>
         <button type="button" onClick={collapseAll} className="u-link text-white/50 hover:text-mrbob-yellow">
-          Collapse All
+          {collapseAllLabel}
         </button>
       </div>
 

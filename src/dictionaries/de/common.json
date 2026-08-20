@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "menu": "Speisekarte",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "beverageMenu": "Getränkekarte",
+    "groupReservation": "Gruppenreservierung",
+    "reserveTable": "Tisch reservieren"
+  },
+  "footer": {
+    "tagline": "Handgeschnittene Steaks, Schweinerippchen und Tomahawk-Chops, kombiniert mit einer sorgfältig ausgewählten Weinkarte und Live-Musik jeden Montag, Mittwoch und Samstag.",
+    "contactUs": "KONTAKTIEREN SIE UNS",
+    "exploreHeading": "Entdecken",
+    "visitHeading": "Besuchen",
+    "home": "Startseite",
+    "about": "Über uns",
+    "foodMenu": "Speisekarte",
+    "beverageMenu": "Getränkekarte",
+    "reserveTable": "Tisch reservieren",
+    "groupReservation": "Gruppenreservierung",
+    "contact": "Kontakt",
+    "rightsReserved": "Alle Rechte vorbehalten."
+  },
+  "hoursRange": "Montag – Sonntag",
+  "faqHeading": "Planen Sie Ihren Besuch",
+  "faqSubheading": "Alles, was Sie wissen müssen",
+  "stickyReserveLabel": "TISCH RESERVIEREN",
+  "expandAll": "Alle aufklappen",
+  "collapseAll": "Alle einklappen"
+}

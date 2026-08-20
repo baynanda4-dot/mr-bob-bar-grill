@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "menu": "Menu",
+    "about": "Tentang Kami",
+    "contact": "Kontak",
+    "beverageMenu": "Menu Minuman",
+    "groupReservation": "Reservasi Grup",
+    "reserveTable": "Reservasi Meja"
+  },
+  "footer": {
+    "tagline": "Steak potongan tangan, iga babi, dan tomahawk chop, dipadukan dengan daftar wine pilihan dan live music setiap Senin, Rabu, dan Sabtu.",
+    "contactUs": "HUBUNGI KAMI",
+    "exploreHeading": "Jelajahi",
+    "visitHeading": "Kunjungi",
+    "home": "Beranda",
+    "about": "Tentang Kami",
+    "foodMenu": "Menu Makanan",
+    "beverageMenu": "Menu Minuman",
+    "reserveTable": "Reservasi Meja",
+    "groupReservation": "Reservasi Grup",
+    "contact": "Kontak",
+    "rightsReserved": "Hak cipta dilindungi undang-undang."
+  },
+  "hoursRange": "Senin – Minggu",
+  "faqHeading": "Rencanakan Kunjungan Anda",
+  "faqSubheading": "Semua yang Perlu Anda Ketahui",
+  "stickyReserveLabel": "RESERVASI MEJA",
+  "expandAll": "Buka Semua",
+  "collapseAll": "Tutup Semua"
+}

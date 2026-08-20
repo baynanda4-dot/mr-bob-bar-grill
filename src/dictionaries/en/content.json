@@ -1,0 +1,201 @@
+{
+  "home": {
+    "hero": {
+      "eyebrow": "Grill. Pour. Savor.",
+      "titleBefore": "The Best",
+      "titleHighlight": "Pork Ribs",
+      "titleAfter": "in Town",
+      "subtitle": "Hand-cut steaks, tomahawk chops, and our signature ribs off the grill, poured alongside a curated wine list in Nusa Dua, Bali.",
+      "reserveCta": "RESERVE TABLE",
+      "menuCta": "VIEW MENU"
+    },
+    "whatsOn": {
+      "heading": "What's On at Mr Bob",
+      "subheading": "Live music nights, food off the grill, and the kind of bar energy that makes a Nusa Dua evening feel deliberate.",
+      "cards": [
+        {
+          "schedule": "Every Mon, Wed & Sat, 7 PM Onwards",
+          "location": "Mr Bob Bar and Grill",
+          "title": "Live Music Nights",
+          "detail": "Live music every Monday (I Love Monday), Wednesday (Oldies Night), and Saturday (Country Night), from 7 PM."
+        },
+        {
+          "schedule": "800K for Two",
+          "location": "Mr Bob Bar and Grill",
+          "title": "Pork Knuckle for Two",
+          "detail": "1.1kg deep fried pork knuckle for two, served with mashed potatoes, sauteed vegetables, bean sauce, and pork gravy, plus two small Singaraja beers included."
+        }
+      ],
+      "ctaText": "Planning a night out with a group? Let us set the table for your event.",
+      "ctaLabel": "RESERVE YOUR EVENT NIGHT"
+    },
+    "welcome": {
+      "eyebrow": "Our Story",
+      "titleBefore": "Welcome to",
+      "titleHighlight": "Mr Bob",
+      "body": "Mr Bob Bar and Grill is built around the fire: hand-cut steaks, slow-cooked pork ribs, and show-stopping tomahawk chops, matched with a wine list chosen to go the distance with every cut. Pull up a seat at the bar or a table for the night in Tanjung Benoa, Nusa Dua, and let the grill do the talking.",
+      "quote": "Real charcoal, real portions, real hospitality. That's the whole menu, really.",
+      "reserveCta": "RESERVE TABLE",
+      "groupCta": "GROUP RESERVATION"
+    },
+    "menuHighlight": {
+      "heading": "On the Menu",
+      "foodHeading": "Our Signature",
+      "foodCta": "View Full Food Menu",
+      "beverageHeading": "Bob's Cocktails",
+      "beverageCta": "View Full Drinks Menu",
+      "eachLabel": "each"
+    },
+    "wineShop": {
+      "eyebrow": "Cheapest Wine Selection in Nusa Dua",
+      "heading": "Wine Shop",
+      "body": "Our wine shop is stocked with the best-priced selection around Nusa Dua, but what's on the shelf changes with availability, so there's no fixed list to browse online. Come by the restaurant and see what we've got pouring.",
+      "cta": "RESERVE TABLE"
+    },
+    "shuttle": {
+      "heading": "Complimentary Shuttle Around Nusa Dua",
+      "body": "Staying nearby? We're glad to offer a complimentary shuttle for guests staying within the Nusa Dua area, just let us know when you reserve your table.",
+      "cta": "RESERVE NOW"
+    },
+    "recognition": {
+      "heading": "Recognition",
+      "googleRatingSuffix": "from 1,100+ Google Reviews",
+      "tripadvisorRatingSuffix": "from 1,500+ Tripadvisor Reviews",
+      "body": "Mr Bob Bar and Grill is the #1-rated restaurant in Tanjung Benoa, Nusa Dua on Tripadvisor, recognized with the Tripadvisor Travelers' Choice Award, placing us among the top 10% of restaurants worldwide, along with a Ctrip Gourmet List Certificate of Excellence, recognition we're genuinely proud of, and a reflection of the care we put into every plate and every guest.",
+      "restaurantName": "Mr Bob Bar and Grill",
+      "ctripDesc": "Recognized by Ctrip for consistently great food and genuine hospitality.",
+      "tripadvisorDesc": "Reviews from millions of Tripadvisor travelers place this winner in the top 10% worldwide.",
+      "ctaLabel": "View on Tripadvisor"
+    },
+    "instagram": {
+      "eyebrow": "Follow Along",
+      "heading": "Instagram"
+    },
+    "testimonials": {
+      "eyebrow": "Word of Mouth",
+      "heading": "An Experience Worth Sharing",
+      "intro": "From the first plate off the grill to the last set of the night, guests keep coming back for the steaks, the ribs, the wine list, and the atmosphere that comes alive every Monday, Wednesday, and Saturday.",
+      "viaTripadvisor": "via Tripadvisor",
+      "reviewCta": "Leave a Google Review",
+      "reviewComingSoon": "Google & Tripadvisor reviews (coming soon)",
+      "reserveCta": "RESERVE TABLE",
+      "groupCta": "GROUP RESERVATION"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Built Around the Fire",
+      "subtitle": "The story behind Mr Bob Bar and Grill: steaks, ribs, tomahawk, wine, and live music."
+    },
+    "ourStory": {
+      "heading": "Our Story",
+      "body": "Mr Bob Bar and Grill was built for people who take their steak seriously. Hand-cut cuts, real charcoal, and a wine list chosen to match every plate, served in a room that's just as at home with a quiet dinner as it is with a night full of live music."
+    },
+    "featureRows": [
+      { "title": "Hand-Cut, Fire-Grilled", "desc": "Every steak, rack of ribs, and tomahawk chop is hand-cut and grilled over real fire. No shortcuts, no compromises on the char that makes a steakhouse worth the trip." },
+      { "title": "A Bar Built to Match", "desc": "From our house wine by the glass to signature cocktails and a full spirits list, the bar is built to stand up to the grill." },
+      { "title": "A Room That Comes Alive", "desc": "Every Monday, Wednesday, and Saturday, live music turns dinner into a night out. Whether you're here for a quiet meal or the full evening, the room is built for both." }
+    ],
+    "quoteBlock": {
+      "line1": "Welcome to Mr Bob Bar and Grill.",
+      "line2": "It's our pleasure to put a great steak, a good glass of wine, and a night of live music in front of you.",
+      "line3": "Thank you for choosing to spend your evening with us.",
+      "signature": "The Mr Bob Team"
+    },
+    "closingCta": {
+      "heading": "Pull Up a Seat",
+      "body": "Come taste what's on the grill and see why guests keep coming back for our live music nights.",
+      "reserveCta": "Reserve Table",
+      "contactCta": "Contact Us"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Contact Us",
+      "subtitle": "Questions, special requests, or feedback? We'd love to hear from you."
+    },
+    "getInTouch": {
+      "heading": "Find Us",
+      "body": "Have a question or need assistance with your reservation? Reach us directly below. Only our Main Restaurant takes table reservations through this site.",
+      "mainBadge": "Main Restaurant",
+      "secondBadge": "Second Outlet",
+      "addressLabel": "Address",
+      "hoursLabel": "Hours",
+      "contactLabel": "Contact",
+      "instagramLabel": "Instagram",
+      "facebookLabel": "Facebook",
+      "instagramComingSoon": "Instagram (coming soon)",
+      "facebookComingSoon": "Facebook (coming soon)",
+      "mapPlaceholder": "Map available once our exact address is confirmed",
+      "openInMaps": "Open in Google Maps",
+      "reserveCta": "Reserve Table"
+    }
+  },
+  "groupReservation": {
+    "hero": {
+      "title": "Group Reservation",
+      "subtitle": "Bringing a bigger party? Let us set the table."
+    },
+    "intro": {
+      "heading": "Dining for Larger Groups",
+      "body": "Planning to dine with 10 or more guests? Let us know your group size and preferred date, and our team will confirm seating and discuss group menu options with you directly."
+    },
+    "stickyReserveLabel": "GROUP RESERVATION"
+  },
+  "reservation": {
+    "hero": {
+      "title": "Reserve a Table",
+      "subtitle": "We recommend booking ahead, especially on live music nights (Monday, Wednesday, and Saturday)."
+    },
+    "joinUs": {
+      "eyebrow": "Reservations",
+      "heading": "Join Us",
+      "body": "Complete the form below and our team will confirm your reservation as soon as possible."
+    },
+    "photoPanel": {
+      "quote": "A good table is half the evening. We take care of the rest."
+    }
+  },
+  "share": {
+    "hero": {
+      "eyebrow": "Enjoyed Your Visit?",
+      "title": "Share Mr Bob With Friends",
+      "body": "Word of mouth means the world to us. Tap a platform below to share Mr Bob Bar and Grill, a short message is already written for you."
+    },
+    "buttons": {
+      "shareNow": "SHARE NOW",
+      "igNote": "Message copied — open Instagram and paste it into a DM, Story, or your bio.",
+      "copyLink": "COPY LINK",
+      "linkCopied": "LINK COPIED!",
+      "backLink": "Back to Mr Bob Bar and Grill",
+      "instagramLabel": "Instagram"
+    },
+    "shareMessage": "I just had an amazing evening at Mr Bob Bar and Grill in Nusa Dua! The best pork ribs in town, hand-cut steaks, and some of the cheapest great wine around. Highly recommend it if you're in Bali!"
+  },
+  "promoTicker": [
+    "The Best Pork Ribs in Town",
+    "Tripadvisor Travelers' Choice Award",
+    "The Cheapest Wine in Nusa Dua"
+  ],
+  "thankYou": {
+    "alsoLikeLabel": "You May Also Like",
+    "reservation": {
+      "heading": "Your Table Is Confirmed",
+      "body": "Thank you for reserving a table with Mr Bob Bar and Grill. We're looking forward to welcoming you."
+    },
+    "groupReservation": {
+      "heading": "Your Group Reservation Request Has Been Received",
+      "body": "Thank you for your request. Our team will get back to you shortly to confirm availability."
+    },
+    "contact": {
+      "heading": "Thank You for Writing to Us",
+      "body": "Your message has reached us. A member of our team will respond to you personally very soon."
+    },
+    "links": {
+      "viewFoodMenu": "View Food Menu",
+      "viewBeverageMenu": "View Beverage Menu",
+      "contactUs": "Contact Us",
+      "reserveTable": "Reserve a Table"
+    }
+  }
+}

@@ -7,16 +7,16 @@ import { LOCATIONS } from "@/lib/site";
 // not a live feed, so it never breaks or shows stale content in the meantime.
 const tiles = Array.from({ length: 6 }, (_, i) => `/images/home/instagram-${i + 1}.jpg`);
 
-export default function InstagramPreview() {
+export default function InstagramPreview({ dict }) {
   const instagramHref = LOCATIONS[0].sameAs.find((url) => url.includes("instagram.com"));
 
   return (
     <section className="border-t border-white/10 px-6 py-20">
       <Reveal as="p" className="mb-3 text-center text-xs uppercase tracking-[0.35em] text-mrbob-yellow">
-        Follow Along
+        {dict.eyebrow}
       </Reveal>
       <Reveal as="h2" delay={90} className="mb-2 text-center text-3xl font-light tracking-normal md:text-4xl">
-        Instagram
+        {dict.heading}
       </Reveal>
       <Reveal as="p" delay={130} className="mb-10 text-center text-sm text-white/50">
         <a href={instagramHref} target="_blank" rel="noopener noreferrer" className="u-link hover:text-mrbob-yellow">

@@ -1,0 +1,201 @@
+{
+  "home": {
+    "hero": {
+      "eyebrow": "Panggang. Tuang. Nikmati.",
+      "titleBefore": "Iga Babi",
+      "titleHighlight": "Terenak",
+      "titleAfter": "di Kota",
+      "subtitle": "Steak potongan tangan, tomahawk chop, dan iga babi andalan kami langsung dari panggangan, disandingkan dengan daftar wine pilihan di Nusa Dua, Bali.",
+      "reserveCta": "RESERVASI MEJA",
+      "menuCta": "LIHAT MENU"
+    },
+    "whatsOn": {
+      "heading": "Apa yang Berlangsung di Mr Bob",
+      "subheading": "Malam live music, hidangan langsung dari panggangan, dan energi bar yang membuat malam di Nusa Dua terasa istimewa.",
+      "cards": [
+        {
+          "schedule": "Setiap Senin, Rabu & Sabtu, Mulai Pukul 19:00",
+          "location": "Mr Bob Bar and Grill",
+          "title": "Malam Live Music",
+          "detail": "Live music setiap Senin (I Love Monday), Rabu (Oldies Night), dan Sabtu (Country Night), mulai pukul 19:00."
+        },
+        {
+          "schedule": "800K untuk Berdua",
+          "location": "Mr Bob Bar and Grill",
+          "title": "Pork Knuckle untuk Berdua",
+          "detail": "1.1kg pork knuckle goreng untuk berdua, disajikan dengan mashed potatoes, sayuran tumis, saus kacang, dan pork gravy, ditambah dua botol kecil bir Singaraja."
+        }
+      ],
+      "ctaText": "Merencanakan malam bersama grup? Biarkan kami menyiapkan meja untuk acara Anda.",
+      "ctaLabel": "RESERVASI MALAM ACARA ANDA"
+    },
+    "welcome": {
+      "eyebrow": "Kisah Kami",
+      "titleBefore": "Selamat Datang di",
+      "titleHighlight": "Mr Bob",
+      "body": "Mr Bob Bar and Grill dibangun di sekitar api: steak potongan tangan, iga babi yang dimasak perlahan, dan tomahawk chop yang memukau, dipadukan dengan daftar wine yang dipilih untuk melengkapi setiap potongan. Duduklah di bar atau meja untuk malam ini di Tanjung Benoa, Nusa Dua, dan biarkan panggangan yang berbicara.",
+      "quote": "Arang asli, porsi asli, keramahan asli. Itulah seluruh menunya, sungguh.",
+      "reserveCta": "RESERVASI MEJA",
+      "groupCta": "RESERVASI GRUP"
+    },
+    "menuHighlight": {
+      "heading": "Menu Andalan",
+      "foodHeading": "Menu Andalan Kami",
+      "foodCta": "Lihat Menu Makanan Lengkap",
+      "beverageHeading": "Koktail Andalan Bob",
+      "beverageCta": "Lihat Menu Minuman Lengkap",
+      "eachLabel": "per gelas"
+    },
+    "wineShop": {
+      "eyebrow": "Pilihan Wine Termurah di Nusa Dua",
+      "heading": "Wine Shop",
+      "body": "Wine shop kami menyediakan pilihan dengan harga terbaik di sekitar Nusa Dua, namun stok yang tersedia berubah sesuai ketersediaan, sehingga tidak ada daftar tetap yang bisa dilihat secara online. Datanglah ke restoran dan lihat apa yang sedang tersedia.",
+      "cta": "RESERVASI MEJA"
+    },
+    "shuttle": {
+      "heading": "Shuttle Gratis Keliling Nusa Dua",
+      "body": "Menginap di sekitar sini? Kami dengan senang hati menawarkan layanan shuttle gratis untuk tamu yang menginap di area Nusa Dua, cukup beritahu kami saat Anda melakukan reservasi meja.",
+      "cta": "RESERVASI SEKARANG"
+    },
+    "recognition": {
+      "heading": "Penghargaan",
+      "googleRatingSuffix": "dari 1.100+ Ulasan Google",
+      "tripadvisorRatingSuffix": "dari 1.500+ Ulasan Tripadvisor",
+      "body": "Mr Bob Bar and Grill adalah restoran dengan rating #1 di Tanjung Benoa, Nusa Dua menurut Tripadvisor, dianugerahi Tripadvisor Travelers' Choice Award, menempatkan kami di antara 10% restoran terbaik di dunia, bersama dengan Sertifikat Ctrip Gourmet List Certificate of Excellence, penghargaan yang benar-benar kami banggakan, dan cerminan dari perhatian yang kami curahkan pada setiap hidangan dan setiap tamu.",
+      "restaurantName": "Mr Bob Bar and Grill",
+      "ctripDesc": "Diakui oleh Ctrip atas hidangan yang konsisten lezat dan keramahan yang tulus.",
+      "tripadvisorDesc": "Ulasan dari jutaan traveler Tripadvisor menempatkan pemenang ini di 10% teratas dunia.",
+      "ctaLabel": "Lihat di Tripadvisor"
+    },
+    "instagram": {
+      "eyebrow": "Ikuti Kami",
+      "heading": "Instagram"
+    },
+    "testimonials": {
+      "eyebrow": "Dari Mulut ke Mulut",
+      "heading": "Pengalaman yang Layak Dibagikan",
+      "intro": "Dari hidangan pertama dari panggangan hingga sesi terakhir malam itu, tamu terus kembali untuk steak, iga babi, daftar wine, dan suasana yang hidup setiap Senin, Rabu, dan Sabtu.",
+      "viaTripadvisor": "via Tripadvisor",
+      "reviewCta": "Tinggalkan Ulasan Google",
+      "reviewComingSoon": "Ulasan Google & Tripadvisor (segera hadir)",
+      "reserveCta": "RESERVASI MEJA",
+      "groupCta": "RESERVASI GRUP"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Dibangun di Sekitar Api",
+      "subtitle": "Kisah di balik Mr Bob Bar and Grill: steak, iga babi, tomahawk, wine, dan live music."
+    },
+    "ourStory": {
+      "heading": "Kisah Kami",
+      "body": "Mr Bob Bar and Grill dibangun untuk orang-orang yang serius soal steak. Potongan tangan, arang asli, dan daftar wine yang dipilih untuk melengkapi setiap hidangan, disajikan dalam ruangan yang cocok baik untuk makan malam yang tenang maupun malam penuh live music."
+    },
+    "featureRows": [
+      { "title": "Potongan Tangan, Dipanggang di Atas Api", "desc": "Setiap steak, sepiring iga babi, dan tomahawk chop dipotong dengan tangan dan dipanggang di atas api sungguhan. Tanpa jalan pintas, tanpa kompromi pada cita rasa bakar yang membuat steakhouse ini layak dikunjungi." },
+      { "title": "Bar yang Setara", "desc": "Dari house wine kami per gelas hingga koktail andalan dan daftar spirits lengkap, bar kami dibangun untuk sepadan dengan panggangan." },
+      { "title": "Ruangan yang Hidup", "desc": "Setiap Senin, Rabu, dan Sabtu, live music mengubah makan malam menjadi malam yang berkesan. Baik Anda datang untuk makan malam yang tenang atau menikmati malam penuh, ruangan ini dibangun untuk keduanya." }
+    ],
+    "quoteBlock": {
+      "line1": "Selamat datang di Mr Bob Bar and Grill.",
+      "line2": "Ini adalah kesenangan kami untuk menyajikan steak yang lezat, segelas wine yang nikmat, dan malam penuh live music di hadapan Anda.",
+      "line3": "Terima kasih telah memilih untuk menghabiskan malam Anda bersama kami.",
+      "signature": "Tim Mr Bob"
+    },
+    "closingCta": {
+      "heading": "Silakan Duduk",
+      "body": "Datang dan rasakan apa yang ada di atas panggangan, dan lihat sendiri mengapa tamu terus kembali untuk malam live music kami.",
+      "reserveCta": "Reservasi Meja",
+      "contactCta": "Hubungi Kami"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Kontak",
+      "subtitle": "Punya pertanyaan, permintaan khusus, atau masukan? Kami ingin mendengarnya."
+    },
+    "getInTouch": {
+      "heading": "Temukan Kami",
+      "body": "Punya pertanyaan atau butuh bantuan dengan reservasi Anda? Hubungi kami langsung di bawah ini. Hanya Restoran Utama kami yang menerima reservasi meja melalui situs ini.",
+      "mainBadge": "Restoran Utama",
+      "secondBadge": "Cabang Kedua",
+      "addressLabel": "Alamat",
+      "hoursLabel": "Jam Buka",
+      "contactLabel": "Kontak",
+      "instagramLabel": "Instagram",
+      "facebookLabel": "Facebook",
+      "instagramComingSoon": "Instagram (segera hadir)",
+      "facebookComingSoon": "Facebook (segera hadir)",
+      "mapPlaceholder": "Peta akan tersedia setelah alamat pasti kami dikonfirmasi",
+      "openInMaps": "Buka di Google Maps",
+      "reserveCta": "Reservasi Meja"
+    }
+  },
+  "groupReservation": {
+    "hero": {
+      "title": "Reservasi Grup",
+      "subtitle": "Membawa rombongan lebih besar? Biarkan kami menyiapkan meja."
+    },
+    "intro": {
+      "heading": "Makan untuk Grup Besar",
+      "body": "Berencana makan bersama 10 tamu atau lebih? Beritahu kami jumlah rombongan dan tanggal yang Anda inginkan, dan tim kami akan mengonfirmasi tempat duduk serta membahas pilihan menu grup langsung dengan Anda."
+    },
+    "stickyReserveLabel": "RESERVASI GRUP"
+  },
+  "reservation": {
+    "hero": {
+      "title": "Reservasi Meja",
+      "subtitle": "Kami menyarankan pemesanan lebih awal, terutama pada malam live music (Senin, Rabu, dan Sabtu)."
+    },
+    "joinUs": {
+      "eyebrow": "Reservasi",
+      "heading": "Bergabunglah Bersama Kami",
+      "body": "Lengkapi formulir di bawah ini dan tim kami akan mengonfirmasi reservasi Anda secepat mungkin."
+    },
+    "photoPanel": {
+      "quote": "Meja yang baik adalah setengah dari malam itu. Sisanya biar kami yang urus."
+    }
+  },
+  "share": {
+    "hero": {
+      "eyebrow": "Menikmati Kunjungan Anda?",
+      "title": "Bagikan Mr Bob kepada Teman",
+      "body": "Dari mulut ke mulut sangat berarti bagi kami. Ketuk salah satu platform di bawah untuk membagikan Mr Bob Bar and Grill, pesan singkat sudah kami siapkan untuk Anda."
+    },
+    "buttons": {
+      "shareNow": "BAGIKAN SEKARANG",
+      "igNote": "Pesan telah disalin — buka Instagram dan tempelkan ke DM, Story, atau bio Anda.",
+      "copyLink": "SALIN TAUTAN",
+      "linkCopied": "TAUTAN TERSALIN!",
+      "backLink": "Kembali ke Mr Bob Bar and Grill",
+      "instagramLabel": "Instagram"
+    },
+    "shareMessage": "Saya baru saja menghabiskan malam yang luar biasa di Mr Bob Bar and Grill, Nusa Dua! Iga babi terenak di kota, steak potongan tangan, dan wine enak dengan harga termurah. Sangat direkomendasikan kalau Anda sedang di Bali!"
+  },
+  "promoTicker": [
+    "Iga Babi Terenak di Kota",
+    "Tripadvisor Travelers' Choice Award",
+    "Wine Termurah di Nusa Dua"
+  ],
+  "thankYou": {
+    "alsoLikeLabel": "Anda Mungkin Juga Menyukai",
+    "reservation": {
+      "heading": "Meja Anda Sudah Dikonfirmasi",
+      "body": "Terima kasih telah melakukan reservasi meja di Mr Bob Bar and Grill. Kami menantikan kedatangan Anda."
+    },
+    "groupReservation": {
+      "heading": "Permintaan Reservasi Grup Anda Telah Diterima",
+      "body": "Terima kasih atas permintaan Anda. Tim kami akan segera menghubungi Anda kembali untuk mengonfirmasi ketersediaan."
+    },
+    "contact": {
+      "heading": "Terima Kasih Telah Menghubungi Kami",
+      "body": "Pesan Anda telah kami terima. Salah satu anggota tim kami akan merespons Anda secara langsung sesegera mungkin."
+    },
+    "links": {
+      "viewFoodMenu": "Lihat Menu Makanan",
+      "viewBeverageMenu": "Lihat Menu Minuman",
+      "contactUs": "Hubungi Kami",
+      "reserveTable": "Reservasi Meja"
+    }
+  }
+}

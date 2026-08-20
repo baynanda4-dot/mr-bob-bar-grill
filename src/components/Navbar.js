@@ -1,32 +1,39 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useParams } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { onScrollFrame } from "./motion/ticker";
 import ScrollProgress from "./motion/ScrollProgress";
+import LocalizedLink from "./LocalizedLink";
+import LanguageSwitcher from "./LanguageSwitcher";
 
-const links = [
-  { href: "/", label: "Home" },
-  { href: "/menu/food", label: "Menu" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
-];
+export default function Navbar({ dict }) {
+  const links = [
+    { href: "/", label: dict.nav.home },
+    { href: "/menu/food", label: dict.nav.menu },
+    { href: "/about", label: dict.nav.about },
+    { href: "/contact", label: dict.nav.contact },
+  ];
 
-const drawerLinks = [
-  ...links,
-  { href: "/menu/beverage", label: "Beverage Menu" },
-  { href: "/group-reservation", label: "Group Reservation" },
-];
+  const drawerLinks = [
+    ...links,
+    { href: "/menu/beverage", label: dict.nav.beverageMenu },
+    { href: "/group-reservation", label: dict.nav.groupReservation },
+  ];
 
-export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [open, setOpen] = useState(false);
   const lastY = useRef(0);
   const lastToggle = useRef(0);
   const pathname = usePathname();
+  const { locale } = useParams();
+  // Strips the locale segment so link.href ("/menu/food") compares against
+  // the un-prefixed page path, same as before locale routing existed.
+  const unlocalizedPathname = pathname.startsWith(`/${locale}`)
+    ? pathname.slice(`/${locale}`.length) || "/"
+    : pathname;
 
   // Belt-and-suspenders for mobile browsers where the synthetic click after
   // a tap has been unreliable: onTouchEnd fires the same toggle directly,
@@ -88,7 +95,7 @@ export default function Navbar() {
             scrolled ? "py-1" : "py-2"
           }`}
         >
-          <Link href="/" className="u-press shrink-0 py-2">
+          <LocalizedLink href="/" className="u-press shrink-0 py-2">
             <Image
               src="/images/shared/logo.png"
               alt="Mr Bob Bar and Grill"
@@ -97,30 +104,33 @@ export default function Navbar() {
               priority
               className="h-14 w-14 md:h-16 md:w-16"
             />
-          </Link>
+          </LocalizedLink>
 
-          <ul className="hidden md:flex gap-10 text-sm tracking-wide">
+          <ul className="hidden md:flex items-center gap-10 text-sm tracking-wide">
             {links.map((link) => (
               <li key={link.href}>
-                <Link
+                <LocalizedLink
                   href={link.href}
                   className={`u-link transition-colors duration-500 ease-expo hover:text-mrbob-yellow ${
-                    pathname === link.href ? "text-mrbob-yellow" : ""
+                    unlocalizedPathname === link.href ? "text-mrbob-yellow" : ""
                   }`}
                 >
                   {link.label}
-                </Link>
+                </LocalizedLink>
               </li>
             ))}
+            <li>
+              <LanguageSwitcher />
+            </li>
           </ul>
 
           <div className="flex items-center gap-3">
-            <Link
+            <LocalizedLink
               href="/reservation"
               className="btn-primary u-press hidden sm:inline-flex px-6 py-2.5 text-sm tracking-wide"
             >
-              Reserve Table
-            </Link>
+              {dict.nav.reserveTable}
+            </LocalizedLink>
 
             <button
               type="button"
@@ -172,7 +182,7 @@ export default function Navbar() {
             open ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          <Link
+          <LocalizedLink
             href="/reservation"
             className="btn-primary u-press mb-8 block px-6 py-4 text-center text-sm tracking-widest"
             style={{
@@ -180,8 +190,8 @@ export default function Navbar() {
               opacity: open ? 1 : 0,
             }}
           >
-            RESERVE TABLE
-          </Link>
+            {dict.stickyReserveLabel}
+          </LocalizedLink>
 
           <ul className="space-y-1">
             {drawerLinks.map((link, index) => (
@@ -194,17 +204,19 @@ export default function Navbar() {
                   transform: open ? "none" : "translateX(24px)",
                 }}
               >
-                <Link
+                <LocalizedLink
                   href={link.href}
                   className={`block border-b border-white/10 py-4 text-xl font-semibold uppercase tracking-wide text-white transition-colors duration-[400ms] ease-expo hover:text-mrbob-yellow ${
-                    pathname === link.href ? "text-mrbob-yellow" : ""
+                    unlocalizedPathname === link.href ? "text-mrbob-yellow" : ""
                   }`}
                 >
                   {link.label}
-                </Link>
+                </LocalizedLink>
               </li>
             ))}
           </ul>
+
+          <LanguageSwitcher className="mt-6 justify-center gap-4 border-t border-white/10 pt-6 text-sm" />
         </div>
       </div>
     </>

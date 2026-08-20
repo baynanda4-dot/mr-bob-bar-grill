@@ -1,4 +1,4 @@
-import Link from "next/link";
+import LocalizedLink from "@/components/LocalizedLink";
 import { LOCATIONS, OPENING_HOURS } from "@/lib/site";
 
 function InstagramIcon(props) {
@@ -52,7 +52,7 @@ function ClockIcon(props) {
 // confirmed for that outlet). Neither card carries a reserve button — the
 // one reservation flow the site actually supports gets a single large CTA
 // below both cards instead (see GetInTouch below), not one repeated per card.
-function OutletCard({ location, isMain }) {
+function OutletCard({ location, isMain, dict, hoursRange }) {
   const whatsappDigits = location.telephone.replace(/\D/g, "");
   const mapsHref = `https://www.google.com/maps/search/?api=1&query=${location.latitude},${location.longitude}`;
   const instagramHref = location.sameAs?.find((url) => url.includes("instagram.com"));
@@ -70,7 +70,7 @@ function OutletCard({ location, isMain }) {
   return (
     <div className="border border-white/10 p-8">
       <p className="mb-6 text-xs uppercase tracking-[0.3em] text-mrbob-yellow">
-        {isMain ? "Main Restaurant" : "Second Outlet"}
+        {isMain ? dict.mainBadge : dict.secondBadge}
       </p>
 
       <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
@@ -78,7 +78,7 @@ function OutletCard({ location, isMain }) {
           <div>
             <p className="mb-2 flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-mrbob-yellow">
               <MapPinIcon className="h-4 w-4 shrink-0" />
-              Address
+              {dict.addressLabel}
             </p>
             <p className="text-sm text-white/70">{addressLine}</p>
           </div>
@@ -87,16 +87,16 @@ function OutletCard({ location, isMain }) {
             <div>
               <p className="mb-2 flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-mrbob-yellow">
                 <ClockIcon className="h-4 w-4 shrink-0" />
-                Hours
+                {dict.hoursLabel}
               </p>
               <p className="text-sm text-white/70">
-                {OPENING_HOURS.dayOfWeek[0]} &ndash; {OPENING_HOURS.dayOfWeek[6]}: {OPENING_HOURS.opens} &ndash; {OPENING_HOURS.closes}
+                {hoursRange}: {OPENING_HOURS.opens} &ndash; {OPENING_HOURS.closes}
               </p>
             </div>
           )}
 
           <div>
-            <p className="mb-2 text-xs uppercase tracking-[0.3em] text-mrbob-yellow">Contact</p>
+            <p className="mb-2 text-xs uppercase tracking-[0.3em] text-mrbob-yellow">{dict.contactLabel}</p>
             <div className="space-y-2 text-sm text-white/70">
               <a href={`https://wa.me/${whatsappDigits}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-mrbob-yellow">
                 <PhoneIcon className="h-4 w-4 shrink-0" />
@@ -108,7 +108,7 @@ function OutletCard({ location, isMain }) {
               {instagramHref ? (
                 <a href={instagramHref} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-mrbob-yellow">
                   <InstagramIcon className="h-4 w-4 shrink-0" />
-                  <span className="u-link">Instagram</span>
+                  <span className="u-link">{dict.instagramLabel}</span>
                 </a>
               ) : (
                 // TODO: swap for the real profile link once the account is
@@ -116,18 +116,18 @@ function OutletCard({ location, isMain }) {
                 // the meantime rather than hidden or linked to a guessed URL.
                 <span className="flex items-center gap-2 text-white/30">
                   <InstagramIcon className="h-4 w-4 shrink-0" />
-                  <span>Instagram (coming soon)</span>
+                  <span>{dict.instagramComingSoon}</span>
                 </span>
               )}
               {location.facebook ? (
                 <a href={location.facebook} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-mrbob-yellow">
                   <FacebookIcon className="h-4 w-4 shrink-0" />
-                  <span className="u-link">Facebook</span>
+                  <span className="u-link">{dict.facebookLabel}</span>
                 </a>
               ) : (
                 <span className="flex items-center gap-2 text-white/30">
                   <FacebookIcon className="h-4 w-4 shrink-0" />
-                  <span>Facebook (coming soon)</span>
+                  <span>{dict.facebookComingSoon}</span>
                 </span>
               )}
             </div>
@@ -145,13 +145,13 @@ function OutletCard({ location, isMain }) {
             />
           ) : (
             <div className="u-media flex h-64 w-full items-center justify-center px-6 text-center text-sm text-white/40">
-              Map available once our exact address is confirmed
+              {dict.mapPlaceholder}
             </div>
           )}
           <div className="p-4">
             <a href={mapsHref} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 text-sm text-mrbob-yellow">
               <MapPinIcon className="h-4 w-4 shrink-0" />
-              <span className="u-link">Open in Google Maps</span>
+              <span className="u-link">{dict.openInMaps}</span>
             </a>
           </div>
         </div>
@@ -160,18 +160,15 @@ function OutletCard({ location, isMain }) {
   );
 }
 
-export default function GetInTouch() {
+export default function GetInTouch({ dict, hoursRange }) {
   return (
     <section className="border-t border-white/10 py-24 px-6 max-w-5xl mx-auto">
-      <h2 className="text-4xl font-light tracking-normal text-center mb-6">Find Us</h2>
-      <p className="text-center text-white/70 max-w-2xl mx-auto mb-14">
-        Have a question or need assistance with your reservation? Reach us directly below. Only
-        our Main Restaurant takes table reservations through this site.
-      </p>
+      <h2 className="text-4xl font-light tracking-normal text-center mb-6">{dict.heading}</h2>
+      <p className="text-center text-white/70 max-w-2xl mx-auto mb-14">{dict.body}</p>
 
       <div className="space-y-10">
         {LOCATIONS.map((location, index) => (
-          <OutletCard key={location.id} location={location} isMain={index === 0} />
+          <OutletCard key={location.id} location={location} isMain={index === 0} dict={dict} hoursRange={hoursRange} />
         ))}
       </div>
 
@@ -179,12 +176,12 @@ export default function GetInTouch() {
           outlet bookable through this site, so this isn't repeated per
           card, just called out once, prominently, below both. */}
       <div className="mt-14 flex justify-center">
-        <Link
+        <LocalizedLink
           href="/reservation"
           className="btn-primary u-press inline-flex px-12 py-5 text-base tracking-widest"
         >
-          Reserve Table
-        </Link>
+          {dict.reserveCta}
+        </LocalizedLink>
       </div>
     </section>
   );

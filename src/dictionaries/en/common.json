@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "home": "Home",
+    "menu": "Menu",
+    "about": "About",
+    "contact": "Contact",
+    "beverageMenu": "Beverage Menu",
+    "groupReservation": "Group Reservation",
+    "reserveTable": "Reserve Table"
+  },
+  "footer": {
+    "tagline": "Hand-cut steaks, pork ribs, and tomahawk chops, paired with a curated wine list and live music every Monday, Wednesday, and Saturday.",
+    "contactUs": "CONTACT US",
+    "exploreHeading": "Explore",
+    "visitHeading": "Visit",
+    "home": "Home",
+    "about": "About",
+    "foodMenu": "Food Menu",
+    "beverageMenu": "Beverage Menu",
+    "reserveTable": "Reserve a Table",
+    "groupReservation": "Group Reservation",
+    "contact": "Contact",
+    "rightsReserved": "All rights reserved."
+  },
+  "hoursRange": "Monday – Sunday",
+  "faqHeading": "Plan Your Visit",
+  "faqSubheading": "Everything You Need to Know",
+  "stickyReserveLabel": "RESERVE TABLE",
+  "expandAll": "Expand All",
+  "collapseAll": "Collapse All"
+}

@@ -5,22 +5,26 @@
 //
 // Curated per form type rather than one generic list — "Reserve a Table"
 // never appears on the reservation thank-you page itself since no page
-// links to itself.
-export const THANK_YOU_LINKS = {
-  reservation: [
-    { label: "View Food Menu", path: "/menu/food", image: "/images/home/menu-food.jpg" },
-    { label: "View Beverage Menu", path: "/menu/beverage", image: "/images/home/menu-beverage.jpg" },
-    { label: "Contact Us", path: "/contact", image: "/images/contact/hero.jpg" },
-  ],
-  "group-reservation": [
-    { label: "Reserve a Table", path: "/reservation", image: "/images/reservation/hero.jpg" },
-    { label: "View Food Menu", path: "/menu/food", image: "/images/home/menu-food.jpg" },
-    { label: "View Beverage Menu", path: "/menu/beverage", image: "/images/home/menu-beverage.jpg" },
-    { label: "Contact Us", path: "/contact", image: "/images/contact/hero.jpg" },
-  ],
-  contact: [
-    { label: "Reserve a Table", path: "/reservation", image: "/images/reservation/hero.jpg" },
-    { label: "View Food Menu", path: "/menu/food", image: "/images/home/menu-food.jpg" },
-    { label: "View Beverage Menu", path: "/menu/beverage", image: "/images/home/menu-beverage.jpg" },
-  ],
-};
+// links to itself. `labels` is the locale dictionary's `content.json`
+// `thankYou.links` slice — path/image never change per locale, only the
+// label text.
+export function getThankYouLinks(labels) {
+  return {
+    reservation: [
+      { label: labels.viewFoodMenu, path: "/menu/food", image: "/images/home/menu-food.jpg" },
+      { label: labels.viewBeverageMenu, path: "/menu/beverage", image: "/images/home/menu-beverage.jpg" },
+      { label: labels.contactUs, path: "/contact", image: "/images/contact/hero.jpg" },
+    ],
+    "group-reservation": [
+      { label: labels.reserveTable, path: "/reservation", image: "/images/reservation/hero.jpg" },
+      { label: labels.viewFoodMenu, path: "/menu/food", image: "/images/home/menu-food.jpg" },
+      { label: labels.viewBeverageMenu, path: "/menu/beverage", image: "/images/home/menu-beverage.jpg" },
+      { label: labels.contactUs, path: "/contact", image: "/images/contact/hero.jpg" },
+    ],
+    contact: [
+      { label: labels.reserveTable, path: "/reservation", image: "/images/reservation/hero.jpg" },
+      { label: labels.viewFoodMenu, path: "/menu/food", image: "/images/home/menu-food.jpg" },
+      { label: labels.viewBeverageMenu, path: "/menu/beverage", image: "/images/home/menu-beverage.jpg" },
+    ],
+  };
+}

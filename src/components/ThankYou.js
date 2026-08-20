@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import LocalizedLink from "@/components/LocalizedLink";
 import GoogleAdsConversion from "@/components/GoogleAdsConversion";
 
 /**
@@ -16,7 +16,7 @@ import GoogleAdsConversion from "@/components/GoogleAdsConversion";
  * booking intent), not contact's (a generic enquiry, not what the ad
  * campaign is optimizing for).
  */
-export default function ThankYou({ heading, body, links = [], trackConversion = false }) {
+export default function ThankYou({ heading, body, links = [], alsoLikeLabel, trackConversion = false }) {
   return (
     <main className="flex min-h-[60vh] flex-col items-center justify-center px-6 py-24 text-center">
       {trackConversion && <GoogleAdsConversion />}
@@ -40,10 +40,10 @@ export default function ThankYou({ heading, body, links = [], trackConversion = 
 
       {links.length > 0 && (
         <div className="mt-12 w-full max-w-xl">
-          <p className="mb-4 text-xs font-semibold tracking-widest text-mrbob-yellow uppercase">You May Also Like</p>
+          <p className="mb-4 text-xs font-semibold tracking-widest text-mrbob-yellow uppercase">{alsoLikeLabel}</p>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             {links.map((link) => (
-              <Link
+              <LocalizedLink
                 key={link.path}
                 href={link.path}
                 className="card-glass group u-lift flex h-24 items-center gap-4 overflow-hidden p-3 text-left transition hover:border-mrbob-yellow"
@@ -61,7 +61,7 @@ export default function ThankYou({ heading, body, links = [], trackConversion = 
                     {link.label}
                   </span>
                 </div>
-              </Link>
+              </LocalizedLink>
             ))}
           </div>
         </div>

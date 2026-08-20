@@ -29,7 +29,7 @@ function MapPinIcon(props) {
 
 // Left half of the reservation card — a full-bleed photo with the quote and
 // quick-facts overlaid at the bottom, instead of a separate glass sidebar.
-export default function ReservationPhotoPanel() {
+export default function ReservationPhotoPanel({ dict, hoursRange }) {
   const location = LOCATIONS[0];
   const whatsappHref = `https://wa.me/${location.telephone.replace(/\D/g, "")}`;
 
@@ -44,14 +44,13 @@ export default function ReservationPhotoPanel() {
 
       <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
         <p className="font-serif mb-5 border-l-4 border-mrbob-yellow pl-4 text-lg italic font-light leading-relaxed text-white/90">
-          &ldquo;A good table is half the evening. We take care of the
-          rest.&rdquo;
+          &ldquo;{dict.quote}&rdquo;
         </p>
 
         <div className="space-y-2 text-sm text-white/80">
           <p className="flex items-center gap-2">
             <ClockIcon className="h-4 w-4 shrink-0 text-mrbob-yellow" />
-            {OPENING_HOURS.dayOfWeek[0]}&ndash;{OPENING_HOURS.dayOfWeek[6]}: {OPENING_HOURS.opens}&ndash;{OPENING_HOURS.closes}
+            {hoursRange}: {OPENING_HOURS.opens}&ndash;{OPENING_HOURS.closes}
           </p>
           <a href={whatsappHref} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-mrbob-yellow">
             <PhoneIcon className="h-4 w-4 shrink-0 text-mrbob-yellow" />

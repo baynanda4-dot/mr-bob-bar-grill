@@ -1,0 +1,47 @@
+{
+  "reservation": {
+    "eyebrow": "Reservierung bestätigt",
+    "headline": "Ihr Tisch ist bestätigt",
+    "intro": "Vielen Dank, dass Sie einen Tisch bei <strong>{locationName}</strong> reserviert haben. Ihre Reservierung ist bestätigt, und wir freuen uns darauf, Sie willkommen zu heißen.",
+    "closing": "Falls sich Ihre Pläne ändern oder Sie besondere Wünsche haben, kontaktieren Sie uns bitte über {whatsappLink}. Dieses Postfach wird nicht überwacht, eine Antwort hierauf erreicht uns also nicht, aber wir helfen Ihnen dort gerne weiter.",
+    "noShowNote": "Bitte beachten Sie: Ihr Tisch wird 30 Minuten über die Reservierungszeit hinaus freigehalten. Sollten Sie bis dahin nicht eingetroffen sein, kann die Buchung freigegeben und als storniert behandelt werden.",
+    "pickupNote": "Ein kostenloser Abholservice für Gäste, die im Raum Nusa Dua übernachten, steht zur Verfügung (mindestens 2 Erwachsene pro Anfrage), je nach Verfügbarkeit."
+  },
+  "groupReservation": {
+    "eyebrow": "Anfrage erhalten",
+    "headline": "Ihre Gruppenreservierungsanfrage wurde erhalten",
+    "intro": "Vielen Dank für Ihre Gruppenreservierungsanfrage. Wir haben Ihre Angaben erhalten, und unser Team wird sich in Kürze bei Ihnen melden, um die Verfügbarkeit zu bestätigen.",
+    "closing": "Wir freuen uns darauf, Sie willkommen zu heißen, und werden uns in Kürze melden, um alle Details zu bestätigen."
+  },
+  "contact": {
+    "eyebrow": "Nachricht erhalten",
+    "headline": "Vielen Dank für Ihre Nachricht",
+    "intro": "Vielen Dank, dass Sie <strong>{locationName}</strong> kontaktiert haben. Ihre Nachricht ist bei uns eingegangen, und ein Mitglied unseres Teams wird sich persönlich sehr bald bei Ihnen melden.",
+    "closing": "Wir freuen uns über Ihr Interesse an Mr Bob Bar and Grill und darauf, Sie bald willkommen zu heißen."
+  },
+  "common": {
+    "dearGuest": "Liebe(r) {guestName},",
+    "dateLabel": "Datum",
+    "timeLabel": "Uhrzeit",
+    "adultsLabel": "Anzahl Erwachsene",
+    "childrenLabel": "Anzahl Kinder",
+    "hotelNameLabel": "Hotelname",
+    "roomNumberLabel": "Zimmernummer",
+    "planningVisit": "Für Ihren Besuch",
+    "yourNote": "Ihre Nachricht an uns:",
+    "signOff": "Herzliche Grüße,",
+    "teamName": "Ihr Mr Bob Bar and Grill Team",
+    "visitUs": "Besuchen Sie uns",
+    "whatsapp": "WhatsApp",
+    "automatedNotice": "Dies ist eine automatische Benachrichtigung. Für dringende Anfragen kontaktieren Sie uns bitte direkt.",
+    "subjectReservationConfirmed": "Ihre Reservierung ist bestätigt ({locationName})",
+    "subjectBookingReceived": "Wir haben Ihre Buchung erhalten ({locationName})",
+    "subjectMessageReceived": "Wir haben Ihre Nachricht erhalten ({locationName})",
+    "suggestedLinks": {
+      "viewFoodMenu": "Speisekarte ansehen",
+      "viewBeverageMenu": "Getränkekarte ansehen",
+      "contactUs": "Kontaktieren Sie uns",
+      "reserveTable": "Tisch reservieren"
+    }
+  }
+}

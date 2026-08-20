@@ -1,0 +1,43 @@
+{
+  "home": {
+    "title": "Mr Bob Bar and Grill | Nr. 1 Restaurant in Tanjung Benoa, Nusa Dua",
+    "description": "Mr Bob Bar and Grill, das laut Tripadvisor bestbewertete Restaurant in Tanjung Benoa, Nusa Dua. Handgeschnittene Steaks, Schweinerippchen und Tomahawk-Chops, eine sorgfältig ausgewählte Weinkarte und Live-Musik jeden Montag, Mittwoch und Samstag in Nusa Dua, Bali."
+  },
+  "reservation": {
+    "title": "Tisch reservieren | Mr Bob Bar and Grill",
+    "description": "Reservieren Sie einen Tisch bei Mr Bob Bar and Grill: handgeschnittene Steaks, Schweinerippchen, Tomahawk-Chops und Live-Musik jeden Montag, Mittwoch und Samstag."
+  },
+  "about": {
+    "title": "Über uns",
+    "description": "Die Geschichte hinter Mr Bob Bar and Grill, einem Steakhouse und Weinbar im westlichen Stil, aufgebaut rund um handgeschnittene Steaks, Schweinerippchen, Tomahawk-Chops und Live-Musik."
+  },
+  "contact": {
+    "title": "Kontakt",
+    "description": "Kontaktieren Sie Mr Bob Bar and Grill für Reservierungen, Anfragen und Wegbeschreibungen."
+  },
+  "contactThankYou": {
+    "title": "Nachricht erhalten"
+  },
+  "groupReservation": {
+    "title": "Gruppenreservierung",
+    "description": "Möchten Sie mit einer größeren Gruppe bei Mr Bob Bar and Grill essen? Beantragen Sie Ihre Gruppenreservierung, und unser Team bestätigt Verfügbarkeit und Paketoptionen."
+  },
+  "groupReservationThankYou": {
+    "title": "Anfrage erhalten"
+  },
+  "menuFood": {
+    "title": "Speisekarte",
+    "description": "Die Speisekarte von Mr Bob Bar and Grill: Vorspeisen, Suppen, unsere legendären BBQ-Rippchen und Beef Tomahawk, indonesische Favoriten, gegrilltes Geflügel, Meeresfrüchte, Rind, Lamm und Schwein, Burger, Pizza, Pasta, ein Kindermenü und Desserts."
+  },
+  "menuBeverage": {
+    "title": "Getränkekarte",
+    "description": "Die Getränkekarte von Mr Bob Bar and Grill: klassische und hauseigene Cocktails, Spirituosen im Shot, Mocktails, Bier, Softdrinks, Kaffee & Tee, Säfte und unsere lokale Hausweinliste."
+  },
+  "reservationThankYou": {
+    "title": "Reservierung bestätigt"
+  },
+  "share": {
+    "title": "Mr Bob Bar and Grill teilen",
+    "description": "Teilen Sie Ihr Erlebnis bei Mr Bob Bar and Grill mit Freunden und Familie."
+  }
+}

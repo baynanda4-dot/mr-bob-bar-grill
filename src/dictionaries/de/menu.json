@@ -1,0 +1,335 @@
+{
+  "food": {
+    "heroTitle": "Speisekarte",
+    "priceNote": "Preise in ‚000‘ IDR angegeben, zzgl. 11 % gesetzlicher Steuer.",
+    "viewBeverageCta": "WEIN- & BARKARTE ANSEHEN",
+    "sections": [
+      {
+        "title": "Vorspeisen",
+        "items": [
+          { "name": "Vegetables Spring Roll", "desc": "Frittierte Rolle gefüllt mit gemischtem Gemüse, serviert mit süß-saurer Soße" },
+          { "name": "Tomato Bruschetta", "desc": "Baguette, Tomate, Basilikum, Zwiebel, Olivenöl, Feta-Käse & Balsamico-Essig" },
+          { "name": "Garlic Bread", "desc": "Baguette, geröstet mit Knoblauchbutter" },
+          { "name": "Garden Salad", "desc": "Gemischter Salat, Zwiebel, Gurke und Karotte mit Balsamico-Vinaigrette" },
+          { "name": "Caesar Salad", "desc": "Junger Romana-Salat, knuspriger Speck, Knoblauchbrot und Caesar-Dressing" },
+          { "name": "Thai Beef Salad", "desc": "Serviert mit gemischtem Salat und thailändischem Dressing" },
+          { "name": "Smoked Salmon Salad", "desc": "Serviert mit Mini-Mesclun und Chili-Limetten-Dressing" }
+        ]
+      },
+      {
+        "title": "Suppen",
+        "items": [
+          { "name": "Cream Corn Soup", "desc": "Sämige Suppe mit Zuckermais und Knoblauchbrot" },
+          { "name": "Chicken Vegetable Soup", "desc": "Klare Suppe mit gewürfeltem Hähnchen, Karotte, Zwiebel und grüner Bohne" },
+          { "name": "Seafood Cream Soup", "desc": "Meeresfrüchte-Mix, Sahne, serviert mit Knoblauchbrot" },
+          { "name": "Tom Yum Soup", "desc": "Scharfe Garnelen, Fisch, Tintenfisch und Champignonscheiben" },
+          { "name": "Chicken Noodle Soup", "desc": "Geschnittene Hähnchenkeule, Gemüse, Hühnerbrühe, Eiernudeln" }
+        ]
+      },
+      {
+        "title": "Unsere Spezialitäten",
+        "items": [
+          { "name": "Mr Bob's BBQ Ribs", "desc": "Unsere feinsten, gut marinierten 600 g Baby-Back-Schweinerippchen, langsam über Holzkohle gegrillt mit Honig und Mr Bobs Soße" },
+          { "name": "Beef Tomahawk", "desc": "1000-1200 g gegrilltes australisches Beef Tomahawk, serviert mit drei Sorten Soße (BBQ, Pilz und schwarzer Pfeffer), gemischtem Salat, gedünstetem Gemüse und Kartoffelecken. Geeignet für 2 Personen; Zubereitungszeit ca. 60 Minuten." }
+        ]
+      },
+      {
+        "title": "Beilagen",
+        "items": [
+          { "name": "Gedämpfter Reis" },
+          { "name": "Ananasreis" },
+          { "name": "Maisreis" },
+          { "name": "Gemischter Salat" },
+          { "name": "Kartoffelecken" },
+          { "name": "Kartoffelpüree" },
+          { "name": "Pommes frites" },
+          { "name": "Gedünstetes Gemüse" }
+        ]
+      },
+      {
+        "title": "Indonesisch",
+        "items": [
+          { "name": "Beef Rendang", "desc": "Rindfleischwürfel, indonesisch geschmort, serviert mit gedämpftem Reis" },
+          { "name": "Seafood Curry", "desc": "Garnelen, Fisch und Tintenfisch, gemischtes Gemüse in Currysoße geschmort" },
+          { "name": "Chicken Curry", "desc": "Geschnittene Hähnchenbrust und gemischtes Gemüse in Currysoße geschmort" },
+          { "name": "Ayam Betutu", "desc": "Geschmortes halbes Baby-Hähnchen, serviert mit Sayur Urab und gedämpftem Reis" },
+          { "name": "Bebek Goreng", "desc": "Knusprig gebratene halbe Ente, serviert mit Gemüse-Curry und gedämpftem Reis" },
+          { "name": "Nasi Goreng Seafood", "desc": "Gebratener Reis, Garnelen, Fisch, Tintenfisch, Garnelenspieß und Cracker" },
+          { "name": "Nasi Goreng Ayam / Mie Goreng Ayam", "desc": "Gebratener Reis oder Nudeln mit Ei, Hähnchenspieß und Cracker" },
+          { "name": "Nasi Goreng Iga Bakar", "desc": "Gebratener Reis mit Ei, Schweinerippchen und Cracker" },
+          { "name": "Nasi Goreng Crispy Pork Belly", "desc": "Gebratener Reis mit Ei und knusprigem Schweinebauch" },
+          { "name": "Beef Paela", "desc": "Gegrilltes Sirloin-Steak und Garnelen auf gelbem Reis" },
+          { "name": "Cap Cay Ayam / Cap Cay Seafood", "desc": "Gebratenes Hähnchen oder Meeresfrüchte und Gemüse nach chinesischer Art, serviert mit gedämpftem Reis" }
+        ]
+      },
+      {
+        "title": "Grill Corner: Geflügel",
+        "items": [
+          { "name": "Grill Chicken Leg Boneless", "desc": "200 g gegrillte, entbeinte Hähnchenkeule, Honig-Chili-Soße, serviert mit Sambal Matah und gedämpftem Reis" },
+          { "name": "Grill Baby Chicken", "desc": "Halbes gegrilltes junges Hähnchen mit balinesischen Gewürzen, serviert mit gedämpftem Reis, Sambal Matah und Sayur Urab" },
+          { "name": "Chicken Satay", "desc": "8 Stück gegrillter Hähnchenspieß, serviert mit Erdnusssoße und gedämpftem Reis" },
+          { "name": "Chicken Steak", "desc": "Gegrillte 200 g Hähnchenbrust, serviert mit Kartoffelpüree, gedünstetem Gemüse und Pilzrahmsoße" },
+          { "name": "Chicken Cordon Bleu", "desc": "Hähnchenbrust gefüllt mit Schinken und Käse, serviert mit Kartoffelpüree, gedünstetem Gemüse und Pilzrahmsoße" }
+        ]
+      },
+      {
+        "title": "Grill Corner: Meeresfrüchte",
+        "items": [
+          { "name": "Grill Lobster", "desc": "350 g gegrillter Hummer, serviert mit gemischtem Salat, Kartoffelpüree, Senf-Rahmsoße und Zitronen-Buttersoße" },
+          { "name": "Grill Prawn", "desc": "5 ausgewählte gegrillte King-Garnelen, serviert mit Zitronenbutter, Honig-Chili-Soße, gemischtem Salat und Kartoffelpüree" },
+          { "name": "Grill Snapper", "desc": "350 g ganzer gegrillter junger weißer Snapper, serviert mit Sambal Matah und gedämpftem Reis" },
+          { "name": "Salmon Steak", "desc": "200 g gebratenes Lachssteak, serviert mit gemischtem Gemüse, Kartoffelpüree, Honig-Chili- und Zitronen-Buttersoße" },
+          { "name": "Grill Mahi-Mahi Fillet", "desc": "200 g gegrillter Mahi-Mahi-Fisch, serviert mit gemischtem Salat, Zitronenbutter, Honig-Chili-Soße und Kartoffelpüree" },
+          { "name": "Seafood Basket (für zwei)", "desc": "Gegrillt: 1 Hummer, 5 King-Garnelen, 2 Mahi-Mahi-Steaks, 1 Tintenfisch, serviert mit gemischtem Salat, Pommes frites oder gedämpftem Reis und 3 Sorten Soße (Zitronenbutter, Sambal Matah, Honig-Chili). Inklusive 2 kleine Bintang-Biere." }
+        ]
+      },
+      {
+        "title": "Grill Corner: Fleisch (Rind & Lamm)",
+        "items": [
+          { "name": "Tenderloin Steak", "desc": "200 g gegrilltes Rinderfilet, serviert mit schwarzer Pfeffer- und Pilzsoße, gedünstetem Gemüse und Pommes frites" },
+          { "name": "Sirloin Steak", "desc": "200 g gegrilltes Rinder-Sirloin, serviert mit Pilzsoße, schwarzer Pfeffersoße, gedünstetem Gemüse und Pommes frites" },
+          { "name": "Rib Eye Steak", "desc": "200 g gegrilltes Rib-Eye vom Rind, serviert mit Pilzsoße, schwarzer Pfeffersoße, gedünstetem Gemüse und Pommes frites" },
+          { "name": "Grilled Beef Kebab", "desc": "Gegrillte Rindfleischwürfel mit roter Paprika, grüner Paprika und Zwiebel am Spieß, serviert mit Pilz-, schwarzer Pfeffersoße und Kartoffelecken" },
+          { "name": "Lamb Steak", "desc": "200 g gegrilltes Lamm, serviert mit Pilzsoße, schwarzer Pfeffersoße, gedünstetem Gemüse und Pommes frites" },
+          { "name": "Lamb Satay", "desc": "10 Stück Lammspieß, serviert mit gedämpftem Reis und Erdnusssoße" },
+          { "name": "Surf and Turf", "desc": "Gegrilltes 200 g Filetsteak mit Garnelen belegt, serviert mit Mini-Mesclun, Kartoffelecken, Pilzsoße und BBQ-Soße" }
+        ]
+      },
+      {
+        "title": "Grill Corner: Fleisch (Schwein)",
+        "items": [
+          { "name": "Pork Knuckle (für zwei)", "desc": "1,1 kg frittierte Schweinshaxe, serviert mit Kartoffelpüree, gedünstetem Gemüse, Bohnensoße und Bratensoße" },
+          { "name": "Grill Pork Chop", "desc": "350 g gegrilltes Schweinekotelett, serviert mit BBQ-Soße, schwarzer Pfeffersoße, gedünstetem Gemüse und Pommes frites" },
+          { "name": "Grill Pork Steak", "desc": "200 g gegrilltes Schweinesteak, serviert mit BBQ-Soße, schwarzer Pfeffersoße, gedünstetem Gemüse und Pommes frites" },
+          { "name": "Pork Satay", "desc": "10 Stück gegrillter Schweinespieß mit gedämpftem Reis und Erdnusssoße" },
+          { "name": "Grill Pork Belly Satay", "desc": "4 Stück gegrillter Schweinebauchspieß, serviert mit gedämpftem Reis und scharf-süßer Chilisoße" },
+          { "name": "Crispy Pork Belly", "desc": "Serviert mit süßer Chili-Sojasoße, schwarzer Bohnensoße und gedämpftem Reis" },
+          { "name": "Mixed Grill (für zwei)", "desc": "Gegrillt: 1 Schweinekotelett, 1/2 Portion Rippchen, 1 Sirloin-Steak, 2 Lamm-Medaillons, 2 Hähnchenwürste und 2 Schweineschinken, serviert mit Pilzsoße, schwarzer Pfeffersoße, BBQ-Soße, gemischtem Salat und Kartoffelecken" }
+        ]
+      },
+      {
+        "title": "Burger & Sandwich",
+        "items": [
+          { "name": "Black Devil", "desc": "100 g Texas-Rindfleisch-Patty, Speck, hausgemachte Chilisoße, Ei, Cheddar-Käse, Salat, Tomate, serviert mit Pommes frites" },
+          { "name": "White Angel", "desc": "100 g importiertes Wagyu-Patty, Speck, Ei, Cheddar-Käse, Salat, Tomate, Bobs Burgersoße, serviert mit Pommes frites" },
+          { "name": "Chicken Sandwich", "desc": "Toast, Hähnchen, Käse, Tomate, Salat, serviert mit Pommes frites" },
+          { "name": "Chicken Ciabatta", "desc": "Ciabatta-Brot, Hähnchen, Käse, Tomate, Salat, serviert mit Pommes frites" },
+          { "name": "Club Sandwich", "desc": "Toast, Tomate, Speck, Ei, Käse, Salat, serviert mit Pommes frites" },
+          { "name": "Smoked Salmon Sandwich", "desc": "Toast, Räucherlachs, Salat, Tomate und Käse, serviert mit Pommes frites" }
+        ]
+      },
+      {
+        "title": "Pizza & Pasta",
+        "items": [
+          { "name": "Margarita Pizza", "desc": "Tomato Concasse und Mozzarella-Käse" },
+          { "name": "Pizza Sambal Matah", "desc": "Tomato Concasse, gezupftes Hähnchen und Mozzarella-Käse" },
+          { "name": "Pizza Ayam Betutu", "desc": "Tomato Concasse, gezupftes Hähnchen, Betutu-Gewürz und Mozzarella-Käse" },
+          { "name": "Hawaiian Pizza", "desc": "Tomato Concasse, gewürfeltes Hähnchen, gewürfelte Ananas und Mozzarella-Käse" },
+          { "name": "Meat Lover Pizza", "desc": "Tomato Concasse, Rinder-Chorizo, Schinken, Salami und Mozzarella-Käse" },
+          { "name": "BBQ Chicken Pizza", "desc": "Tomato Concasse, BBQ-Hähnchen, gemischte Paprika, Zwiebel und Mozzarella-Käse" },
+          { "name": "Spaghetti Marinara", "desc": "Meeresfrüchte-Mix, Tomato Concasse, Basilikum, Parmesan-Käse" },
+          { "name": "Spaghetti Bolognaise", "desc": "Rinderhack, Tomato Concasse, Basilikum, Parmesan-Käse" },
+          { "name": "Spaghetti Carbonara", "desc": "Speck, Sahne, Petersilie, Parmesan-Käse" },
+          { "name": "Fettuccine Alfredo", "desc": "Spaghetti mit Pilzen, Schinken, Rahmsoße und Parmesan-Käse" },
+          { "name": "Spaghetti Napolitana", "desc": "Spaghetti mit Tomatensoße und Parmesan-Käse" },
+          { "name": "Spaghetti Aglio Olio", "desc": "Sautierte Spaghetti mit Olivenöl, geschnittenem Knoblauch, scharfem Chili, Parmesan-Käse" },
+          { "name": "Spaghetti Aglio Olio with Grilled Prawn", "desc": "Sautierte Spaghetti mit Olivenöl, geschnittenem Knoblauch, scharfem Chili, 3 gegrillten Garnelen und Parmesan-Käse" }
+        ]
+      },
+      {
+        "title": "Bob's Junior",
+        "note": "Kindermenü",
+        "items": [
+          { "name": "Fish & Chips", "desc": "Serviert mit Remoulade & Thousand-Island-Soße" },
+          { "name": "Calamari Ring", "desc": "Serviert mit Remoulade & Thousand-Island-Soße" },
+          { "name": "Spaghetti Napolitana", "desc": "Spaghetti mit Tomatensoße und Parmesan-Käse" },
+          { "name": "Spaghetti Aglio Olio", "desc": "Sautierte Spaghetti mit Olivenöl und gehacktem Knoblauch" },
+          { "name": "Mac & Cheese", "desc": "Makkaroni-Käse-Mix in Rahmsoße, mit geriebenem Parmesan-Käse und Schinkenstreifen überbacken" },
+          { "name": "Chicken Nugget", "desc": "3 Stück Chicken Nuggets und Pommes frites" },
+          { "name": "Nasi Goreng Sausage", "desc": "Gebratener Reis serviert mit gegrillter Wurst und Garnelencracker" },
+          { "name": "Mini Burger", "desc": "Weißes Brötchen, Rindfleisch-Patty, Ei, Käse, Salat, serviert mit Pommes frites" }
+        ]
+      },
+      {
+        "title": "Dessert",
+        "items": [
+          { "name": "Banana Split", "desc": "3 Kugeln Eis und geschnittene Banane" },
+          { "name": "Apple Pie", "desc": "Apfelkuchen nach australischer Art, serviert mit Vanilleeis" },
+          { "name": "Tiramisu" },
+          { "name": "Chocolate Cake", "desc": "Serviert mit Schokoladensoße" },
+          { "name": "Ice Cream Selection", "desc": "3 Kugeln Eis, Vanille, Erdbeere oder Schokolade" },
+          { "name": "Slice Tropical Fresh Fruit", "desc": "Geschnittene Wassermelone, Papaya und Ananas" },
+          { "name": "Chocolate Brownies", "desc": "Serviert mit 1 Kugel Vanilleeis" }
+        ]
+      }
+    ]
+  },
+  "beverage": {
+    "heroTitle": "Getränkekarte",
+    "priceNote": "Preise in ‚000‘ IDR angegeben, zzgl. 11 % gesetzlicher Steuer.",
+    "viewFoodCta": "SPEISEKARTE ANSEHEN",
+    "sections": [
+      {
+        "title": "Classic Cocktail",
+        "note": "Premium Spirituose 135K / Lokale Spirituose 100K",
+        "items": [
+          { "name": "Margarita", "desc": "Tequila, Orangenlikör, frische Limette" },
+          { "name": "Mojito's", "desc": "Rum, frische Limette, Minzzweig" },
+          { "name": "Daiquiry's", "desc": "Rum, Orangenlikör, frische Limette" },
+          { "name": "Espresso Martini", "desc": "Wodka, Kaffeelikör, Espresso" },
+          { "name": "Lychee Martini", "desc": "Wodka, Litschi-Likör, Litschi-Frucht" },
+          { "name": "Caipirinha & Caipiroska", "desc": "Rum/Wodka, frische Limette, Süßungsmittel" },
+          { "name": "Long Island Ice Tea", "desc": "Wodka, Rum, Gin, Tequila, Triple Sec, Limette, aufgefüllt mit Cola" },
+          { "name": "Pinacolada", "desc": "Heller Rum, Ananas, Kokosmilch, Kokoslikör" },
+          { "name": "Old Fashioned", "desc": "Bourbon-Whiskey, Zuckersirup, Angostura Bitter" },
+          { "name": "Negroni", "desc": "Gin, Campari, süßer Wermut" },
+          { "name": "Lemon Drop", "desc": "Wodka, Zitronensaft, Orangenlikör" },
+          { "name": "Dry or Sweet Martini", "desc": "Trockener Gin, trockener oder süßer Wermut" },
+          { "name": "Whiskey Sour", "desc": "Whiskey, Limettensaft, Zucker" },
+          { "name": "Japanese Slipper", "desc": "Wodka, Limettensaft, Triple Sec, Melonenlikör" },
+          { "name": "Pink/White/Blue Lady", "desc": "Gin, Orangenlikör, Limettensaft, Grenadine oder Blue Curaçao" },
+          { "name": "Tequila Sunrise", "desc": "Tequila, Orangensaft, Grenadine" },
+          { "name": "White or Black Russian", "desc": "Wodka, Kaffeelikör, Sahne" },
+          { "name": "Cosmopolitan", "desc": "Wodka, Triple Sec, Cranberrysaft, Limettensaft" },
+          { "name": "Long Beach", "desc": "Wodka, Orangensaft, Cranberrysaft" }
+        ]
+      },
+      {
+        "title": "Bob's Cocktails (Signature)",
+        "note": "120K",
+        "items": [
+          { "name": "Bob's Bitter Sweet", "desc": "Heller Rum, Campari, Ananassaft, Passionsfruchtsirup" },
+          { "name": "Bob's Negroni", "desc": "Campari, Kirschwasser, süßer Wermut" },
+          { "name": "Tropical Gin", "desc": "Gin, Erdbeere, Limette, Minzblatt, Zucker, aufgefüllt mit Tonic Water" },
+          { "name": "Flower Bloom", "desc": "Gin, Limettensaft, Cananga-Sirup, Sodawasser" },
+          { "name": "Bloody Orange", "desc": "Wodka, Orangensaft, frische Erdbeere, Limettensaft, Zuckersirup" },
+          { "name": "Bob's Sangria", "desc": "Gewürzter Arak, Rot-/Weißwein, tropische Früchte" },
+          { "name": "Mango Basil Daiquiry", "desc": "Heller Rum, Mangosaft, Triple Sec, Basilikumblatt, Limettensaft" },
+          { "name": "Watermelon Mexico", "desc": "Tequila, Orangenlikör, Limettensaft, Wassermelone, Passionsfruchtsirup" },
+          { "name": "Bob Penicillin", "desc": "Whisky, frischer Zitronensaft, Zitronengras-Honig-Sirup" },
+          { "name": "Nusa Dua Colada", "desc": "Heller Rum, Ananaslikör, Ananassaft, Mangosaft, Kokoscreme, Blue Syrup" }
+        ]
+      },
+      {
+        "title": "Spirituosen im Shot",
+        "note": "45 ml",
+        "items": [
+          { "name": "Gin", "desc": "Bombay Sapphire" },
+          { "name": "Wodka", "desc": "Absolut" },
+          { "name": "Rum", "desc": "Bacardi, Captain Morgan" },
+          { "name": "Tequila", "desc": "Jose Cuervo" },
+          { "name": "Scotch Whiskey", "desc": "Red Label, Black Label" },
+          { "name": "American Whiskey", "desc": "Jack Daniel, Jim Beam" },
+          { "name": "Irish Whiskey", "desc": "John Jameson" }
+        ]
+      },
+      {
+        "title": "Bob's Refreshing",
+        "items": [
+          { "name": "Shirley Temple", "desc": "Kirschwasser, Grenadine, Limettensaft, aufgefüllt mit Sprite" },
+          { "name": "Hera's Crown", "desc": "Orangensaft, Grenadine, Zitronensaft, aufgefüllt mit Sprite" },
+          { "name": "Mint Sensation", "desc": "Litschi, Ananas, Minzblatt" },
+          { "name": "Mango Frappe", "desc": "Mango-Püree/-Saft, Orangensaft, Limettensaft, Tonic Water" },
+          { "name": "Berry Sunshine", "desc": "Erdbeere, Ananassaft, Orangensaft, Zuckersirup" },
+          { "name": "Lychee Basilia", "desc": "Litschi-Frucht, Basilikumblatt, Sweet Sour, Sprite" },
+          { "name": "Tiki Berry", "desc": "Frische Erdbeere, Ananassaft, Passionsfruchtsirup, Kokoscreme und Zitronensaft" },
+          { "name": "Lemon Lime Bitter", "desc": "Limettensaft, Zitronensaft, Zuckersirup, Angostura Bitter, Sodawasser" },
+          { "name": "Lemon Up (Pink/Blue/Natural)", "desc": "Frischer Zitronensaft, Limonade, Zuckersirup, Grenadine/Blue Syrup" },
+          { "name": "Queenchers (Strawberry/Mango)", "desc": "Zitronensaft, Mango-/Erdbeer-Püree, Limonade, Zuckersirup" }
+        ]
+      },
+      {
+        "title": "Bier",
+        "items": [
+          { "name": "Bintang", "desc": "Groß / Klein" },
+          { "name": "Bintang Radler" },
+          { "name": "Crystal Bintang" },
+          { "name": "Heineken", "desc": "Groß / Klein" },
+          { "name": "Balihai", "desc": "Groß / Klein" },
+          { "name": "Singaraja" },
+          { "name": "Prost Pilsner / Lager" },
+          { "name": "Albens Apple Cider" },
+          { "name": "Tower Bintang" },
+          { "name": "Tower Balihai" },
+          { "name": "Tower Heineken" }
+        ]
+      },
+      {
+        "title": "Softdrinks & Wasser",
+        "items": [
+          { "name": "Cola" },
+          { "name": "Cola Zero" },
+          { "name": "Sprite" },
+          { "name": "Fanta" },
+          { "name": "Tonic Water" },
+          { "name": "Sodawasser" },
+          { "name": "Ginger Ale" },
+          { "name": "Stilles Wasser" },
+          { "name": "Sprudelwasser" }
+        ]
+      },
+      {
+        "title": "Milchshake & Smoothies",
+        "items": [
+          { "name": "Vanille" },
+          { "name": "Schokolade" },
+          { "name": "Banane" },
+          { "name": "Mango" },
+          { "name": "Erdbeere" }
+        ]
+      },
+      {
+        "title": "Kaffee & Tee",
+        "items": [
+          { "name": "Balinesischer Kaffee" },
+          { "name": "Normaler Tee" },
+          { "name": "Litschi-Tee" },
+          { "name": "Passionsfrucht-Tee" },
+          { "name": "Zitronengras-Tee" },
+          { "name": "Minz-Ingwer-Tee" }
+        ]
+      },
+      {
+        "title": "Säfte",
+        "items": [
+          { "name": "Wassermelone" },
+          { "name": "Ananas" },
+          { "name": "Mango" },
+          { "name": "Orange" },
+          { "name": "Mix-Saft" },
+          { "name": "Papaya" },
+          { "name": "Zitrone" },
+          { "name": "Banane" },
+          { "name": "Limette" },
+          { "name": "Frische Kokosnuss" }
+        ]
+      },
+      {
+        "title": "Weißwein",
+        "note": "Im Glas (85K)",
+        "items": [
+          { "name": "Two Island Sauvignon Blanc" },
+          { "name": "Two Island Pinot Grigio" },
+          { "name": "Two Island Chardonnay" },
+          { "name": "Two Island Riesling" }
+        ]
+      },
+      {
+        "title": "Rotwein",
+        "note": "Im Glas (85K)",
+        "items": [
+          { "name": "Two Island Cabernet Merlot" },
+          { "name": "Two Island Shiraz" },
+          { "name": "Two Island Pinot Noir" }
+        ]
+      },
+      {
+        "title": "Rosé-Wein",
+        "note": "Im Glas (85K)",
+        "items": [
+          { "name": "Two Island Rose" }
+        ]
+      }
+    ]
+  }
+}

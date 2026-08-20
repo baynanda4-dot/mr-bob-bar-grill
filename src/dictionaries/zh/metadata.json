@@ -1,0 +1,43 @@
+{
+  "home": {
+    "title": "Mr Bob Bar and Grill | 丹戎伯诺阿努沙杜瓦第一餐厅",
+    "description": "Mr Bob Bar and Grill,猫途鹰(Tripadvisor)评选努沙杜瓦丹戎伯诺阿地区排名第一的餐厅。手切牛排、猪肋排和战斧牛排,精选葡萄酒单,每周一、三、六在巴厘岛努沙杜瓦为您呈现现场音乐。"
+  },
+  "reservation": {
+    "title": "预订餐桌 | Mr Bob Bar and Grill",
+    "description": "在 Mr Bob Bar and Grill 预订餐桌:手切牛排、猪肋排、战斧牛排,每周一、三、六还有现场音乐。"
+  },
+  "about": {
+    "title": "关于我们",
+    "description": "Mr Bob Bar and Grill 的故事,一家以手切牛排、猪肋排、战斧牛排和现场音乐为核心的西式牛排馆与酒吧。"
+  },
+  "contact": {
+    "title": "联系我们",
+    "description": "如需预订、咨询或路线指引,欢迎联系 Mr Bob Bar and Grill。"
+  },
+  "contactThankYou": {
+    "title": "已收到您的留言"
+  },
+  "groupReservation": {
+    "title": "团体预订",
+    "description": "想与更大的团体一起在 Mr Bob Bar and Grill 用餐吗?提交您的团体预订申请,我们的团队将为您确认可预订情况及套餐选项。"
+  },
+  "groupReservationThankYou": {
+    "title": "已收到您的申请"
+  },
+  "menuFood": {
+    "title": "美食菜单",
+    "description": "Mr Bob Bar and Grill 美食菜单:开胃菜、汤品、招牌 BBQ 肋排与战斧牛排、印尼风味菜肴、烤禽类、海鲜、牛肉、羊肉与猪肉、汉堡、披萨、意面、儿童餐及甜点。"
+  },
+  "menuBeverage": {
+    "title": "饮品单",
+    "description": "Mr Bob Bar and Grill 饮品单:经典与招牌鸡尾酒、单杯烈酒、无酒精鸡尾酒、啤酒、软饮、咖啡与茶、果汁,以及本地精选House Wine酒单。"
+  },
+  "reservationThankYou": {
+    "title": "预订已确认"
+  },
+  "share": {
+    "title": "分享 Mr Bob Bar and Grill",
+    "description": "与亲朋好友分享您在 Mr Bob Bar and Grill 的用餐体验。"
+  }
+}

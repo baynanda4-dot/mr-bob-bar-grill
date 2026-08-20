@@ -1,0 +1,47 @@
+{
+  "reservation": {
+    "eyebrow": "Reservasi Dikonfirmasi",
+    "headline": "Meja Anda Sudah Dikonfirmasi",
+    "intro": "Terima kasih telah melakukan reservasi meja di <strong>{locationName}</strong>. Reservasi Anda telah dikonfirmasi, dan kami menantikan kedatangan Anda.",
+    "closing": "Jika rencana Anda berubah atau Anda memiliki permintaan khusus, silakan hubungi kami melalui {whatsappLink}. Kotak masuk email ini tidak dipantau, sehingga membalas email ini tidak akan sampai kepada kami, namun kami dengan senang hati membantu Anda melalui WhatsApp.",
+    "noShowNote": "Harap diperhatikan: meja Anda akan ditahan selama 30 menit setelah waktu reservasi. Jika Anda belum tiba pada saat itu, pemesanan dapat dilepas dan dianggap batal.",
+    "pickupNote": "Layanan antar-jemput gratis untuk tamu yang menginap di sekitar area Nusa Dua tersedia (minimum 2 dewasa per permintaan), tergantung ketersediaan."
+  },
+  "groupReservation": {
+    "eyebrow": "Permintaan Diterima",
+    "headline": "Permintaan Reservasi Grup Anda Telah Diterima",
+    "intro": "Terima kasih atas permintaan reservasi grup Anda. Kami telah menerima detail Anda, dan tim kami akan segera menghubungi Anda kembali untuk mengonfirmasi ketersediaan.",
+    "closing": "Kami menantikan kesempatan untuk menyambut Anda, dan akan menindaklanjuti segera untuk mengonfirmasi setiap detail."
+  },
+  "contact": {
+    "eyebrow": "Pesan Diterima",
+    "headline": "Terima Kasih Telah Menghubungi Kami",
+    "intro": "Terima kasih telah menghubungi <strong>{locationName}</strong>. Pesan Anda telah kami terima dengan baik, dan salah satu anggota tim kami akan merespons Anda secara langsung sesegera mungkin.",
+    "closing": "Kami sangat menghargai ketertarikan Anda pada Mr Bob Bar and Grill, dan menantikan kesempatan untuk menyambut Anda segera."
+  },
+  "common": {
+    "dearGuest": "Yth. {guestName},",
+    "dateLabel": "Tanggal",
+    "timeLabel": "Waktu",
+    "adultsLabel": "Jumlah Dewasa",
+    "childrenLabel": "Jumlah Anak",
+    "hotelNameLabel": "Nama Hotel",
+    "roomNumberLabel": "Nomor Kamar",
+    "planningVisit": "Saat Anda Merencanakan Kunjungan",
+    "yourNote": "Catatan Anda untuk kami:",
+    "signOff": "Salam hangat,",
+    "teamName": "Tim Mr Bob Bar and Grill",
+    "visitUs": "Kunjungi Kami",
+    "whatsapp": "WhatsApp",
+    "automatedNotice": "Ini adalah pemberitahuan otomatis. Untuk pertanyaan mendesak, silakan hubungi kami langsung.",
+    "subjectReservationConfirmed": "Reservasi Anda Telah Dikonfirmasi ({locationName})",
+    "subjectBookingReceived": "Kami Telah Menerima Pemesanan Anda ({locationName})",
+    "subjectMessageReceived": "Kami Telah Menerima Pesan Anda ({locationName})",
+    "suggestedLinks": {
+      "viewFoodMenu": "Lihat Menu Makanan",
+      "viewBeverageMenu": "Lihat Menu Minuman",
+      "contactUs": "Hubungi Kami",
+      "reserveTable": "Reservasi Meja"
+    }
+  }
+}

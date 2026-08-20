@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Link from "next/link";
+import LocalizedLink from "@/components/LocalizedLink";
 import Reveal from "@/components/motion/Reveal";
 
-export default function Welcome() {
+export default function Welcome({ dict }) {
   return (
     <section
       id="welcome"
@@ -21,37 +21,30 @@ export default function Welcome() {
       </Reveal>
 
       <Reveal x={36} y={12} delay={120} className="w-full md:w-3/5">
-        <p className="mb-3 text-xs uppercase tracking-[0.35em] text-mrbob-yellow">Our Story</p>
+        <p className="mb-3 text-xs uppercase tracking-[0.35em] text-mrbob-yellow">{dict.eyebrow}</p>
         <h2 className="mb-6 text-3xl font-light tracking-normal md:text-4xl">
-          Welcome to <span className="text-mrbob-yellow">Mr Bob</span>
+          {dict.titleBefore} <span className="text-mrbob-yellow">{dict.titleHighlight}</span>
         </h2>
 
-        <p className="mb-6 leading-relaxed text-white/70">
-          Mr Bob Bar and Grill is built around the fire: hand-cut steaks,
-          slow-cooked pork ribs, and show-stopping tomahawk chops, matched
-          with a wine list chosen to go the distance with every cut. Pull up
-          a seat at the bar or a table for the night in Tanjung Benoa, Nusa
-          Dua, and let the grill do the talking.
-        </p>
+        <p className="mb-6 leading-relaxed text-white/70">{dict.body}</p>
 
         <blockquote className="font-serif mb-8 border-l-4 border-mrbob-yellow pl-6 text-xl italic font-light text-white/80">
-          &ldquo;Real charcoal, real portions, real hospitality. That&apos;s
-          the whole menu, really.&rdquo;
+          &ldquo;{dict.quote}&rdquo;
         </blockquote>
 
         <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-          <Link
+          <LocalizedLink
             href="/reservation"
             className="btn-primary u-press px-6 py-3 text-sm tracking-widest"
           >
-            RESERVE TABLE
-          </Link>
-          <Link
+            {dict.reserveCta}
+          </LocalizedLink>
+          <LocalizedLink
             href="/group-reservation"
             className="btn-outline u-press px-6 py-3 text-sm tracking-widest"
           >
-            GROUP RESERVATION
-          </Link>
+            {dict.groupCta}
+          </LocalizedLink>
         </div>
       </Reveal>
     </section>

@@ -1,31 +1,32 @@
 import Image from "next/image";
-import Link from "next/link";
+import LocalizedLink from "./LocalizedLink";
+import LanguageSwitcher from "./LanguageSwitcher";
 import Reveal from "./motion/Reveal";
 import Stagger from "./motion/Stagger";
 import { LOCATIONS, OPENING_HOURS } from "@/lib/site";
 
-const columns = [
-  {
-    heading: "Explore",
-    links: [
-      { href: "/", label: "Home" },
-      { href: "/about", label: "About" },
-      { href: "/menu/food", label: "Food Menu" },
-      { href: "/menu/beverage", label: "Beverage Menu" },
-    ],
-  },
-  {
-    heading: "Visit",
-    links: [
-      { href: "/reservation", label: "Reserve a Table" },
-      { href: "/group-reservation", label: "Group Reservation" },
-      { href: "/contact", label: "Contact" },
-    ],
-  },
-];
-
-export default function Footer() {
+export default function Footer({ dict }) {
   const location = LOCATIONS[0];
+
+  const columns = [
+    {
+      heading: dict.footer.exploreHeading,
+      links: [
+        { href: "/", label: dict.footer.home },
+        { href: "/about", label: dict.footer.about },
+        { href: "/menu/food", label: dict.footer.foodMenu },
+        { href: "/menu/beverage", label: dict.footer.beverageMenu },
+      ],
+    },
+    {
+      heading: dict.footer.visitHeading,
+      links: [
+        { href: "/reservation", label: dict.footer.reserveTable },
+        { href: "/group-reservation", label: dict.footer.groupReservation },
+        { href: "/contact", label: dict.footer.contact },
+      ],
+    },
+  ];
 
   return (
     <footer className="bg-mrbob-black px-6 py-16 text-white">
@@ -42,16 +43,14 @@ export default function Footer() {
             className="mb-4 h-20 w-auto"
           />
           <p className="mb-6 text-sm leading-relaxed text-gray-400">
-            Hand-cut steaks, pork ribs, and tomahawk chops, paired with a
-            curated wine list and live music every Monday, Wednesday, and
-            Saturday.
+            {dict.footer.tagline}
           </p>
-          <Link
+          <LocalizedLink
             href="/contact"
             className="btn-outline u-press inline-flex px-6 py-2.5 text-sm tracking-widest"
           >
-            CONTACT US
-          </Link>
+            {dict.footer.contactUs}
+          </LocalizedLink>
         </div>
 
         {columns.map((column) => (
@@ -60,12 +59,12 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-gray-400">
               {column.links.map((link) => (
                 <li key={link.href}>
-                  <Link
+                  <LocalizedLink
                     href={link.href}
                     className="u-link transition-colors duration-500 ease-expo hover:text-mrbob-yellow"
                   >
                     {link.label}
-                  </Link>
+                  </LocalizedLink>
                 </li>
               ))}
             </ul>
@@ -77,10 +76,11 @@ export default function Footer() {
         delay={200}
         className="mx-auto mt-10 flex max-w-5xl flex-col gap-3 border-t border-white/15 pt-6 text-sm text-gray-400 sm:flex-row sm:items-center sm:justify-between"
       >
-        <p>&copy; 2026 {location.name}. All rights reserved.</p>
+        <p>&copy; 2026 {location.name}. {dict.footer.rightsReserved}</p>
         <p>
-          {OPENING_HOURS.dayOfWeek[0]} &ndash; {OPENING_HOURS.dayOfWeek[6]}: {OPENING_HOURS.opens} &ndash; {OPENING_HOURS.closes}
+          {dict.hoursRange}: {OPENING_HOURS.opens} &ndash; {OPENING_HOURS.closes}
         </p>
+        <LanguageSwitcher />
       </Reveal>
     </footer>
   );

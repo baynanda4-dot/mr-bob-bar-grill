@@ -9,6 +9,3 @@ export function isValidPhoneDigits(value) {
   const trimmed = String(value).trim();
   return /^[0-9]+$/.test(trimmed) && trimmed.length >= MIN_PHONE_DIGITS;
 }
-
-export const EMAIL_ERROR = "Please enter a valid email address.";
-export const PHONE_ERROR = `Please enter a valid WhatsApp number (numbers only, at least ${MIN_PHONE_DIGITS} digits).`;

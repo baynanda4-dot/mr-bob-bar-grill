@@ -1,0 +1,11 @@
+[
+  { "q": "Do I need to make a reservation?", "a": "Reservations are recommended, especially on live music nights (Monday, Wednesday, and Saturday)." },
+  { "q": "Is there a dress code?", "a": "Smart casual is welcome. We don't require formal wear, but we ask guests to skip beachwear and swimwear indoors." },
+  { "q": "Do you serve halal food?", "a": "Please contact us directly to confirm current halal-friendly options on the menu." },
+  { "q": "Do you have a children's menu?", "a": "Yes. We offer child-friendly menu options." },
+  { "q": "Do you accept credit cards?", "a": "Yes. We accept major credit and debit cards, as well as cash payments." },
+  { "q": "Is parking available?", "a": "Yes. On-site parking is available for guests." },
+  { "q": "What time does the live music start?", "a": "Live music runs every Monday, Wednesday, and Saturday from 7:00 PM." },
+  { "q": "Can you accommodate large groups?", "a": "Certainly. Please reach out through our Group Reservation page or contact us directly so we can arrange the best setup for your party." },
+  { "q": "Is the restaurant wheelchair accessible?", "a": "Yes. Mr Bob Bar and Grill welcomes all guests and offers wheelchair-accessible access." }
+]

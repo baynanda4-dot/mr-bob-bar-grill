@@ -1,0 +1,43 @@
+{
+  "home": {
+    "title": "Mr Bob Bar and Grill | Restoran #1 di Tanjung Benoa, Nusa Dua",
+    "description": "Mr Bob Bar and Grill, restoran dengan rating #1 di Tanjung Benoa, Nusa Dua menurut Tripadvisor. Steak potongan tangan, iga babi, dan tomahawk chop, daftar wine pilihan, dan live music setiap Senin, Rabu, dan Sabtu di Nusa Dua, Bali."
+  },
+  "reservation": {
+    "title": "Reservasi Meja | Mr Bob Bar and Grill",
+    "description": "Reservasi meja di Mr Bob Bar and Grill: steak potongan tangan, iga babi, tomahawk chop, dan live music setiap Senin, Rabu, dan Sabtu."
+  },
+  "about": {
+    "title": "Tentang Kami",
+    "description": "Kisah di balik Mr Bob Bar and Grill, steakhouse dan wine bar bergaya Barat yang dibangun di sekitar steak potongan tangan, iga babi, tomahawk chop, dan live music."
+  },
+  "contact": {
+    "title": "Kontak",
+    "description": "Hubungi Mr Bob Bar and Grill untuk reservasi, pertanyaan, dan petunjuk arah."
+  },
+  "contactThankYou": {
+    "title": "Pesan Diterima"
+  },
+  "groupReservation": {
+    "title": "Reservasi Grup",
+    "description": "Makan bersama grup besar di Mr Bob Bar and Grill? Ajukan reservasi grup Anda dan tim kami akan mengonfirmasi ketersediaan serta pilihan paket."
+  },
+  "groupReservationThankYou": {
+    "title": "Permintaan Diterima"
+  },
+  "menuFood": {
+    "title": "Menu Makanan",
+    "description": "Menu makanan Mr Bob Bar and Grill: appetizer, sup, BBQ ribs dan beef tomahawk andalan kami, hidangan favorit Indonesia, unggas panggang, seafood, sapi, domba dan babi, burger, pizza, pasta, menu anak, dan dessert."
+  },
+  "menuBeverage": {
+    "title": "Menu Minuman",
+    "description": "Menu minuman Mr Bob Bar and Grill: koktail klasik dan andalan, spirits per shot, mocktail, bir, minuman ringan, kopi & teh, jus, dan daftar house wine lokal kami."
+  },
+  "reservationThankYou": {
+    "title": "Reservasi Dikonfirmasi"
+  },
+  "share": {
+    "title": "Bagikan Mr Bob Bar and Grill",
+    "description": "Bagikan pengalaman Anda di Mr Bob Bar and Grill dengan teman dan keluarga."
+  }
+}

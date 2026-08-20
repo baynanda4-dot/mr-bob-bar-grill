@@ -1,7 +1,9 @@
 import { NextResponse, after } from "next/server";
 import { Resend } from "resend";
 import { LOCATIONS, SITE_URL } from "@/lib/site";
-import { THANK_YOU_LINKS } from "@/lib/thankYouLinks";
+import { getThankYouLinks } from "@/lib/thankYouLinks";
+import { getDictionary } from "@/lib/i18n/getDictionary";
+import { LOCALES, DEFAULT_LOCALE } from "@/lib/i18n/config";
 
 // Lazy-instantiated (not at module scope) — the Resend constructor throws
 // synchronously on a missing/empty key, which would otherwise crash Next's
@@ -15,6 +17,28 @@ function getResendClient() {
 
 // Single location — every form type notifies the same inbox.
 const NOTIFICATION_EMAIL = process.env.EMAIL_MRBOB;
+
+// Every form sends `fields.locale` (the visitor's URL locale, read via
+// useParams() in each form component — see ReservationForm.js etc.). It
+// flows into `submitToGoogleSheets` automatically since that call spreads
+// `...fields` into its payload, so staff can see which language a guest
+// booked in. The guest confirmation email (sendGuestConfirmationEmail
+// below) reads dictionaries/*/email.json for this same locale, defaulting
+// to English for a missing/invalid value since this is a public,
+// unauthenticated endpoint. The staff notification email (buildEmailHtml)
+// stays English-only on purpose — it's an internal tool, not guest-facing.
+function resolveLocale(value) {
+  return LOCALES.includes(value) ? value : DEFAULT_LOCALE;
+}
+
+// Maps a form's `formType` (hyphenated, matches THANK_YOU_LINKS/Sheets
+// column naming) to its key in dictionaries/*/email.json (camelCase, a
+// valid JS identifier).
+const EMAIL_DICT_KEYS = {
+  reservation: "reservation",
+  "group-reservation": "groupReservation",
+  contact: "contact",
+};
 
 const FORM_LABELS = {
   reservation: "Table Reservation",
@@ -34,35 +58,6 @@ const TABLE_RESERVATION_TYPES = new Set(["reservation"]);
 // Only the main table reservation offers the Nusa Dua pickup checkbox —
 // group bookings/contact enquiries don't.
 const PICKUP_ELIGIBLE_TYPES = new Set(["reservation"]);
-
-const BOOKING_COPY = {
-  reservation: {
-    eyebrow: "Reservation Confirmed",
-    headline: "Your Table Is Confirmed",
-    intro: (locationName) =>
-      `Thank you for reserving a table with <strong>${escapeHtml(locationName)}</strong>. Your reservation is confirmed, and we&rsquo;re looking forward to welcoming you.`,
-    closing: (whatsappLink) =>
-      `If your plans change or you have any special requests, please reach out to us on ${whatsappLink}. This inbox is unattended, so replying here won&rsquo;t reach us, but we&rsquo;re happy to help there.`,
-  },
-  "group-reservation": {
-    eyebrow: "Request Received",
-    headline: "Your Group Reservation Request Has Been Received",
-    intro: () =>
-      `Thank you for your group reservation request. We&rsquo;ve received your details, and our team will get back to you shortly to confirm availability.`,
-  },
-};
-
-// Table reservations only — a group booking isn't "released" the same way
-// a table is, so this doesn't apply there.
-const NO_SHOW_NOTE =
-  "Please note: your table will be held for 30 minutes past the reservation time. If you haven't arrived by then, the booking may be released and treated as cancelled.";
-
-// Complimentary pickup for guests staying around the Nusa Dua area —
-// shown on every pickup-eligible confirmation regardless of whether it was
-// requested, so staff/guests never have to wonder if "no note" means "no
-// pickup" or "the note didn't render".
-const PICKUP_NOTE =
-  "Complimentary pickup service for guests staying around the Nusa Dua area is available (minimum 2 adults per request), subject to availability.";
 
 // Single source of truth for "this booking needs pickup" — computed once
 // from the raw fields and reused everywhere (table row filtering, the
@@ -131,12 +126,20 @@ function buildEmailHtml(formType, fields) {
   `;
 }
 
+// Fills `{token}` placeholders in an email.json template string — used for
+// the handful of strings that need a runtime value spliced in (locationName,
+// guestName, a pre-built WhatsApp <a> tag). Callers escape any user-facing
+// HTML-unsafe value (guestName, locationName) before passing it in here.
+function interpolate(template, vars) {
+  return template.replace(/\{(\w+)\}/g, (match, key) => (key in vars ? vars[key] : match));
+}
+
 // Small "what to do next" block appended to the guest confirmation email —
 // the email counterpart of the thank-you page's "You May Also Like" links
-// (both read from the same THANK_YOU_LINKS, so the two surfaces never
-// disagree on what's suggested for a given formType).
-function buildSuggestedLinksHtml(formType) {
-  const links = THANK_YOU_LINKS[formType];
+// (both read from getThankYouLinks, so the two surfaces never disagree on
+// what's suggested for a given formType, and both localize the same way).
+function buildSuggestedLinksHtml(formType, emailDict) {
+  const links = getThankYouLinks(emailDict.common.suggestedLinks)[formType];
   if (!links || !links.length) return "";
 
   const itemsHtml = links
@@ -150,7 +153,7 @@ function buildSuggestedLinksHtml(formType) {
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:28px 0 0;">
       <tr>
         <td>
-          <p style="margin:0 0 12px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#D4A017;">While You&rsquo;re Planning Your Visit</p>
+          <p style="margin:0 0 12px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#D4A017;">${escapeHtml(emailDict.common.planningVisit)}</p>
           ${itemsHtml}
         </td>
       </tr>
@@ -158,9 +161,13 @@ function buildSuggestedLinksHtml(formType) {
   `;
 }
 
-function buildGuestConfirmationHtml(formType, fields) {
+// `emailDict` is dictionaries/*/email.json for the guest's own locale (see
+// resolveLocale/sendGuestConfirmationEmail) — every guest-facing string in
+// this email comes from there, nothing is hardcoded English here anymore.
+function buildGuestConfirmationHtml(formType, fields, emailDict) {
   const location = LOCATIONS[0];
   const locationName = location.name;
+  const common = emailDict.common;
   const guestName =
     [fields.title, fields.firstName, fields.lastName].filter(Boolean).join(" ") || "Guest";
   const isReservation = RESERVATION_FORM_TYPES.has(formType);
@@ -169,12 +176,12 @@ function buildGuestConfirmationHtml(formType, fields) {
 
   const summaryRows = isReservation
     ? [
-        ["Date", fields.date],
-        ["Time", fields.time],
-        ["Number of Adults", fields.adults || fields.guests],
-        ["Number of Children", fields.children],
-        ["Hotel Name", fields.hotelName],
-        ["Room Number", fields.roomNumber],
+        [common.dateLabel, fields.date],
+        [common.timeLabel, fields.time],
+        [common.adultsLabel, fields.adults || fields.guests],
+        [common.childrenLabel, fields.children],
+        [common.hotelNameLabel, fields.hotelName],
+        [common.roomNumberLabel, fields.roomNumber],
       ].filter(([, value]) => value)
     : [];
 
@@ -194,26 +201,20 @@ function buildGuestConfirmationHtml(formType, fields) {
     `
     : "";
 
-  const booking = BOOKING_COPY[formType];
-  const eyebrow = isReservation ? booking.eyebrow : "Message Received";
-  const headline = isReservation ? booking.headline : "Thank You for Writing to Us";
+  const booking = emailDict[EMAIL_DICT_KEYS[formType]];
+  const eyebrow = booking.eyebrow;
+  const headline = booking.headline;
+  const intro = interpolate(booking.intro, { locationName: escapeHtml(locationName) });
 
-  const intro = isReservation
-    ? booking.intro(locationName)
-    : `Thank you for writing to <strong>${escapeHtml(locationName)}</strong>. Your message has reached us safely, and a member of our team will respond to you personally very soon.`;
+  const whatsappLink = `<a href="${whatsappHref}" style="color:#D4A017;text-decoration:none;">${escapeHtml(common.whatsapp)}</a>`;
+  const closing = interpolate(booking.closing, { whatsappLink });
 
-  const whatsappLink = `<a href="${whatsappHref}" style="color:#D4A017;text-decoration:none;">WhatsApp</a>`;
-  const closing = isReservation
-    ? (typeof booking.closing === "function" ? booking.closing(whatsappLink) : booking.closing) ||
-      "We&rsquo;re looking forward to the opportunity to welcome you, and will follow up shortly to confirm every detail."
-    : "We are grateful for your interest in Mr Bob Bar and Grill, and look forward to the opportunity of welcoming you soon.";
-
-  const suggestedLinksHtml = buildSuggestedLinksHtml(formType);
+  const suggestedLinksHtml = buildSuggestedLinksHtml(formType, emailDict);
 
   const notes = isReservation
     ? [
-        TABLE_RESERVATION_TYPES.has(formType) ? NO_SHOW_NOTE : null,
-        PICKUP_ELIGIBLE_TYPES.has(formType) ? PICKUP_NOTE : null,
+        TABLE_RESERVATION_TYPES.has(formType) ? emailDict.reservation.noShowNote : null,
+        PICKUP_ELIGIBLE_TYPES.has(formType) ? emailDict.reservation.pickupNote : null,
       ].filter(Boolean)
     : [];
   const notesHtml = notes.length
@@ -224,7 +225,7 @@ function buildGuestConfirmationHtml(formType, fields) {
             ${notes
               .map(
                 (n, i) =>
-                  `<p style="margin:${i === 0 ? "0" : "8px 0 0"};font-size:13px;line-height:1.6;color:#6b6355;">${n}</p>`
+                  `<p style="margin:${i === 0 ? "0" : "8px 0 0"};font-size:13px;line-height:1.6;color:#6b6355;">${escapeHtml(n)}</p>`
               )
               .join("")}
           </td>
@@ -234,11 +235,11 @@ function buildGuestConfirmationHtml(formType, fields) {
     : "";
 
   const contactHtml = `
-    <p style="margin:0 0 8px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#D4A017;">Visit Us</p>
+    <p style="margin:0 0 8px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#D4A017;">${escapeHtml(common.visitUs)}</p>
     <p style="margin:0;font-size:13px;line-height:1.7;color:#6b6355;">
       <strong style="color:#1a1a1a;">${escapeHtml(locationName)}</strong><br />
       ${escapeHtml(location.streetAddress)}, ${escapeHtml(location.addressLocality)}<br />
-      WhatsApp: <a href="${whatsappHref}" style="color:#D4A017;text-decoration:none;">${escapeHtml(location.telephone)}</a>
+      ${escapeHtml(common.whatsapp)}: <a href="${whatsappHref}" style="color:#D4A017;text-decoration:none;">${escapeHtml(location.telephone)}</a>
     </p>
   `;
 
@@ -250,13 +251,13 @@ function buildGuestConfirmationHtml(formType, fields) {
             <tr>
               <td style="padding:44px 40px 0;text-align:center;">
                 <img src="${logoUrl}" width="120" alt="Mr Bob Bar and Grill" style="display:block;margin:0 auto 24px;width:120px;max-width:120px;" />
-                <p style="margin:0 0 14px;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#D4A017;">${eyebrow}</p>
-                <h1 style="margin:0 0 28px;font-size:25px;font-weight:700;color:#0A0A0A;line-height:1.35;">${headline}</h1>
+                <p style="margin:0 0 14px;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#D4A017;">${escapeHtml(eyebrow)}</p>
+                <h1 style="margin:0 0 28px;font-size:25px;font-weight:700;color:#0A0A0A;line-height:1.35;">${escapeHtml(headline)}</h1>
               </td>
             </tr>
             <tr>
               <td style="padding:0 40px;">
-                <p style="margin:0 0 16px;font-size:15px;line-height:1.75;color:#1a1a1a;">Dear ${escapeHtml(guestName)},</p>
+                <p style="margin:0 0 16px;font-size:15px;line-height:1.75;color:#1a1a1a;">${interpolate(common.dearGuest, { guestName: escapeHtml(guestName) })}</p>
                 <p style="margin:0;font-size:15px;line-height:1.75;color:#1a1a1a;">${intro}</p>
 
                 ${summaryHtml}
@@ -267,20 +268,20 @@ function buildGuestConfirmationHtml(formType, fields) {
 
                 ${
                   fields.message
-                    ? `<p style="margin:24px 0 0;font-size:14px;line-height:1.75;color:#1a1a1a;"><em>Your note to us:</em> &ldquo;${escapeHtml(fields.message)}&rdquo;</p>`
+                    ? `<p style="margin:24px 0 0;font-size:14px;line-height:1.75;color:#1a1a1a;"><em>${escapeHtml(common.yourNote)}</em> &ldquo;${escapeHtml(fields.message)}&rdquo;</p>`
                     : ""
                 }
 
                 <p style="margin:24px 0 0;font-size:15px;line-height:1.75;color:#1a1a1a;">${closing}</p>
 
-                <p style="margin:32px 0 0;font-size:15px;line-height:1.75;color:#1a1a1a;">Warmly,<br /><strong>The Mr Bob Bar and Grill Team</strong></p>
+                <p style="margin:32px 0 0;font-size:15px;line-height:1.75;color:#1a1a1a;">${escapeHtml(common.signOff)}<br /><strong>${escapeHtml(common.teamName)}</strong></p>
               </td>
             </tr>
             <tr>
               <td style="padding:36px 40px 40px;">
                 <hr style="border:none;border-top:1px solid #e5decb;margin:0 0 24px;" />
                 ${contactHtml}
-                <p style="margin:24px 0 0;font-size:11px;color:#a39c8c;">This is an automated notice. For urgent enquiries, please contact us directly.</p>
+                <p style="margin:24px 0 0;font-size:11px;color:#a39c8c;">${escapeHtml(common.automatedNotice)}</p>
               </td>
             </tr>
           </table>
@@ -341,22 +342,29 @@ async function sendNotificationEmail({ formType, fields }) {
 // Confirmation email to the guest themselves — kept fully independent from
 // the restaurant notification above (Promise.allSettled in POST) so a
 // failure here never blocks the restaurant from getting the booking.
+// Renders in the guest's own locale (fields.locale, defaulting to English —
+// see resolveLocale).
 async function sendGuestConfirmationEmail({ formType, fields }) {
   if (!fields.email) throw new Error("No guest email address provided.");
 
+  const locale = resolveLocale(fields.locale);
+  const emailDict = await getDictionary(locale, "email");
   const locationName = LOCATIONS[0].name;
   const isReservation = RESERVATION_FORM_TYPES.has(formType);
-  const subject = TABLE_RESERVATION_TYPES.has(formType)
-    ? `Your Reservation Is Confirmed (${locationName})`
-    : isReservation
-      ? `We've Received Your Booking (${locationName})`
-      : `We've Received Your Message (${locationName})`;
+  const subject = interpolate(
+    TABLE_RESERVATION_TYPES.has(formType)
+      ? emailDict.common.subjectReservationConfirmed
+      : isReservation
+        ? emailDict.common.subjectBookingReceived
+        : emailDict.common.subjectMessageReceived,
+    { locationName }
+  );
 
   const { error } = await getResendClient().emails.send({
     from: "Mr Bob Bar and Grill <noreply@mrbobbali.com>",
     to: fields.email,
     subject,
-    html: buildGuestConfirmationHtml(formType, fields),
+    html: buildGuestConfirmationHtml(formType, fields, emailDict),
   });
 
   if (error) throw new Error(error.message || "Resend failed to send the guest confirmation.");

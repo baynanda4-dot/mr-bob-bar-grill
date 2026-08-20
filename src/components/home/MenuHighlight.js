@@ -1,25 +1,7 @@
-import Link from "next/link";
+import LocalizedLink from "@/components/LocalizedLink";
 import Reveal from "@/components/motion/Reveal";
 import Stagger from "@/components/motion/Stagger";
-import { FOOD_HOMEPAGE_HIGHLIGHTS, BEVERAGE_SIGNATURE } from "@/lib/signatureMenu";
-
-const panels = [
-  {
-    key: "food",
-    heading: "Our Signature",
-    items: FOOD_HOMEPAGE_HIGHLIGHTS,
-    href: "/menu/food",
-    cta: "View Full Food Menu",
-  },
-  {
-    key: "beverage",
-    heading: "Bob's Cocktails",
-    note: `${BEVERAGE_SIGNATURE.note} each`,
-    items: BEVERAGE_SIGNATURE.items,
-    href: "/menu/beverage",
-    cta: "View Full Drinks Menu",
-  },
-];
+import { BEVERAGE_SIGNATURE } from "@/lib/signatureMenu";
 
 function MenuItemRow({ item }) {
   return (
@@ -49,23 +31,45 @@ function MenuPanel({ panel }) {
           regardless of how tall the item list above is, so the two panels'
           CTA links line up even when one has more items than the other. */}
       <div className="mt-auto pt-4">
-        <Link
+        <LocalizedLink
           href={panel.href}
           className="u-link u-press group inline-flex w-fit items-center gap-2 text-sm tracking-widest text-mrbob-yellow"
         >
           {panel.cta.toUpperCase()}
           <span className="u-nudge">→</span>
-        </Link>
+        </LocalizedLink>
       </div>
     </div>
   );
 }
 
-export default function MenuHighlight() {
+// `foodItems`/`beverageItems` are pre-localized by the page (matched by
+// English name against the full translated menu — see
+// lib/menuLocalization.js's localizeByEnglishName), since these are
+// hand-picked cross-section highlights, not one contiguous menu section.
+export default function MenuHighlight({ dict, foodItems, beverageItems }) {
+  const panels = [
+    {
+      key: "food",
+      heading: dict.foodHeading,
+      items: foodItems,
+      href: "/menu/food",
+      cta: dict.foodCta,
+    },
+    {
+      key: "beverage",
+      heading: dict.beverageHeading,
+      note: `${BEVERAGE_SIGNATURE.note} ${dict.eachLabel}`,
+      items: beverageItems,
+      href: "/menu/beverage",
+      cta: dict.beverageCta,
+    },
+  ];
+
   return (
     <section className="border-t border-white/10 px-6 py-20">
       <Reveal as="h2" className="mb-10 text-center text-3xl font-light tracking-normal">
-        On the Menu
+        {dict.heading}
       </Reveal>
 
       <Stagger className="mx-auto grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-2" itemClassName="h-full">

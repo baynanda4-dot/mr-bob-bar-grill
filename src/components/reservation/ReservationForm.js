@@ -1,12 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useParams } from "next/navigation";
 import { useFormSubmit } from "@/lib/useFormSubmit";
-import { isValidEmail, isValidPhoneDigits, EMAIL_ERROR, PHONE_ERROR } from "@/lib/validation";
+import { isValidEmail, isValidPhoneDigits } from "@/lib/validation";
 import { DEFAULT_COUNTRY_CODE } from "@/lib/countryCodes";
 import { TITLES } from "@/lib/titles";
-import { OPENING_HOUR_SLOTS } from "@/lib/timeSlots";
+import { OPENING_HOUR_SLOTS, todayLocalDate } from "@/lib/timeSlots";
 import PhoneField from "@/components/PhoneField";
 import GuestCountField from "@/components/GuestCountField";
 import SubmitButton from "@/components/SubmitButton";
@@ -44,13 +44,18 @@ function FieldLabel({ children, required }) {
   );
 }
 
-export default function ReservationForm() {
+// `dict` is dictionaries/*/forms.json's `reservation` slice, `common` is
+// its `common` slice (shared field-chrome strings reused across all 3 forms).
+export default function ReservationForm({ dict, common }) {
   const router = useRouter();
-  const today = new Date().toISOString().split("T")[0];
+  const { locale } = useParams();
+  const today = todayLocalDate();
   const [fields, setFields] = useState(initialFields);
   const [fieldErrors, setFieldErrors] = useState({});
   const { status, errorMessage, submitForm, submittingMessage } = useFormSubmit({
     formType: "reservation",
+    messages: common.submittingMessages,
+    errorFallback: common.errorFallback,
   });
 
   const update = (key) => (e) => setFields((f) => ({ ...f, [key]: e.target.value }));
@@ -58,8 +63,8 @@ export default function ReservationForm() {
 
   const validate = () => {
     const errors = {};
-    if (!isValidEmail(fields.email)) errors.email = EMAIL_ERROR;
-    if (!isValidPhoneDigits(fields.whatsappNumber)) errors.whatsapp = PHONE_ERROR;
+    if (!isValidEmail(fields.email)) errors.email = common.emailError;
+    if (!isValidPhoneDigits(fields.whatsappNumber)) errors.whatsapp = common.phoneError;
     setFieldErrors(errors);
     return Object.keys(errors).length === 0;
   };
@@ -73,13 +78,14 @@ export default function ReservationForm() {
       ...rest,
       whatsapp: `${whatsappCountry} ${whatsappNumber}`,
       ...(pickupNeeded ? { hotelName, roomNumber } : {}),
+      locale,
     };
 
     const ok = await submitForm(payload);
     if (ok) {
       setFields(initialFields);
       setFieldErrors({});
-      router.push("/reservation/thank-you");
+      router.push(`/${locale}/reservation/thank-you`);
     }
   };
 
@@ -89,9 +95,9 @@ export default function ReservationForm() {
         <fieldset disabled={status === "submitting"} className="m-0 min-w-0 space-y-5 border-0 p-0">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             <div>
-              <FieldLabel>Title</FieldLabel>
-              <select value={fields.title} onChange={update("title")} aria-label="Title" className={FIELD_CLASS_FULL}>
-                <option value="">None</option>
+              <FieldLabel>{dict.titleLabel}</FieldLabel>
+              <select value={fields.title} onChange={update("title")} aria-label={dict.titleLabel} className={FIELD_CLASS_FULL}>
+                <option value="">{dict.titleNone}</option>
                 {TITLES.map((t) => (
                   <option key={t} value={t}>
                     {t}
@@ -100,25 +106,25 @@ export default function ReservationForm() {
               </select>
             </div>
             <div>
-              <FieldLabel required>First Name</FieldLabel>
-              <input placeholder="Your first name" aria-label="First Name" required value={fields.firstName} onChange={update("firstName")} className={FIELD_CLASS_FULL} />
+              <FieldLabel required>{dict.firstNameLabel}</FieldLabel>
+              <input placeholder={dict.firstNamePlaceholder} aria-label={dict.firstNameLabel} required value={fields.firstName} onChange={update("firstName")} className={FIELD_CLASS_FULL} />
             </div>
             <div>
-              <FieldLabel required>Last Name</FieldLabel>
-              <input placeholder="Your last name" aria-label="Last Name" required value={fields.lastName} onChange={update("lastName")} className={FIELD_CLASS_FULL} />
+              <FieldLabel required>{dict.lastNameLabel}</FieldLabel>
+              <input placeholder={dict.lastNamePlaceholder} aria-label={dict.lastNameLabel} required value={fields.lastName} onChange={update("lastName")} className={FIELD_CLASS_FULL} />
             </div>
           </div>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div>
-              <FieldLabel required>Date</FieldLabel>
+              <FieldLabel required>{dict.dateLabel}</FieldLabel>
               <input type="date" min={today} required value={fields.date} onChange={update("date")} className={FIELD_CLASS_FULL} />
             </div>
             <div>
-              <FieldLabel required>Time</FieldLabel>
+              <FieldLabel required>{dict.timeLabel}</FieldLabel>
               <select required value={fields.time} onChange={update("time")} className={FIELD_CLASS_FULL}>
                 <option value="" disabled>
-                  Select a time
+                  {dict.selectTime}
                 </option>
                 {OPENING_HOUR_SLOTS.map((slot) => (
                   <option key={slot} value={slot}>
@@ -131,21 +137,37 @@ export default function ReservationForm() {
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div>
-              <FieldLabel required>Number of Adults</FieldLabel>
-              <GuestCountField value={fields.adults} onChange={update("adults")} placeholder="Select" required className={FIELD_CLASS_FULL} />
+              <FieldLabel required>{dict.adultsLabel}</FieldLabel>
+              <GuestCountField
+                value={fields.adults}
+                onChange={update("adults")}
+                placeholder={dict.guestSelectPlaceholder}
+                required
+                className={FIELD_CLASS_FULL}
+                useListLabel={common.useList}
+                otherManualLabel={common.otherManual}
+              />
             </div>
             <div>
-              <FieldLabel>Number of Children</FieldLabel>
-              <GuestCountField value={fields.children} onChange={update("children")} options={[0, 1, 2, 3, 4, 5]} placeholder="Select" className={FIELD_CLASS_FULL} />
+              <FieldLabel>{dict.childrenLabel}</FieldLabel>
+              <GuestCountField
+                value={fields.children}
+                onChange={update("children")}
+                options={[0, 1, 2, 3, 4, 5]}
+                placeholder={dict.guestSelectPlaceholder}
+                className={FIELD_CLASS_FULL}
+                useListLabel={common.useList}
+                otherManualLabel={common.otherManual}
+              />
             </div>
           </div>
 
           <div>
-            <FieldLabel required>Email Address</FieldLabel>
+            <FieldLabel required>{dict.emailLabel}</FieldLabel>
             <input
               type="email"
-              placeholder="you@example.com"
-              aria-label="Email Address"
+              placeholder={dict.emailPlaceholder}
+              aria-label={dict.emailLabel}
               required
               value={fields.email}
               onChange={update("email")}
@@ -155,7 +177,7 @@ export default function ReservationForm() {
           </div>
 
           <div>
-            <FieldLabel required>WhatsApp Number</FieldLabel>
+            <FieldLabel required>{dict.whatsappLabel}</FieldLabel>
             <PhoneField
               countryCode={fields.whatsappCountry}
               onCountryCodeChange={update("whatsappCountry")}
@@ -163,6 +185,7 @@ export default function ReservationForm() {
               onNumberChange={update("whatsappNumber")}
               error={fieldErrors.whatsapp}
               className={FIELD_CLASS}
+              dict={common}
             />
           </div>
 
@@ -174,27 +197,27 @@ export default function ReservationForm() {
                 onChange={toggle("pickupNeeded")}
                 className="h-4 w-4 rounded border-white/25 bg-white/5 accent-mrbob-yellow"
               />
-              I&apos;d like complimentary pickup around Nusa Dua (minimum 2 adults)
+              {dict.pickupLabel}
             </label>
             {fields.pickupNeeded && (
               <div className="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div>
-                  <FieldLabel required>Hotel Name</FieldLabel>
-                  <input placeholder="Hotel name" aria-label="Hotel Name" required value={fields.hotelName} onChange={update("hotelName")} className={FIELD_CLASS_FULL} />
+                  <FieldLabel required>{dict.hotelNameLabel}</FieldLabel>
+                  <input placeholder={dict.hotelNamePlaceholder} aria-label={dict.hotelNameLabel} required value={fields.hotelName} onChange={update("hotelName")} className={FIELD_CLASS_FULL} />
                 </div>
                 <div>
-                  <FieldLabel required>Room Number</FieldLabel>
-                  <input placeholder="Room number" aria-label="Room Number" required value={fields.roomNumber} onChange={update("roomNumber")} className={FIELD_CLASS_FULL} />
+                  <FieldLabel required>{dict.roomNumberLabel}</FieldLabel>
+                  <input placeholder={dict.roomNumberPlaceholder} aria-label={dict.roomNumberLabel} required value={fields.roomNumber} onChange={update("roomNumber")} className={FIELD_CLASS_FULL} />
                 </div>
               </div>
             )}
           </div>
 
           <div>
-            <FieldLabel>Special Requests</FieldLabel>
+            <FieldLabel>{dict.specialRequestsLabel}</FieldLabel>
             <textarea
-              placeholder="Dietary requirements, special arrangements..."
-              aria-label="Special Requests"
+              placeholder={dict.specialRequestsPlaceholder}
+              aria-label={dict.specialRequestsLabel}
               value={fields.message}
               onChange={update("message")}
               className={`${FIELD_CLASS_FULL} h-20 resize-none`}
@@ -202,17 +225,13 @@ export default function ReservationForm() {
           </div>
 
           <div className="pt-2">
-            <SubmitButton status={status} label="Submit" submittingMessage={submittingMessage} />
+            <SubmitButton status={status} label={dict.submitLabel} submittingMessage={submittingMessage} />
           </div>
 
-          <p className="text-xs text-white/40">
-            Your table will be held for 30 minutes past the reservation time, after which the booking may be released and treated as cancelled.
-          </p>
+          <p className="text-xs text-white/40">{dict.holdNotice}</p>
         </fieldset>
         {status === "success" && (
-          <p className="text-center text-sm text-emerald-400">
-            Thank you! Your table is confirmed. We&apos;re looking forward to welcoming you.
-          </p>
+          <p className="text-center text-sm text-emerald-400">{dict.successMessage}</p>
         )}
         {status === "error" && (
           <p className="text-center text-sm text-red-400">{errorMessage}</p>

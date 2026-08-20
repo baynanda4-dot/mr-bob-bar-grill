@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "home": "首页",
+    "menu": "菜单",
+    "about": "关于我们",
+    "contact": "联系我们",
+    "beverageMenu": "饮品单",
+    "groupReservation": "团体预订",
+    "reserveTable": "预订餐桌"
+  },
+  "footer": {
+    "tagline": "手切牛排、猪肋排和战斧牛排,搭配精选葡萄酒单,每周一、三、六还有现场音乐。",
+    "contactUs": "联系我们",
+    "exploreHeading": "探索",
+    "visitHeading": "到访",
+    "home": "首页",
+    "about": "关于我们",
+    "foodMenu": "美食菜单",
+    "beverageMenu": "饮品单",
+    "reserveTable": "预订餐桌",
+    "groupReservation": "团体预订",
+    "contact": "联系我们",
+    "rightsReserved": "版权所有。"
+  },
+  "hoursRange": "周一至周日",
+  "faqHeading": "规划您的行程",
+  "faqSubheading": "您需要了解的一切",
+  "stickyReserveLabel": "预订餐桌",
+  "expandAll": "全部展开",
+  "collapseAll": "全部收起"
+}

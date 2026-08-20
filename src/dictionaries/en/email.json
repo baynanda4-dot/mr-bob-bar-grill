@@ -1,0 +1,47 @@
+{
+  "reservation": {
+    "eyebrow": "Reservation Confirmed",
+    "headline": "Your Table Is Confirmed",
+    "intro": "Thank you for reserving a table with <strong>{locationName}</strong>. Your reservation is confirmed, and we're looking forward to welcoming you.",
+    "closing": "If your plans change or you have any special requests, please reach out to us on {whatsappLink}. This inbox is unattended, so replying here won't reach us, but we're happy to help there.",
+    "noShowNote": "Please note: your table will be held for 30 minutes past the reservation time. If you haven't arrived by then, the booking may be released and treated as cancelled.",
+    "pickupNote": "Complimentary pickup service for guests staying around the Nusa Dua area is available (minimum 2 adults per request), subject to availability."
+  },
+  "groupReservation": {
+    "eyebrow": "Request Received",
+    "headline": "Your Group Reservation Request Has Been Received",
+    "intro": "Thank you for your group reservation request. We've received your details, and our team will get back to you shortly to confirm availability.",
+    "closing": "We're looking forward to the opportunity to welcome you, and will follow up shortly to confirm every detail."
+  },
+  "contact": {
+    "eyebrow": "Message Received",
+    "headline": "Thank You for Writing to Us",
+    "intro": "Thank you for writing to <strong>{locationName}</strong>. Your message has reached us safely, and a member of our team will respond to you personally very soon.",
+    "closing": "We are grateful for your interest in Mr Bob Bar and Grill, and look forward to the opportunity of welcoming you soon."
+  },
+  "common": {
+    "dearGuest": "Dear {guestName},",
+    "dateLabel": "Date",
+    "timeLabel": "Time",
+    "adultsLabel": "Number of Adults",
+    "childrenLabel": "Number of Children",
+    "hotelNameLabel": "Hotel Name",
+    "roomNumberLabel": "Room Number",
+    "planningVisit": "While You're Planning Your Visit",
+    "yourNote": "Your note to us:",
+    "signOff": "Warmly,",
+    "teamName": "The Mr Bob Bar and Grill Team",
+    "visitUs": "Visit Us",
+    "whatsapp": "WhatsApp",
+    "automatedNotice": "This is an automated notice. For urgent enquiries, please contact us directly.",
+    "subjectReservationConfirmed": "Your Reservation Is Confirmed ({locationName})",
+    "subjectBookingReceived": "We've Received Your Booking ({locationName})",
+    "subjectMessageReceived": "We've Received Your Message ({locationName})",
+    "suggestedLinks": {
+      "viewFoodMenu": "View Food Menu",
+      "viewBeverageMenu": "View Beverage Menu",
+      "contactUs": "Contact Us",
+      "reserveTable": "Reserve a Table"
+    }
+  }
+}

@@ -1,0 +1,335 @@
+{
+  "food": {
+    "heroTitle": "Menu Makanan",
+    "priceNote": "Harga dalam satuan ‘000’ IDR dan belum termasuk pajak pemerintah 11%.",
+    "viewBeverageCta": "LIHAT MENU WINE & BAR",
+    "sections": [
+      {
+        "title": "Appetizer",
+        "items": [
+          { "name": "Vegetables Spring Roll", "desc": "Lumpia goreng isi campuran sayuran, disajikan dengan saus asam manis" },
+          { "name": "Tomato Bruschetta", "desc": "Baguette, tomat, basil, bawang bombay, minyak zaitun, keju feta & cuka balsamic" },
+          { "name": "Garlic Bread", "desc": "Baguette, dipanggang dengan mentega bawang putih" },
+          { "name": "Garden Salad", "desc": "Campuran selada, bawang bombay, mentimun, dan wortel dengan vinaigrette balsamic" },
+          { "name": "Caesar Salad", "desc": "Selada romain muda, bacon renyah, roti bawang putih, dan saus caesar" },
+          { "name": "Thai Beef Salad", "desc": "Disajikan dengan salad campuran dan saus khas Thailand" },
+          { "name": "Smoked Salmon Salad", "desc": "Disajikan dengan mini mesclun dan saus chili lime" }
+        ]
+      },
+      {
+        "title": "Sup",
+        "items": [
+          { "name": "Cream Corn Soup", "desc": "Sup kental jagung manis dengan roti bawang putih" },
+          { "name": "Chicken Vegetable Soup", "desc": "Sup bening dengan potongan ayam, wortel, bawang bombay, dan buncis" },
+          { "name": "Seafood Cream Soup", "desc": "Campuran seafood, krim, disajikan dengan roti bawang putih" },
+          { "name": "Tom Yum Soup", "desc": "Udang pedas, ikan, cumi, dan irisan jamur" },
+          { "name": "Chicken Noodle Soup", "desc": "Irisan paha ayam, sayuran, kaldu ayam, mi telur" }
+        ]
+      },
+      {
+        "title": "Menu Andalan Kami",
+        "items": [
+          { "name": "Mr Bob's BBQ Ribs", "desc": "Iga babi baby back 600 gr pilihan terbaik kami, dimarinasi sempurna, dipanggang perlahan di atas arang dengan madu dan saus khas Mr Bob" },
+          { "name": "Beef Tomahawk", "desc": "1000-1200 gr tomahawk sapi Australia panggang disajikan dengan tiga jenis saus (BBQ, jamur, dan lada hitam), salad campuran, sayuran tumis, dan potato wedges. Cocok untuk 2 orang; membutuhkan waktu sekitar 60 menit untuk persiapan." }
+        ]
+      },
+      {
+        "title": "Side Dish",
+        "items": [
+          { "name": "Nasi Putih" },
+          { "name": "Nasi Nanas" },
+          { "name": "Nasi Jagung" },
+          { "name": "Salad Campuran" },
+          { "name": "Potato Wedges" },
+          { "name": "Mashed Potatoes" },
+          { "name": "French Fries" },
+          { "name": "Sayuran Tumis" }
+        ]
+      },
+      {
+        "title": "Indonesia",
+        "items": [
+          { "name": "Beef Rendang", "desc": "Dadu daging sapi dimasak gaya Indonesia, disajikan dengan nasi putih" },
+          { "name": "Seafood Curry", "desc": "Udang, ikan, dan cumi, sayuran campuran dimasak dengan saus kari" },
+          { "name": "Chicken Curry", "desc": "Irisan dada ayam dan sayuran campuran dimasak dengan saus kari" },
+          { "name": "Ayam Betutu", "desc": "Setengah ekor ayam kampung dimasak khas Bali, disajikan dengan sayur urab dan nasi putih" },
+          { "name": "Bebek Goreng", "desc": "Setengah ekor bebek goreng renyah, disajikan dengan sayur kari dan nasi putih" },
+          { "name": "Nasi Goreng Seafood", "desc": "Nasi goreng, udang, ikan, cumi, sate udang, dan kerupuk" },
+          { "name": "Nasi Goreng Ayam / Mie Goreng Ayam", "desc": "Nasi atau mi goreng dengan telur, sate ayam, dan kerupuk" },
+          { "name": "Nasi Goreng Iga Bakar", "desc": "Nasi goreng dengan telur, iga babi, dan kerupuk" },
+          { "name": "Nasi Goreng Crispy Pork Belly", "desc": "Nasi goreng dengan telur dan pork belly renyah" },
+          { "name": "Beef Paela", "desc": "Sirloin steak panggang dan udang di atas nasi kuning" },
+          { "name": "Cap Cay Ayam / Cap Cay Seafood", "desc": "Tumis ayam atau seafood dan sayuran gaya Tionghoa, disajikan dengan nasi putih" }
+        ]
+      },
+      {
+        "title": "Grill Corner: Poultry",
+        "items": [
+          { "name": "Grill Chicken Leg Boneless", "desc": "200 gr paha ayam tanpa tulang panggang, saus honey chili, disajikan dengan sambal matah dan nasi putih" },
+          { "name": "Grill Baby Chicken", "desc": "Setengah ekor ayam muda panggang dengan bumbu khas Bali, disajikan dengan nasi putih, sambal matah, dan sayur urab" },
+          { "name": "Chicken Satay", "desc": "8 tusuk sate ayam panggang, disajikan dengan saus kacang dan nasi putih" },
+          { "name": "Chicken Steak", "desc": "200 gr dada ayam panggang disajikan dengan mashed potatoes, sayuran tumis, dan saus krim jamur" },
+          { "name": "Chicken Cordon Bleu", "desc": "Dada ayam isi ham dan keju, disajikan dengan mashed potatoes, sayuran tumis, dan saus krim jamur" }
+        ]
+      },
+      {
+        "title": "Grill Corner: Seafood",
+        "items": [
+          { "name": "Grill Lobster", "desc": "350 gr lobster panggang disajikan dengan salad campuran, mashed potatoes, saus krim mustard, dan saus lemon butter" },
+          { "name": "Grill Prawn", "desc": "5 ekor king prawn pilihan panggang, disajikan dengan lemon butter, saus honey chili, salad campuran, dan mashed potatoes" },
+          { "name": "Grill Snapper", "desc": "350 gr ikan kakap putih utuh panggang disajikan dengan sambal matah dan nasi putih" },
+          { "name": "Salmon Steak", "desc": "200 gr salmon steak dipanggang disajikan dengan sayuran campuran, mashed potatoes, saus honey chili, dan lemon butter" },
+          { "name": "Grill Mahi-Mahi Fillet", "desc": "200 gr ikan mahi-mahi panggang disajikan dengan salad campuran, lemon butter, saus honey chili, dan mashed potatoes" },
+          { "name": "Seafood Basket (untuk berdua)", "desc": "1 ekor lobster, 5 ekor king prawn, 2 potong mahi-mahi steak, 1 ekor cumi panggang, disajikan dengan salad campuran, french fries atau nasi putih, dan 3 jenis saus (lemon butter, sambal matah, honey chili). Termasuk 2 botol kecil bir Bintang." }
+        ]
+      },
+      {
+        "title": "Grill Corner: Daging (Sapi & Domba)",
+        "items": [
+          { "name": "Tenderloin Steak", "desc": "200 gr tenderloin sapi panggang disajikan dengan saus lada hitam dan jamur, sayuran tumis, dan french fries" },
+          { "name": "Sirloin Steak", "desc": "200 gr sirloin sapi panggang disajikan dengan saus jamur, saus lada hitam, sayuran tumis, dan french fries" },
+          { "name": "Rib Eye Steak", "desc": "200 gr rib eye sapi panggang disajikan dengan saus jamur, saus lada hitam, sayuran tumis, dan french fries" },
+          { "name": "Grilled Beef Kebab", "desc": "Dadu daging sapi panggang dengan paprika merah, paprika hijau, dan bawang bombay di tusukan, disajikan dengan saus jamur, saus lada hitam, dan potato wedges" },
+          { "name": "Lamb Steak", "desc": "200 gr domba panggang disajikan dengan saus jamur, saus lada hitam, sayuran tumis, dan french fries" },
+          { "name": "Lamb Satay", "desc": "10 tusuk sate domba disajikan dengan nasi putih dan saus kacang" },
+          { "name": "Surf and Turf", "desc": "200 gr tenderloin steak panggang ditambah udang di atasnya, disajikan dengan mini mesclun, potato wedges, saus jamur, dan saus BBQ" }
+        ]
+      },
+      {
+        "title": "Grill Corner: Daging (Babi)",
+        "items": [
+          { "name": "Pork Knuckle (untuk berdua)", "desc": "1.1kg pork knuckle goreng disajikan dengan mashed potatoes, sayuran tumis, saus kacang, dan pork gravy" },
+          { "name": "Grill Pork Chop", "desc": "350 gr pork chop panggang disajikan dengan saus BBQ, saus lada hitam, sayuran tumis, dan french fries" },
+          { "name": "Grill Pork Steak", "desc": "200 gr pork steak panggang disajikan dengan saus BBQ, saus lada hitam, sayuran tumis, dan french fries" },
+          { "name": "Pork Satay", "desc": "10 tusuk sate babi panggang dengan nasi putih dan saus kacang" },
+          { "name": "Grill Pork Belly Satay", "desc": "4 tusuk sate pork belly panggang disajikan dengan nasi putih dan saus chili manis pedas" },
+          { "name": "Crispy Pork Belly", "desc": "Disajikan dengan saus kecap chili manis, saus black bean, dan nasi putih" },
+          { "name": "Mixed Grill (untuk berdua)", "desc": "1 potong pork chop, 1/2 porsi ribs, 1 potong sirloin steak, 2 potong lamb medallion, 2 buah sosis ayam, dan 2 potong ham babi panggang, disajikan dengan saus jamur, saus lada hitam, saus BBQ, salad campuran, dan potato wedges" }
+        ]
+      },
+      {
+        "title": "Burger & Sandwich",
+        "items": [
+          { "name": "Black Devil", "desc": "100 gr beef patty Texas, bacon, saus chili buatan sendiri, telur, keju cheddar, selada, tomat, disajikan dengan french fries" },
+          { "name": "White Angel", "desc": "100 gr wagyu patty impor, bacon, telur, keju cheddar, selada, tomat, saus burger khas Bob, disajikan dengan french fries" },
+          { "name": "Chicken Sandwich", "desc": "Roti panggang, ayam, keju, tomat, selada, disajikan dengan french fries" },
+          { "name": "Chicken Ciabatta", "desc": "Roti ciabatta, ayam, keju, tomat, selada, disajikan dengan french fries" },
+          { "name": "Club Sandwich", "desc": "Roti panggang, tomat, bacon, telur, keju, selada, disajikan dengan french fries" },
+          { "name": "Smoked Salmon Sandwich", "desc": "Roti panggang, smoked salmon, selada, tomat, dan keju, disajikan dengan french fries" }
+        ]
+      },
+      {
+        "title": "Pizza & Pasta",
+        "items": [
+          { "name": "Margarita Pizza", "desc": "Tomato concasse dan keju mozzarella" },
+          { "name": "Pizza Sambal Matah", "desc": "Tomato concasse, ayam suwir, dan keju mozzarella" },
+          { "name": "Pizza Ayam Betutu", "desc": "Tomato concasse, ayam suwir, bumbu betutu, dan keju mozzarella" },
+          { "name": "Hawaiian Pizza", "desc": "Tomato concasse, potongan ayam, potongan nanas, dan keju mozzarella" },
+          { "name": "Meat Lover Pizza", "desc": "Tomato concasse, beef chorizo, ham, salami, dan keju mozzarella" },
+          { "name": "BBQ Chicken Pizza", "desc": "Tomato concasse, ayam BBQ, campuran paprika, bawang bombay, dan keju mozzarella" },
+          { "name": "Spaghetti Marinara", "desc": "Campuran seafood, tomato concasse, basil, keju parmesan" },
+          { "name": "Spaghetti Bolognaise", "desc": "Daging sapi cincang, tomato concasse, basil, keju parmesan" },
+          { "name": "Spaghetti Carbonara", "desc": "Bacon, krim, parsley, keju parmesan" },
+          { "name": "Fettuccine Alfredo", "desc": "Spaghetti dengan jamur, ham, saus krim, dan keju parmesan" },
+          { "name": "Spaghetti Napolitana", "desc": "Spaghetti dengan saus tomat dan keju parmesan" },
+          { "name": "Spaghetti Aglio Olio", "desc": "Spaghetti tumis dengan minyak zaitun, irisan bawang putih, chili pedas, keju parmesan" },
+          { "name": "Spaghetti Aglio Olio with Grilled Prawn", "desc": "Spaghetti tumis dengan minyak zaitun, irisan bawang putih, chili pedas, 3 ekor udang panggang, dan keju parmesan" }
+        ]
+      },
+      {
+        "title": "Bob's Junior",
+        "note": "Menu anak",
+        "items": [
+          { "name": "Fish & Chips", "desc": "Disajikan dengan saus tartar & saus thousand island" },
+          { "name": "Calamari Ring", "desc": "Disajikan dengan saus tartar & saus thousand island" },
+          { "name": "Spaghetti Napolitana", "desc": "Spaghetti dengan saus tomat dan keju parmesan" },
+          { "name": "Spaghetti Aglio Olio", "desc": "Spaghetti tumis dengan minyak zaitun dan bawang putih cincang" },
+          { "name": "Mac & Cheese", "desc": "Campuran makaroni dan keju dalam saus krim, ditaburi keju parmesan parut dan irisan ham" },
+          { "name": "Chicken Nugget", "desc": "3 buah chicken nugget dan french fries" },
+          { "name": "Nasi Goreng Sausage", "desc": "Nasi goreng disajikan dengan sosis panggang dan kerupuk udang" },
+          { "name": "Mini Burger", "desc": "Roti putih, beef patty, telur, keju, selada, disajikan dengan french fries" }
+        ]
+      },
+      {
+        "title": "Dessert",
+        "items": [
+          { "name": "Banana Split", "desc": "3 scoop es krim dan irisan pisang" },
+          { "name": "Apple Pie", "desc": "Apple pie gaya Australia disajikan dengan es krim vanila" },
+          { "name": "Tiramisu" },
+          { "name": "Chocolate Cake", "desc": "Disajikan dengan saus cokelat" },
+          { "name": "Ice Cream Selection", "desc": "3 scoop es krim rasa vanila, stroberi, atau cokelat" },
+          { "name": "Slice Tropical Fresh Fruit", "desc": "Irisan semangka, pepaya, dan nanas" },
+          { "name": "Chocolate Brownies", "desc": "Disajikan dengan 1 scoop es krim vanila" }
+        ]
+      }
+    ]
+  },
+  "beverage": {
+    "heroTitle": "Menu Minuman",
+    "priceNote": "Harga dalam satuan ‘000’ IDR dan belum termasuk pajak pemerintah 11%.",
+    "viewFoodCta": "LIHAT MENU MAKANAN",
+    "sections": [
+      {
+        "title": "Classic Cocktail",
+        "note": "Premium Spirit 135K / Local Spirit 100K",
+        "items": [
+          { "name": "Margarita", "desc": "Tequila, orange liqueur, jeruk nipis segar" },
+          { "name": "Mojito's", "desc": "Rum, jeruk nipis segar, daun mint" },
+          { "name": "Daiquiry's", "desc": "Rum, orange liqueur, jeruk nipis segar" },
+          { "name": "Espresso Martini", "desc": "Vodka, coffee liqueur, espresso" },
+          { "name": "Lychee Martini", "desc": "Vodka, lychee liqueur, buah leci" },
+          { "name": "Caipirinha & Caipiroska", "desc": "Rum/vodka, jeruk nipis segar, pemanis" },
+          { "name": "Long Island Ice Tea", "desc": "Vodka, rum, gin, tequila, triple sec, jeruk nipis, diberi Coke" },
+          { "name": "Pinacolada", "desc": "Light rum, nanas, santan, coconut liqueur" },
+          { "name": "Old Fashioned", "desc": "Bourbon whiskey, simple syrup, angostura bitter" },
+          { "name": "Negroni", "desc": "Gin, campari, sweet vermouth" },
+          { "name": "Lemon Drop", "desc": "Vodka, air jeruk lemon, orange liqueur" },
+          { "name": "Dry or Sweet Martini", "desc": "Dry gin, dry atau sweet vermouth" },
+          { "name": "Whiskey Sour", "desc": "Whiskey, air jeruk nipis, gula" },
+          { "name": "Japanese Slipper", "desc": "Vodka, air jeruk nipis, triple sec, melon liqueur" },
+          { "name": "Pink/White/Blue Lady", "desc": "Gin, orange liqueur, air jeruk nipis, grenadine atau blue curacao" },
+          { "name": "Tequila Sunrise", "desc": "Tequila, air jeruk, grenadine" },
+          { "name": "White or Black Russian", "desc": "Vodka, coffee liqueur, krim" },
+          { "name": "Cosmopolitan", "desc": "Vodka, triple sec, jus cranberry, air jeruk nipis" },
+          { "name": "Long Beach", "desc": "Vodka, air jeruk, jus cranberry" }
+        ]
+      },
+      {
+        "title": "Bob's Cocktails (Signature)",
+        "note": "120K",
+        "items": [
+          { "name": "Bob's Bitter Sweet", "desc": "White rum, campari, jus nanas, passion syrup" },
+          { "name": "Bob's Negroni", "desc": "Campari, air ceri, sweet vermouth" },
+          { "name": "Tropical Gin", "desc": "Gin, stroberi, jeruk nipis, daun mint, gula, diberi tonic water" },
+          { "name": "Flower Bloom", "desc": "Gin, air jeruk nipis, cananga syrup, soda water" },
+          { "name": "Bloody Orange", "desc": "Vodka, air jeruk, stroberi segar, air jeruk nipis, simple syrup" },
+          { "name": "Bob's Sangria", "desc": "Arak berbumbu, wine merah/putih, buah tropis" },
+          { "name": "Mango Basil Daiquiry", "desc": "White rum, jus mangga, triple sec, daun basil, air jeruk nipis" },
+          { "name": "Watermelon Mexico", "desc": "Tequila, orange liqueur, air jeruk nipis, semangka, passion syrup" },
+          { "name": "Bob Penicillin", "desc": "Whisky, air lemon segar, lemongrass honey syrup" },
+          { "name": "Nusa Dua Colada", "desc": "White rum, pineapple liqueur, jus nanas, jus mangga, santan, blue syrup" }
+        ]
+      },
+      {
+        "title": "Spirits by Shot",
+        "note": "45ml",
+        "items": [
+          { "name": "Gin", "desc": "Bombay Sapphire" },
+          { "name": "Vodka", "desc": "Absolut" },
+          { "name": "Rum", "desc": "Bacardi, Captain Morgan" },
+          { "name": "Tequila", "desc": "Jose Cuervo" },
+          { "name": "Scotch Whiskey", "desc": "Red Label, Black Label" },
+          { "name": "American Whiskey", "desc": "Jack Daniel, Jim Beam" },
+          { "name": "Irish Whiskey", "desc": "John Jameson" }
+        ]
+      },
+      {
+        "title": "Bob's Refreshing",
+        "items": [
+          { "name": "Shirley Temple", "desc": "Air ceri, grenadine, air jeruk nipis, diberi sprite" },
+          { "name": "Hera's Crown", "desc": "Air jeruk, grenadine, air lemon, diberi sprite" },
+          { "name": "Mint Sensation", "desc": "Leci, nanas, daun mint" },
+          { "name": "Mango Frappe", "desc": "Puree/jus mangga, air jeruk, air jeruk nipis, tonic water" },
+          { "name": "Berry Sunshine", "desc": "Stroberi, jus nanas, air jeruk, simple syrup" },
+          { "name": "Lychee Basilia", "desc": "Buah leci, daun basil, sweet sour, sprite" },
+          { "name": "Tiki Berry", "desc": "Stroberi segar, jus nanas, passion syrup, santan, dan air lemon" },
+          { "name": "Lemon Lime Bitter", "desc": "Air jeruk nipis, air lemon, simple syrup, angostura bitter, soda water" },
+          { "name": "Lemon Up (Pink/Blue/Natural)", "desc": "Air lemon segar, lemonade, simple syrup, grenadine/blue syrup" },
+          { "name": "Queenchers (Strawberry/Mango)", "desc": "Air lemon, puree mangga/stroberi, lemonade, simple syrup" }
+        ]
+      },
+      {
+        "title": "Beer's",
+        "items": [
+          { "name": "Bintang", "desc": "Besar / Kecil" },
+          { "name": "Bintang Radler" },
+          { "name": "Crystal Bintang" },
+          { "name": "Heineken", "desc": "Besar / Kecil" },
+          { "name": "Balihai", "desc": "Besar / Kecil" },
+          { "name": "Singaraja" },
+          { "name": "Prost Pilsner / Lager" },
+          { "name": "Albens Apple Cider" },
+          { "name": "Tower Bintang" },
+          { "name": "Tower Balihai" },
+          { "name": "Tower Heineken" }
+        ]
+      },
+      {
+        "title": "Minuman Ringan & Air Mineral",
+        "items": [
+          { "name": "Coke" },
+          { "name": "Coke Zero" },
+          { "name": "Sprite" },
+          { "name": "Fanta" },
+          { "name": "Tonic Water" },
+          { "name": "Soda Water" },
+          { "name": "Ginger Ale" },
+          { "name": "Air Mineral" },
+          { "name": "Sparkling Water" }
+        ]
+      },
+      {
+        "title": "Milkshake & Smoothies",
+        "items": [
+          { "name": "Vanilla" },
+          { "name": "Cokelat" },
+          { "name": "Pisang" },
+          { "name": "Mangga" },
+          { "name": "Stroberi" }
+        ]
+      },
+      {
+        "title": "Kopi & Teh",
+        "items": [
+          { "name": "Kopi Bali" },
+          { "name": "Teh Biasa" },
+          { "name": "Teh Leci" },
+          { "name": "Teh Markisa" },
+          { "name": "Teh Sereh" },
+          { "name": "Teh Jahe Mint" }
+        ]
+      },
+      {
+        "title": "Jus",
+        "items": [
+          { "name": "Semangka" },
+          { "name": "Nanas" },
+          { "name": "Mangga" },
+          { "name": "Jeruk" },
+          { "name": "Jus Campur" },
+          { "name": "Pepaya" },
+          { "name": "Lemon" },
+          { "name": "Pisang" },
+          { "name": "Jeruk Nipis" },
+          { "name": "Kelapa Segar" }
+        ]
+      },
+      {
+        "title": "White Wine",
+        "note": "Per gelas (85K)",
+        "items": [
+          { "name": "Two Island Sauvignon Blanc" },
+          { "name": "Two Island Pinot Grigio" },
+          { "name": "Two Island Chardonnay" },
+          { "name": "Two Island Riesling" }
+        ]
+      },
+      {
+        "title": "Red Wine",
+        "note": "Per gelas (85K)",
+        "items": [
+          { "name": "Two Island Cabernet Merlot" },
+          { "name": "Two Island Shiraz" },
+          { "name": "Two Island Pinot Noir" }
+        ]
+      },
+      {
+        "title": "Rosé Wine",
+        "note": "Per gelas (85K)",
+        "items": [
+          { "name": "Two Island Rose" }
+        ]
+      }
+    ]
+  }
+}

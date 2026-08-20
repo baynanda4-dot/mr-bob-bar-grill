@@ -1,0 +1,201 @@
+{
+  "home": {
+    "hero": {
+      "eyebrow": "炭烤 · 美酒 · 尽享",
+      "titleBefore": "全城最赞的",
+      "titleHighlight": "猪肋排",
+      "titleAfter": "",
+      "subtitle": "手切牛排、战斧牛排,以及我们招牌的炭烤肋排,搭配精选葡萄酒单,在巴厘岛努沙杜瓦为您呈现。",
+      "reserveCta": "预订餐桌",
+      "menuCta": "查看菜单"
+    },
+    "whatsOn": {
+      "heading": "Mr Bob 精彩活动",
+      "subheading": "现场音乐之夜、炭火烹制的美食,以及让努沙杜瓦的夜晚变得与众不同的酒吧氛围。",
+      "cards": [
+        {
+          "schedule": "每周一、三、六,晚上7点起",
+          "location": "Mr Bob Bar and Grill",
+          "title": "现场音乐之夜",
+          "detail": "每周一(I Love Monday)、周三(Oldies Night)、周六(Country Night)晚上7点起,精彩现场音乐不间断。"
+        },
+        {
+          "schedule": "双人套餐 800K",
+          "location": "Mr Bob Bar and Grill",
+          "title": "双人猪肘套餐",
+          "detail": "1.1公斤炸猪肘双人份,配土豆泥、时蔬和肉汁酱,另附赠两瓶小瓶 Singaraja 啤酒。"
+        }
+      ],
+      "ctaText": "计划与团体共度一晚?让我们为您的活动安排好餐桌。",
+      "ctaLabel": "预订您的活动之夜"
+    },
+    "welcome": {
+      "eyebrow": "我们的故事",
+      "titleBefore": "欢迎来到",
+      "titleHighlight": "Mr Bob",
+      "body": "Mr Bob Bar and Grill 因炭火而生:手切牛排、慢烤猪肋排,还有令人惊艳的战斧牛排,搭配精心挑选、能衬托每一块肉的葡萄酒单。在丹戎伯诺阿、努沙杜瓦,于吧台或餐桌旁落座,让炭烤的美味为这个夜晚代言。",
+      "quote": "真正的炭火,真材实料的分量,真心实意的款待。这其实就是我们全部的菜单理念。",
+      "reserveCta": "预订餐桌",
+      "groupCta": "团体预订"
+    },
+    "menuHighlight": {
+      "heading": "招牌菜单",
+      "foodHeading": "我们的招牌菜",
+      "foodCta": "查看完整美食菜单",
+      "beverageHeading": "Bob 招牌鸡尾酒",
+      "beverageCta": "查看完整饮品单",
+      "eachLabel": "每杯"
+    },
+    "wineShop": {
+      "eyebrow": "努沙杜瓦最实惠的葡萄酒精选",
+      "heading": "Wine Shop",
+      "body": "我们的 Wine Shop 提供努沙杜瓦周边性价比最高的葡萄酒精选,但架上品项会随库存变化,因此没有固定的在线清单。欢迎来店里看看当下有哪些好酒。",
+      "cta": "预订餐桌"
+    },
+    "shuttle": {
+      "heading": "努沙杜瓦周边免费接送",
+      "body": "就住在附近?我们很乐意为入住努沙杜瓦地区的客人提供免费接送服务,预订餐桌时告诉我们即可。",
+      "cta": "立即预订"
+    },
+    "recognition": {
+      "heading": "荣誉认证",
+      "googleRatingSuffix": "来自1,100+条Google评论",
+      "tripadvisorRatingSuffix": "来自1,500+条Tripadvisor评论",
+      "body": "Mr Bob Bar and Grill 是猫途鹰(Tripadvisor)评选的丹戎伯诺阿、努沙杜瓦地区排名第一的餐厅,荣获 Tripadvisor 旅行者之选大奖(Travelers' Choice Award),跻身全球前10%的优秀餐厅之列,同时荣获携程美食榜(Ctrip Gourmet List)卓越认证——这些荣誉是我们由衷珍视的肯定,也是我们对每一道菜、每一位客人用心付出的真实写照。",
+      "restaurantName": "Mr Bob Bar and Grill",
+      "ctripDesc": "获携程认可,始终如一地提供美味佳肴与真诚款待。",
+      "tripadvisorDesc": "来自数百万猫途鹰旅行者的评价,让这位获奖者跻身全球前10%之列。",
+      "ctaLabel": "在Tripadvisor上查看"
+    },
+    "instagram": {
+      "eyebrow": "关注我们",
+      "heading": "Instagram"
+    },
+    "testimonials": {
+      "eyebrow": "口碑相传",
+      "heading": "值得分享的体验",
+      "intro": "从炭烤出炉的第一道菜,到夜晚最后一曲音乐落下,客人们一次又一次为了牛排、肋排、葡萄酒单,以及每周一、三、六活力四射的氛围而再度光临。",
+      "viaTripadvisor": "来自 Tripadvisor",
+      "reviewCta": "留下 Google 评论",
+      "reviewComingSoon": "Google 与 Tripadvisor 评论(即将上线)",
+      "reserveCta": "预订餐桌",
+      "groupCta": "团体预订"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "因炭火而生",
+      "subtitle": "Mr Bob Bar and Grill 的故事:牛排、肋排、战斧牛排、美酒与现场音乐。"
+    },
+    "ourStory": {
+      "heading": "我们的故事",
+      "body": "Mr Bob Bar and Grill 是为真正讲究牛排的人而生。手切原肉、真正的炭火,以及精心搭配每道菜的葡萄酒单,无论是安静的晚餐,还是充满现场音乐的夜晚,这里都能让您宾至如归。"
+    },
+    "featureRows": [
+      { "title": "手切原肉,炭火烘烤", "desc": "每一块牛排、每一份肋排、每一块战斧牛排,都经过手工切割,并在真正的炭火上烘烤。没有捷径,不在造就一家值得专程前来的牛排馆的那份焦香上妥协。" },
+      { "title": "与美食相得益彰的酒吧", "desc": "从单杯供应的自家葡萄酒,到招牌鸡尾酒与完整的烈酒单,我们的酒吧足以与炭烤美食相媲美。" },
+      { "title": "活力四射的空间", "desc": "每周一、三、六,现场音乐让晚餐变成难忘的夜晚。无论您是想安静地用餐,还是尽情享受整晚的氛围,这个空间都能满足您。" }
+    ],
+    "quoteBlock": {
+      "line1": "欢迎来到 Mr Bob Bar and Grill。",
+      "line2": "能为您呈上一份美味的牛排、一杯上好的葡萄酒,以及一整晚的现场音乐,是我们的荣幸。",
+      "line3": "感谢您选择与我们共度这个夜晚。",
+      "signature": "Mr Bob 团队"
+    },
+    "closingCta": {
+      "heading": "欢迎入座",
+      "body": "快来尝尝炭烤炉上的美味,亲身感受为何客人总是为了我们的现场音乐之夜一再回来。",
+      "reserveCta": "预订餐桌",
+      "contactCta": "联系我们"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "联系我们",
+      "subtitle": "有任何疑问、特殊要求或建议?我们很乐意倾听。"
+    },
+    "getInTouch": {
+      "heading": "联系方式",
+      "body": "有疑问或需要预订方面的协助?请直接通过以下方式联系我们。仅本站主餐厅接受通过网站进行的餐桌预订。",
+      "mainBadge": "主餐厅",
+      "secondBadge": "第二分店",
+      "addressLabel": "地址",
+      "hoursLabel": "营业时间",
+      "contactLabel": "联系方式",
+      "instagramLabel": "Instagram",
+      "facebookLabel": "Facebook",
+      "instagramComingSoon": "Instagram(即将上线)",
+      "facebookComingSoon": "Facebook(即将上线)",
+      "mapPlaceholder": "地图将在确认确切地址后提供",
+      "openInMaps": "在 Google 地图中打开",
+      "reserveCta": "预订餐桌"
+    }
+  },
+  "groupReservation": {
+    "hero": {
+      "title": "团体预订",
+      "subtitle": "带着更大的团队前来?让我们为您安排好餐桌。"
+    },
+    "intro": {
+      "heading": "大团体用餐",
+      "body": "计划与10位或以上的宾客一同用餐吗?告诉我们您的团体人数和期望日期,我们的团队将为您确认座位安排,并直接与您商讨团体菜单选项。"
+    },
+    "stickyReserveLabel": "团体预订"
+  },
+  "reservation": {
+    "hero": {
+      "title": "预订餐桌",
+      "subtitle": "建议提前预订,尤其是在现场音乐之夜(周一、周三和周六)。"
+    },
+    "joinUs": {
+      "eyebrow": "预订",
+      "heading": "立即预订",
+      "body": "填写下方表单,我们的团队将尽快为您确认预订。"
+    },
+    "photoPanel": {
+      "quote": "一张好餐桌,是美好夜晚的一半,剩下的交给我们。"
+    }
+  },
+  "share": {
+    "hero": {
+      "eyebrow": "喜欢这次的体验吗?",
+      "title": "与朋友分享 Mr Bob",
+      "body": "口碑对我们意义重大。点击下方平台即可分享 Mr Bob Bar and Grill,我们已为您准备好一段简短留言。"
+    },
+    "buttons": {
+      "shareNow": "立即分享",
+      "igNote": "留言已复制——打开 Instagram,粘贴到私信、Story 或个人简介中。",
+      "copyLink": "复制链接",
+      "linkCopied": "链接已复制!",
+      "backLink": "返回 Mr Bob Bar and Grill",
+      "instagramLabel": "Instagram"
+    },
+    "shareMessage": "我刚在努沙杜瓦的 Mr Bob Bar and Grill 度过了美好的一晚!全城最赞的猪肋排、手切牛排,还有物美价廉的好酒。如果你在巴厘岛,强烈推荐!"
+  },
+  "promoTicker": [
+    "全城最赞的猪肋排",
+    "Tripadvisor 旅行者之选大奖",
+    "努沙杜瓦最实惠的葡萄酒"
+  ],
+  "thankYou": {
+    "alsoLikeLabel": "您可能还会喜欢",
+    "reservation": {
+      "heading": "您的餐桌已确认",
+      "body": "感谢您在 Mr Bob Bar and Grill 预订餐桌,我们期待您的光临。"
+    },
+    "groupReservation": {
+      "heading": "您的团体预订申请已收到",
+      "body": "感谢您的申请。我们的团队将尽快与您联系以确认可预订情况。"
+    },
+    "contact": {
+      "heading": "感谢您的来信",
+      "body": "我们已收到您的留言,团队成员会尽快亲自回复您。"
+    },
+    "links": {
+      "viewFoodMenu": "查看美食菜单",
+      "viewBeverageMenu": "查看饮品单",
+      "contactUs": "联系我们",
+      "reserveTable": "预订餐桌"
+    }
+  }
+}

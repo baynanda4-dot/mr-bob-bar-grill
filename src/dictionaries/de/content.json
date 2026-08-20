@@ -1,0 +1,201 @@
+{
+  "home": {
+    "hero": {
+      "eyebrow": "Grillen. Einschenken. Genießen.",
+      "titleBefore": "Die besten",
+      "titleHighlight": "Schweinerippchen",
+      "titleAfter": "der Stadt",
+      "subtitle": "Handgeschnittene Steaks, Tomahawk-Chops und unsere legendären Rippchen direkt vom Grill, dazu eine sorgfältig ausgewählte Weinkarte in Nusa Dua, Bali.",
+      "reserveCta": "TISCH RESERVIEREN",
+      "menuCta": "SPEISEKARTE ANSEHEN"
+    },
+    "whatsOn": {
+      "heading": "Das ist los bei Mr Bob",
+      "subheading": "Live-Musik-Abende, Speisen vom Grill und die Bar-Atmosphäre, die einen Abend in Nusa Dua zu etwas Besonderem macht.",
+      "cards": [
+        {
+          "schedule": "Jeden Mo, Mi & Sa, ab 19 Uhr",
+          "location": "Mr Bob Bar and Grill",
+          "title": "Live-Musik-Abende",
+          "detail": "Live-Musik jeden Montag (I Love Monday), Mittwoch (Oldies Night) und Samstag (Country Night), ab 19 Uhr."
+        },
+        {
+          "schedule": "800K für Zwei",
+          "location": "Mr Bob Bar and Grill",
+          "title": "Pork Knuckle für Zwei",
+          "detail": "1,1 kg frittierte Schweinshaxe für zwei Personen, serviert mit Kartoffelpüree, gedünstetem Gemüse, Bohnensoße und Bratensoße, dazu zwei kleine Singaraja-Biere inklusive."
+        }
+      ],
+      "ctaText": "Planen Sie einen Abend mit einer Gruppe? Lassen Sie uns den Tisch für Ihre Veranstaltung decken.",
+      "ctaLabel": "IHREN VERANSTALTUNGSABEND RESERVIEREN"
+    },
+    "welcome": {
+      "eyebrow": "Unsere Geschichte",
+      "titleBefore": "Willkommen bei",
+      "titleHighlight": "Mr Bob",
+      "body": "Mr Bob Bar and Grill dreht sich um das Feuer: handgeschnittene Steaks, langsam gegarte Schweinerippchen und beeindruckende Tomahawk-Chops, kombiniert mit einer Weinkarte, die zu jedem Stück passt. Nehmen Sie an der Bar oder an einem Tisch Platz und lassen Sie in Tanjung Benoa, Nusa Dua, den Grill für sich sprechen.",
+      "quote": "Echte Holzkohle, echte Portionen, echte Gastfreundschaft. Das ist eigentlich die ganze Speisekarte.",
+      "reserveCta": "TISCH RESERVIEREN",
+      "groupCta": "GRUPPENRESERVIERUNG"
+    },
+    "menuHighlight": {
+      "heading": "Von der Speisekarte",
+      "foodHeading": "Unsere Spezialitäten",
+      "foodCta": "Vollständige Speisekarte ansehen",
+      "beverageHeading": "Bob's Cocktails",
+      "beverageCta": "Vollständige Getränkekarte ansehen",
+      "eachLabel": "pro Stück"
+    },
+    "wineShop": {
+      "eyebrow": "Günstigste Weinauswahl in Nusa Dua",
+      "heading": "Wine Shop",
+      "body": "Unser Wine Shop bietet die günstigste Auswahl rund um Nusa Dua, aber das aktuelle Angebot ändert sich je nach Verfügbarkeit, daher gibt es keine feste Liste zum online Durchstöbern. Kommen Sie vorbei und sehen Sie, was gerade eingeschenkt wird.",
+      "cta": "TISCH RESERVIEREN"
+    },
+    "shuttle": {
+      "heading": "Kostenloser Shuttle rund um Nusa Dua",
+      "body": "Sie übernachten in der Nähe? Gerne bieten wir einen kostenlosen Shuttle für Gäste, die im Gebiet Nusa Dua übernachten, an. Teilen Sie es uns einfach bei Ihrer Tischreservierung mit.",
+      "cta": "JETZT RESERVIEREN"
+    },
+    "recognition": {
+      "heading": "Auszeichnungen",
+      "googleRatingSuffix": "von über 1.100 Google-Bewertungen",
+      "tripadvisorRatingSuffix": "von über 1.500 Tripadvisor-Bewertungen",
+      "body": "Mr Bob Bar and Grill ist laut Tripadvisor das bestbewertete Restaurant in Tanjung Benoa, Nusa Dua, ausgezeichnet mit dem Tripadvisor Travelers' Choice Award, der uns unter die Top 10 % der Restaurants weltweit einreiht, zusammen mit einem Ctrip Gourmet List Certificate of Excellence – eine Anerkennung, auf die wir wirklich stolz sind und die die Sorgfalt widerspiegelt, die wir in jedes Gericht und jeden Gast investieren.",
+      "restaurantName": "Mr Bob Bar and Grill",
+      "ctripDesc": "Von Ctrip ausgezeichnet für durchgehend hervorragendes Essen und echte Gastfreundschaft.",
+      "tripadvisorDesc": "Bewertungen von Millionen Tripadvisor-Reisenden platzieren diesen Gewinner unter den Top 10 % weltweit.",
+      "ctaLabel": "Auf Tripadvisor ansehen"
+    },
+    "instagram": {
+      "eyebrow": "Folgen Sie uns",
+      "heading": "Instagram"
+    },
+    "testimonials": {
+      "eyebrow": "Mundpropaganda",
+      "heading": "Ein Erlebnis, das man teilen sollte",
+      "intro": "Vom ersten Gericht vom Grill bis zum letzten Musikset des Abends – Gäste kommen immer wieder wegen der Steaks, der Rippchen, der Weinkarte und der Atmosphäre, die jeden Montag, Mittwoch und Samstag lebendig wird.",
+      "viaTripadvisor": "via Tripadvisor",
+      "reviewCta": "Google-Bewertung hinterlassen",
+      "reviewComingSoon": "Google- & Tripadvisor-Bewertungen (in Kürze)",
+      "reserveCta": "TISCH RESERVIEREN",
+      "groupCta": "GRUPPENRESERVIERUNG"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Rund ums Feuer gebaut",
+      "subtitle": "Die Geschichte hinter Mr Bob Bar and Grill: Steaks, Rippchen, Tomahawk, Wein und Live-Musik."
+    },
+    "ourStory": {
+      "heading": "Unsere Geschichte",
+      "body": "Mr Bob Bar and Grill wurde für Menschen gebaut, die ihr Steak ernst nehmen. Handgeschnittene Stücke, echte Holzkohle und eine Weinkarte, die zu jedem Gericht passt, serviert in einem Raum, der sich sowohl für ein ruhiges Abendessen als auch für einen Abend voller Live-Musik eignet."
+    },
+    "featureRows": [
+      { "title": "Handgeschnitten, über Feuer gegrillt", "desc": "Jedes Steak, jedes Rack Rippchen und jeder Tomahawk-Chop wird von Hand geschnitten und über echtem Feuer gegrillt. Keine Abkürzungen, keine Kompromisse bei der Röstaromen, die ein Steakhouse den Besuch wert machen." },
+      { "title": "Eine Bar, die mithalten kann", "desc": "Von unserem Hauswein im Glas bis zu hauseigenen Cocktails und einer vollständigen Spirituosenliste – die Bar ist so gebaut, dass sie mit dem Grill mithält." },
+      { "title": "Ein Raum, der lebendig wird", "desc": "Jeden Montag, Mittwoch und Samstag verwandelt Live-Musik das Abendessen in einen Abend zum Ausgehen. Ob Sie ein ruhiges Essen oder den ganzen Abend genießen möchten – der Raum ist für beides gemacht." }
+    ],
+    "quoteBlock": {
+      "line1": "Willkommen bei Mr Bob Bar and Grill.",
+      "line2": "Es ist uns eine Freude, Ihnen ein großartiges Steak, ein gutes Glas Wein und einen Abend mit Live-Musik zu servieren.",
+      "line3": "Vielen Dank, dass Sie sich entschieden haben, Ihren Abend bei uns zu verbringen.",
+      "signature": "Das Mr Bob Team"
+    },
+    "closingCta": {
+      "heading": "Nehmen Sie Platz",
+      "body": "Kommen Sie vorbei, probieren Sie, was auf dem Grill liegt, und erleben Sie, warum unsere Gäste immer wieder für unsere Live-Musik-Abende zurückkommen.",
+      "reserveCta": "Tisch reservieren",
+      "contactCta": "Kontaktieren Sie uns"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Kontakt",
+      "subtitle": "Fragen, besondere Wünsche oder Feedback? Wir würden uns freuen, von Ihnen zu hören."
+    },
+    "getInTouch": {
+      "heading": "Finden Sie uns",
+      "body": "Haben Sie eine Frage oder benötigen Sie Hilfe bei Ihrer Reservierung? Kontaktieren Sie uns direkt unten. Nur unser Hauptrestaurant nimmt Tischreservierungen über diese Website an.",
+      "mainBadge": "Hauptrestaurant",
+      "secondBadge": "Zweite Filiale",
+      "addressLabel": "Adresse",
+      "hoursLabel": "Öffnungszeiten",
+      "contactLabel": "Kontakt",
+      "instagramLabel": "Instagram",
+      "facebookLabel": "Facebook",
+      "instagramComingSoon": "Instagram (in Kürze)",
+      "facebookComingSoon": "Facebook (in Kürze)",
+      "mapPlaceholder": "Die Karte wird verfügbar sein, sobald unsere genaue Adresse bestätigt ist",
+      "openInMaps": "In Google Maps öffnen",
+      "reserveCta": "Tisch reservieren"
+    }
+  },
+  "groupReservation": {
+    "hero": {
+      "title": "Gruppenreservierung",
+      "subtitle": "Sie kommen mit einer größeren Gruppe? Lassen Sie uns den Tisch decken."
+    },
+    "intro": {
+      "heading": "Essen für größere Gruppen",
+      "body": "Planen Sie mit 10 oder mehr Gästen zu essen? Teilen Sie uns Ihre Gruppengröße und Ihr Wunschdatum mit, und unser Team bestätigt die Sitzplätze und bespricht Gruppenmenü-Optionen direkt mit Ihnen."
+    },
+    "stickyReserveLabel": "GRUPPENRESERVIERUNG"
+  },
+  "reservation": {
+    "hero": {
+      "title": "Tisch reservieren",
+      "subtitle": "Wir empfehlen eine frühzeitige Reservierung, besonders an Live-Musik-Abenden (Montag, Mittwoch und Samstag)."
+    },
+    "joinUs": {
+      "eyebrow": "Reservierungen",
+      "heading": "Machen Sie mit",
+      "body": "Füllen Sie das untenstehende Formular aus, und unser Team bestätigt Ihre Reservierung so schnell wie möglich."
+    },
+    "photoPanel": {
+      "quote": "Ein guter Tisch ist die halbe Miete für den Abend. Um den Rest kümmern wir uns."
+    }
+  },
+  "share": {
+    "hero": {
+      "eyebrow": "Hat Ihnen Ihr Besuch gefallen?",
+      "title": "Mr Bob mit Freunden teilen",
+      "body": "Mundpropaganda bedeutet uns sehr viel. Tippen Sie unten auf eine Plattform, um Mr Bob Bar and Grill zu teilen, eine kurze Nachricht ist bereits für Sie vorbereitet."
+    },
+    "buttons": {
+      "shareNow": "JETZT TEILEN",
+      "igNote": "Nachricht kopiert — öffnen Sie Instagram und fügen Sie sie in eine DM, Story oder Ihre Bio ein.",
+      "copyLink": "LINK KOPIEREN",
+      "linkCopied": "LINK KOPIERT!",
+      "backLink": "Zurück zu Mr Bob Bar and Grill",
+      "instagramLabel": "Instagram"
+    },
+    "shareMessage": "Ich hatte gerade einen fantastischen Abend im Mr Bob Bar and Grill in Nusa Dua! Die besten Schweinerippchen der Stadt, handgeschnittene Steaks und einige der günstigsten guten Weine der Gegend. Absolute Empfehlung, wenn Sie in Bali sind!"
+  },
+  "promoTicker": [
+    "Die besten Schweinerippchen der Stadt",
+    "Tripadvisor Travelers' Choice Award",
+    "Der günstigste Wein in Nusa Dua"
+  ],
+  "thankYou": {
+    "alsoLikeLabel": "Das könnte Sie auch interessieren",
+    "reservation": {
+      "heading": "Ihr Tisch ist bestätigt",
+      "body": "Vielen Dank, dass Sie einen Tisch bei Mr Bob Bar and Grill reserviert haben. Wir freuen uns darauf, Sie willkommen zu heißen."
+    },
+    "groupReservation": {
+      "heading": "Ihre Gruppenreservierungsanfrage wurde erhalten",
+      "body": "Vielen Dank für Ihre Anfrage. Unser Team wird sich in Kürze bei Ihnen melden, um die Verfügbarkeit zu bestätigen."
+    },
+    "contact": {
+      "heading": "Vielen Dank für Ihre Nachricht",
+      "body": "Ihre Nachricht ist bei uns eingegangen. Ein Mitglied unseres Teams wird sich persönlich sehr bald bei Ihnen melden."
+    },
+    "links": {
+      "viewFoodMenu": "Speisekarte ansehen",
+      "viewBeverageMenu": "Getränkekarte ansehen",
+      "contactUs": "Kontaktieren Sie uns",
+      "reserveTable": "Tisch reservieren"
+    }
+  }
+}

@@ -25,6 +25,7 @@ export default function PhoneField({
   error,
   className = "field p-3",
   required = true,
+  dict,
 }) {
   const [isManual, setIsManual] = useState(false);
 
@@ -54,10 +55,10 @@ export default function PhoneField({
               inputMode="tel"
               value={countryCode}
               onChange={onCountryCodeChange}
-              placeholder="+66"
+              placeholder={dict.countryCodePlaceholder}
               required={required}
               pattern="\+[0-9]+"
-              title="Country code must start with + followed by digits only, e.g. +66"
+              title={dict.countryCodeError}
               aria-label="Country code"
               className={className}
             />
@@ -66,7 +67,7 @@ export default function PhoneField({
               onClick={handleUseList}
               className="text-left text-xs text-white/50 underline hover:text-mrbob-yellow"
             >
-              Use list
+              {dict.useList}
             </button>
           </div>
         ) : (
@@ -81,13 +82,13 @@ export default function PhoneField({
                 {c.label}
               </option>
             ))}
-            <option value={OTHER_VALUE}>Other (type manually)</option>
+            <option value={OTHER_VALUE}>{dict.otherManual}</option>
           </select>
         )}
         <input
           type="tel"
           inputMode="numeric"
-          placeholder="Whatsapp Number"
+          placeholder={dict.whatsappNumberPlaceholder}
           required={required}
           value={number}
           onChange={onNumberChange}
@@ -95,11 +96,7 @@ export default function PhoneField({
           className={`${className} min-w-0 flex-1`}
         />
       </div>
-      {manualInvalid && (
-        <p className="mt-1 text-xs text-red-600">
-          Country code must start with + followed by digits only (e.g. +66).
-        </p>
-      )}
+      {manualInvalid && <p className="mt-1 text-xs text-red-600">{dict.countryCodeError}</p>}
       {error && <p className="mt-1 text-xs text-red-600">{error}</p>}
     </div>
   );

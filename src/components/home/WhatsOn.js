@@ -1,4 +1,4 @@
-import Link from "next/link";
+import LocalizedLink from "@/components/LocalizedLink";
 import SmartImage from "@/components/SmartImage";
 import Reveal from "@/components/motion/Reveal";
 import Stagger from "@/components/motion/Stagger";
@@ -8,35 +8,23 @@ import PosterViewer from "@/components/home/PosterViewer";
 // promotions page to link out to), so this is the full story, not a
 // preview. "View Poster" opens the card's own image in a lightbox (see
 // PosterViewer.js) — once a real designed flyer replaces the photo at that
-// path, it just works, no code change needed.
-const cards = [
-  {
-    schedule: "Every Mon, Wed & Sat, 7 PM Onwards",
-    location: "Mr Bob Bar and Grill",
-    title: "Live Music Nights",
-    detail: "Live music every Monday (I Love Monday), Wednesday (Oldies Night), and Saturday (Country Night), from 7 PM.",
-    image: "/images/home/live-music-friday.jpg",
-  },
-  {
-    schedule: "800K for Two",
-    location: "Mr Bob Bar and Grill",
-    title: "Pork Knuckle for Two",
-    detail: "1.1kg deep fried pork knuckle for two, served with mashed potatoes, sauteed vegetables, bean sauce, and pork gravy, plus two small Singaraja beers included.",
-    image: "/images/home/promotions.jpg",
-  },
-];
+// path, it just works, no code change needed. Image paths never change per
+// locale, so they stay static here and merge with the dict's translated
+// schedule/location/title/detail by index.
+const CARD_IMAGES = ["/images/home/live-music-friday.jpg", "/images/home/promotions.jpg"];
 
-export default function WhatsOn() {
+export default function WhatsOn({ dict }) {
+  const cards = dict.cards.map((card, i) => ({ ...card, image: CARD_IMAGES[i] }));
+
   return (
     <section className="border-t border-white/10 bg-mrbob-black py-20 text-white">
       <div className="px-6">
         <div className="mx-auto mb-12 flex max-w-5xl flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <Reveal as="h2" className="max-w-lg text-3xl font-light tracking-normal md:text-4xl">
-            What&apos;s On at Mr Bob
+            {dict.heading}
           </Reveal>
           <Reveal as="p" delay={90} className="max-w-sm text-sm leading-relaxed text-white/60 sm:text-right">
-            Live music nights, food off the grill, and the kind of bar energy
-            that makes a Nusa Dua evening feel deliberate.
+            {dict.subheading}
           </Reveal>
         </div>
 
@@ -73,12 +61,10 @@ export default function WhatsOn() {
           delay={260}
           className="mx-auto mt-14 flex max-w-5xl flex-col items-center justify-between gap-4 border border-mrbob-yellow/30 bg-mrbob-yellow/5 px-6 py-6 text-center sm:flex-row sm:text-left"
         >
-          <p className="text-sm text-white/80">
-            Planning a night out with a group? Let us set the table for your event.
-          </p>
-          <Link href="/reservation" className="btn-primary u-press shrink-0 px-6 py-3 text-sm tracking-widest">
-            RESERVE YOUR EVENT NIGHT
-          </Link>
+          <p className="text-sm text-white/80">{dict.ctaText}</p>
+          <LocalizedLink href="/reservation" className="btn-primary u-press shrink-0 px-6 py-3 text-sm tracking-widest">
+            {dict.ctaLabel}
+          </LocalizedLink>
         </Reveal>
       </div>
     </section>

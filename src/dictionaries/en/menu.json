@@ -1,0 +1,335 @@
+{
+  "food": {
+    "heroTitle": "Food Menu",
+    "priceNote": "Prices are quoted in ‘000’ IDR and subject to 11% government tax.",
+    "viewBeverageCta": "VIEW WINE & BAR MENU",
+    "sections": [
+      {
+        "title": "Appetizer",
+        "items": [
+          { "name": "Vegetables Spring Roll", "desc": "Fried roll filled with mixed vegetables, served with sweet & sour sauce" },
+          { "name": "Tomato Bruschetta", "desc": "Baguette, tomato, basil, onion, olive oil, fetta cheese & balsamic vinegar" },
+          { "name": "Garlic Bread", "desc": "Baguette, toasted with garlic butter" },
+          { "name": "Garden Salad", "desc": "Mixed lettuce, onion, cucumber and carrot with balsamic vinaigrette" },
+          { "name": "Caesar Salad", "desc": "Baby romain lettuce, crispy bacon, garlic bread and caesar dressing" },
+          { "name": "Thai Beef Salad", "desc": "Served with mixed salad and thai dressing" },
+          { "name": "Smoked Salmon Salad", "desc": "Served with mini mesclun and chili lime dressing" }
+        ]
+      },
+      {
+        "title": "Soups",
+        "items": [
+          { "name": "Cream Corn Soup", "desc": "Thick soup with sweet corn and garlic bread" },
+          { "name": "Chicken Vegetable Soup", "desc": "Clear soup with diced chicken, carrot, onion, and green bean" },
+          { "name": "Seafood Cream Soup", "desc": "Mixed seafood, cream, served with garlic bread" },
+          { "name": "Tom Yum Soup", "desc": "Spicy prawn, fish, squid, and slice mushroom" },
+          { "name": "Chicken Noodle Soup", "desc": "Sliced chicken leg, vegetables, chicken stock, egg noodle" }
+        ]
+      },
+      {
+        "title": "Our Signature",
+        "items": [
+          { "name": "Mr Bob's BBQ Ribs", "desc": "Our finest well marinated 600 gr Baby Back Pork Ribs, slow charcoal grilled with honey and Mr Bob's sauce" },
+          { "name": "Beef Tomahawk", "desc": "1000-1200 gr grilled Australian beef tomahawk served with three kinds of sauce (BBQ, mushroom and black pepper), mixed salad, sauteed vegetables and potato wedges. Suitable for 2 pax; takes around 60 minutes to prepare." }
+        ]
+      },
+      {
+        "title": "Side Dish",
+        "items": [
+          { "name": "Steamed Rice" },
+          { "name": "Pineapple Rice" },
+          { "name": "Corn Rice" },
+          { "name": "Mixed Salad" },
+          { "name": "Potatoes Wedges" },
+          { "name": "Mashed Potatoes" },
+          { "name": "French Fries" },
+          { "name": "Sauteed Vegetables" }
+        ]
+      },
+      {
+        "title": "Indonesian",
+        "items": [
+          { "name": "Beef Rendang", "desc": "Dices of beef stewed in Indonesian style served with steamed rice" },
+          { "name": "Seafood Curry", "desc": "Prawn, fish and squid, mixed vegetables braised with curry sauce" },
+          { "name": "Chicken Curry", "desc": "Sliced chicken breast and mixed vegetables braised with curry sauce" },
+          { "name": "Ayam Betutu", "desc": "Braised half baby chicken served with sayur urab and steamed rice" },
+          { "name": "Bebek Goreng", "desc": "Crispy half fried duck served with vegetables curry and steamed rice" },
+          { "name": "Nasi Goreng Seafood", "desc": "Fried rice, prawn, fish, squid, prawn satay and crackers" },
+          { "name": "Nasi Goreng Ayam / Mie Goreng Ayam", "desc": "Fried rice or noodle with egg, chicken satay and crackers" },
+          { "name": "Nasi Goreng Iga Bakar", "desc": "Fried rice with egg, pork ribs and crackers" },
+          { "name": "Nasi Goreng Crispy Pork Belly", "desc": "Fried rice with egg and pork belly" },
+          { "name": "Beef Paela", "desc": "Grilled sirloin steak and prawn on yellow rice" },
+          { "name": "Cap Cay Ayam / Cap Cay Seafood", "desc": "Stir fry chicken or seafood and vegetables Chinese style, served with steamed rice" }
+        ]
+      },
+      {
+        "title": "Grill Corner: Poultry",
+        "items": [
+          { "name": "Grill Chicken Leg Boneless", "desc": "200 gr grilled chicken leg boneless, honey chili sauce, served with sambal matah and steamed rice" },
+          { "name": "Grill Baby Chicken", "desc": "Half grilled baby chicken with Balinese spice, served with steamed rice, sambal matah and sayur urab" },
+          { "name": "Chicken Satay", "desc": "8 pcs grilled chicken satay, served with peanut sauce and steamed rice" },
+          { "name": "Chicken Steak", "desc": "Grilled 200 gr chicken breast served with mashed potatoes, sauteed vegetables and mushroom cream sauce" },
+          { "name": "Chicken Cordon Bleu", "desc": "Chicken breast stuffed with ham and cheese, served with mashed potatoes, sauteed vegetables and mushroom cream sauce" }
+        ]
+      },
+      {
+        "title": "Grill Corner: Seafood",
+        "items": [
+          { "name": "Grill Lobster", "desc": "350 gr grilled lobster served with mixed salad, mashed potatoes, mustard cream sauce, and lemon butter sauce" },
+          { "name": "Grill Prawn", "desc": "5 pcs selected grilled king prawn, served with lemon butter, honey chili sauce, mixed salad and mashed potatoes" },
+          { "name": "Grill Snapper", "desc": "350 gr grilled whole baby white snapper served with sambal matah and steamed rice" },
+          { "name": "Salmon Steak", "desc": "200 gr pan seared salmon steak served with mixed vegetables, mashed potatoes, honey chili and lemon butter sauce" },
+          { "name": "Grill Mahi-Mahi Fillet", "desc": "200 gr grilled mahi-mahi fish served with mixed salad, lemon butter, honey chili sauce, and mashed potatoes" },
+          { "name": "Seafood Basket (for two)", "desc": "Grilled 1 pc lobster, 5 pcs king prawn, 2 pcs mahi-mahi steak, 1 pc squid, served with mixed salad, french fries or steamed rice, and 3 kinds of sauce (lemon butter, sambal matah, honey chili). Includes 2 small Bintang beers." }
+        ]
+      },
+      {
+        "title": "Grill Corner: Meat (Beef & Lamb)",
+        "items": [
+          { "name": "Tenderloin Steak", "desc": "200 gr grilled beef tenderloin served with black pepper and mushroom sauce, sauteed vegetables and french fries" },
+          { "name": "Sirloin Steak", "desc": "200 gr grilled beef sirloin served with mushroom sauce, black pepper sauce, sauteed vegetables and french fries" },
+          { "name": "Rib Eye Steak", "desc": "200 gr grilled beef rib eye served with mushroom sauce, black pepper sauce, sauteed vegetables and french fries" },
+          { "name": "Grilled Beef Kebab", "desc": "Grilled diced beef with red pepper, green pepper, and onion on skewer, served with mushroom, black pepper sauce and potato wedges" },
+          { "name": "Lamb Steak", "desc": "200 gr grilled lamb served with mushroom sauce, black pepper sauce, sauteed vegetables and french fries" },
+          { "name": "Lamb Satay", "desc": "10 pcs lamb satay served with steamed rice and peanut sauce" },
+          { "name": "Surf and Turf", "desc": "Grilled 200 gr tenderloin steak topped with prawn, served with mini mesclun, potato wedges, mushroom sauce and BBQ sauce" }
+        ]
+      },
+      {
+        "title": "Grill Corner: Meat (Pork)",
+        "items": [
+          { "name": "Pork Knuckle (for two)", "desc": "1.1kg deep fried pork knuckle served with mashed potatoes, sauteed vegetables, bean sauce, and pork gravy" },
+          { "name": "Grill Pork Chop", "desc": "350 gr grilled pork chop served with BBQ sauce, black pepper sauce, sauteed vegetables and french fries" },
+          { "name": "Grill Pork Steak", "desc": "200 gr grilled pork steak served with BBQ sauce, black pepper sauce, sauteed vegetables and french fries" },
+          { "name": "Pork Satay", "desc": "10 pcs grilled pork satay with steamed rice and peanut sauce" },
+          { "name": "Grill Pork Belly Satay", "desc": "4 pcs grilled pork belly satay served with steamed rice and hot sweet chili sauce" },
+          { "name": "Crispy Pork Belly", "desc": "Served with sweet chili soya sauce, black bean sauce and steamed rice" },
+          { "name": "Mixed Grill (for two)", "desc": "Grilled 1 pc pork chop, 1/2 portion ribs, 1 pc sirloin steak, 2 pcs lamb medallion, 2 pcs chicken sausage and 2 pcs pork ham, served with mushroom sauce, black pepper sauce, BBQ sauce, mixed salad and potato wedges" }
+        ]
+      },
+      {
+        "title": "Burger & Sandwich",
+        "items": [
+          { "name": "Black Devil", "desc": "100 gr Texas beef patty, bacon, homemade chili sauce, egg, cheddar cheese, lettuce, tomato, served with french fries" },
+          { "name": "White Angel", "desc": "100 gr imported wagyu patty, bacon, egg, cheddar cheese, lettuce, tomato, Bob's burger sauce, served with french fries" },
+          { "name": "Chicken Sandwich", "desc": "Toast, chicken, cheese, tomato, lettuce, served with french fries" },
+          { "name": "Chicken Ciabatta", "desc": "Ciabatta bread, chicken, cheese, tomato, lettuce, served with french fries" },
+          { "name": "Club Sandwich", "desc": "Toast, tomato, bacon, egg, cheese, lettuce, served with french fries" },
+          { "name": "Smoked Salmon Sandwich", "desc": "Toast, smoked salmon, lettuce, tomato and cheese, served with french fries" }
+        ]
+      },
+      {
+        "title": "Pizza & Pasta",
+        "items": [
+          { "name": "Margarita Pizza", "desc": "Tomato concasse and mozzarella cheese" },
+          { "name": "Pizza Sambal Matah", "desc": "Tomato concasse, shredded chicken and mozzarella cheese" },
+          { "name": "Pizza Ayam Betutu", "desc": "Tomato concasse, shredded chicken, betutu spice and mozzarella cheese" },
+          { "name": "Hawaiian Pizza", "desc": "Tomato concasse, diced chicken, diced pineapple and mozzarella cheese" },
+          { "name": "Meat Lover Pizza", "desc": "Tomato concasse, beef chorizo, ham, salami, and mozzarella cheese" },
+          { "name": "BBQ Chicken Pizza", "desc": "Tomato concasse, BBQ chicken, mixed bell pepper, onion and mozzarella cheese" },
+          { "name": "Spaghetti Marinara", "desc": "Mixed seafood, tomato concasse, basil, parmesan cheese" },
+          { "name": "Spaghetti Bolognaise", "desc": "Minced beef, tomato concasse, basil, parmesan cheese" },
+          { "name": "Spaghetti Carbonara", "desc": "Bacon, cream, parsley, parmesan cheese" },
+          { "name": "Fettuccine Alfredo", "desc": "Spaghetti with mushroom, ham, cream sauce and parmesan cheese" },
+          { "name": "Spaghetti Napolitana", "desc": "Spaghetti with tomato sauce and parmesan cheese" },
+          { "name": "Spaghetti Aglio Olio", "desc": "Sauteed spaghetti with olive oil, sliced garlic, hot chili, parmesan cheese" },
+          { "name": "Spaghetti Aglio Olio with Grilled Prawn", "desc": "Sauteed spaghetti with olive oil, sliced garlic, hot chili, 3 pcs grilled prawn and parmesan cheese" }
+        ]
+      },
+      {
+        "title": "Bob's Junior",
+        "note": "Kids menu",
+        "items": [
+          { "name": "Fish & Chips", "desc": "Served with tartar sauce & thousand island sauce" },
+          { "name": "Calamari Ring", "desc": "Served with tartar sauce & thousand island sauce" },
+          { "name": "Spaghetti Napolitana", "desc": "Spaghetti with tomato sauce and parmesan cheese" },
+          { "name": "Spaghetti Aglio Olio", "desc": "Sauteed spaghetti with olive oil and chopped garlic" },
+          { "name": "Mac & Cheese", "desc": "Mixed macaroni and cheese in cream sauce, topped with grated parmesan cheese and sliced ham" },
+          { "name": "Chicken Nugget", "desc": "3 pcs chicken nugget and french fries" },
+          { "name": "Nasi Goreng Sausage", "desc": "Fried rice served with grilled sausage and prawn crackers" },
+          { "name": "Mini Burger", "desc": "White bun, beef patty, egg, cheese, lettuce, served with french fries" }
+        ]
+      },
+      {
+        "title": "Dessert",
+        "items": [
+          { "name": "Banana Split", "desc": "3 scoops of ice cream and sliced banana" },
+          { "name": "Apple Pie", "desc": "Australian style apple pie served with vanilla ice cream" },
+          { "name": "Tiramisu" },
+          { "name": "Chocolate Cake", "desc": "Served with chocolate sauce" },
+          { "name": "Ice Cream Selection", "desc": "3 scoops of vanilla, strawberry, or chocolate flavor" },
+          { "name": "Slice Tropical Fresh Fruit", "desc": "Sliced watermelon, papaya, and pineapple" },
+          { "name": "Chocolate Brownies", "desc": "Served with 1 scoop vanilla ice cream" }
+        ]
+      }
+    ]
+  },
+  "beverage": {
+    "heroTitle": "Beverage Menu",
+    "priceNote": "Prices are quoted in ‘000’ IDR and subject to 11% government tax.",
+    "viewFoodCta": "VIEW FOOD MENU",
+    "sections": [
+      {
+        "title": "Classic Cocktail",
+        "note": "Premium Spirit 135K / Local Spirit 100K",
+        "items": [
+          { "name": "Margarita", "desc": "Tequila, orange liqueur, fresh lime" },
+          { "name": "Mojito's", "desc": "Rum, fresh lime, sprig of mint leaf" },
+          { "name": "Daiquiry's", "desc": "Rum, orange liqueur, fresh lime" },
+          { "name": "Espresso Martini", "desc": "Vodka, coffee liqueur, espresso" },
+          { "name": "Lychee Martini", "desc": "Vodka, lychee liqueur, lychee fruit" },
+          { "name": "Caipirinha & Caipiroska", "desc": "Rum/vodka, fresh lime, sweetener" },
+          { "name": "Long Island Ice Tea", "desc": "Vodka, rum, gin, tequila, triple sec, lime, topped with Coke" },
+          { "name": "Pinacolada", "desc": "Light rum, pineapple, coconut milk, coconut liqueur" },
+          { "name": "Old Fashioned", "desc": "Bourbon whiskey, simple syrup, angostura bitter" },
+          { "name": "Negroni", "desc": "Gin, campari, sweet vermouth" },
+          { "name": "Lemon Drop", "desc": "Vodka, lemon juice, orange liqueur" },
+          { "name": "Dry or Sweet Martini", "desc": "Dry gin, dry or sweet vermouth" },
+          { "name": "Whiskey Sour", "desc": "Whiskey, lime juice, sugar" },
+          { "name": "Japanese Slipper", "desc": "Vodka, lime juice, triple sec, melon liqueur" },
+          { "name": "Pink/White/Blue Lady", "desc": "Gin, orange liqueur, lime juice, grenadine or blue curacao" },
+          { "name": "Tequila Sunrise", "desc": "Tequila, orange juice, grenadine" },
+          { "name": "White or Black Russian", "desc": "Vodka, coffee liqueur, cream" },
+          { "name": "Cosmopolitan", "desc": "Vodka, triple sec, cranberry juice, lime juice" },
+          { "name": "Long Beach", "desc": "Vodka, orange juice, cranberry juice" }
+        ]
+      },
+      {
+        "title": "Bob's Cocktails (Signature)",
+        "note": "120K",
+        "items": [
+          { "name": "Bob's Bitter Sweet", "desc": "White rum, campari, pineapple juice, passion syrup" },
+          { "name": "Bob's Negroni", "desc": "Campari, cherry water, sweet vermouth" },
+          { "name": "Tropical Gin", "desc": "Gin, strawberry, lime, mint leaf, sugar, topped with tonic water" },
+          { "name": "Flower Bloom", "desc": "Gin, lime juice, cananga syrup, soda water" },
+          { "name": "Bloody Orange", "desc": "Vodka, orange juice, fresh strawberry, lime juice, simple syrup" },
+          { "name": "Bob's Sangria", "desc": "Spiced arak, red/white wine, tropical fruit" },
+          { "name": "Mango Basil Daiquiry", "desc": "White rum, mango juice, triple sec, basil leaf, lime juice" },
+          { "name": "Watermelon Mexico", "desc": "Tequila, orange liqueur, lime juice, watermelon, passion syrup" },
+          { "name": "Bob Penicillin", "desc": "Whisky, fresh lemon juice, lemongrass honey syrup" },
+          { "name": "Nusa Dua Colada", "desc": "White rum, pineapple liqueur, pineapple juice, mango juice, coconut cream, blue syrup" }
+        ]
+      },
+      {
+        "title": "Spirits by Shot",
+        "note": "45ml",
+        "items": [
+          { "name": "Gin", "desc": "Bombay Sapphire" },
+          { "name": "Vodka", "desc": "Absolut" },
+          { "name": "Rum", "desc": "Bacardi, Captain Morgan" },
+          { "name": "Tequila", "desc": "Jose Cuervo" },
+          { "name": "Scotch Whiskey", "desc": "Red Label, Black Label" },
+          { "name": "American Whiskey", "desc": "Jack Daniel, Jim Beam" },
+          { "name": "Irish Whiskey", "desc": "John Jameson" }
+        ]
+      },
+      {
+        "title": "Bob's Refreshing",
+        "items": [
+          { "name": "Shirley Temple", "desc": "Cherry water, grenadine, lime juice, topped with sprite" },
+          { "name": "Hera's Crown", "desc": "Orange juice, grenadine, lemon juice, topped with sprite" },
+          { "name": "Mint Sensation", "desc": "Lychee, pineapple, mint leaf" },
+          { "name": "Mango Frappe", "desc": "Mango puree/juice, orange juice, lime juice, tonic water" },
+          { "name": "Berry Sunshine", "desc": "Strawberry, pineapple juice, orange juice, simple syrup" },
+          { "name": "Lychee Basilia", "desc": "Lychee fruit, basil leaf, sweet sour, sprite" },
+          { "name": "Tiki Berry", "desc": "Fresh strawberry, pineapple juice, passion syrup, coconut cream and lemon juice" },
+          { "name": "Lemon Lime Bitter", "desc": "Lime juice, lemon juice, simple syrup, angostura bitter, soda water" },
+          { "name": "Lemon Up (Pink/Blue/Natural)", "desc": "Fresh lemon juice, lemonade, simple syrup, grenadine/blue syrup" },
+          { "name": "Queenchers (Strawberry/Mango)", "desc": "Lemon juice, mango/strawberry puree, lemonade, simple syrup" }
+        ]
+      },
+      {
+        "title": "Beer's",
+        "items": [
+          { "name": "Bintang", "desc": "Large / Small" },
+          { "name": "Bintang Radler" },
+          { "name": "Crystal Bintang" },
+          { "name": "Heineken", "desc": "Large / Small" },
+          { "name": "Balihai", "desc": "Large / Small" },
+          { "name": "Singaraja" },
+          { "name": "Prost Pilsner / Lager" },
+          { "name": "Albens Apple Cider" },
+          { "name": "Tower Bintang" },
+          { "name": "Tower Balihai" },
+          { "name": "Tower Heineken" }
+        ]
+      },
+      {
+        "title": "Soft Drinks & Water",
+        "items": [
+          { "name": "Coke" },
+          { "name": "Coke Zero" },
+          { "name": "Sprite" },
+          { "name": "Fanta" },
+          { "name": "Tonic Water" },
+          { "name": "Soda Water" },
+          { "name": "Ginger Ale" },
+          { "name": "Natural Water" },
+          { "name": "Sparkling Water" }
+        ]
+      },
+      {
+        "title": "Milkshake & Smoothies",
+        "items": [
+          { "name": "Vanilla" },
+          { "name": "Chocolate" },
+          { "name": "Banana" },
+          { "name": "Mango" },
+          { "name": "Strawberry" }
+        ]
+      },
+      {
+        "title": "Coffee & Tea's",
+        "items": [
+          { "name": "Balinese Coffee" },
+          { "name": "Regular Tea" },
+          { "name": "Lychee Tea" },
+          { "name": "Passion Tea" },
+          { "name": "Lemon Grass Tea" },
+          { "name": "Mint Ginger Tea" }
+        ]
+      },
+      {
+        "title": "Juices",
+        "items": [
+          { "name": "Watermelon" },
+          { "name": "Pineapple" },
+          { "name": "Mango" },
+          { "name": "Orange" },
+          { "name": "Mix Juice" },
+          { "name": "Papaya" },
+          { "name": "Lemon" },
+          { "name": "Banana" },
+          { "name": "Lime" },
+          { "name": "Fresh Coconut" }
+        ]
+      },
+      {
+        "title": "White Wine",
+        "note": "By the glass (85K)",
+        "items": [
+          { "name": "Two Island Sauvignon Blanc" },
+          { "name": "Two Island Pinot Grigio" },
+          { "name": "Two Island Chardonnay" },
+          { "name": "Two Island Riesling" }
+        ]
+      },
+      {
+        "title": "Red Wine",
+        "note": "By the glass (85K)",
+        "items": [
+          { "name": "Two Island Cabernet Merlot" },
+          { "name": "Two Island Shiraz" },
+          { "name": "Two Island Pinot Noir" }
+        ]
+      },
+      {
+        "title": "Rosé Wine",
+        "note": "By the glass (85K)",
+        "items": [
+          { "name": "Two Island Rose" }
+        ]
+      }
+    ]
+  }
+}

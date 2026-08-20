@@ -15,9 +15,11 @@ export default function GuestCountField({
   value,
   onChange,
   options = DEFAULT_OPTIONS,
-  placeholder = "Number of Guests",
+  placeholder,
   required = false,
   className = "field p-3",
+  useListLabel,
+  otherManualLabel,
 }) {
   const [isManual, setIsManual] = useState(false);
 
@@ -52,7 +54,7 @@ export default function GuestCountField({
         onClick={handleUseList}
         className="text-left text-xs text-white/50 underline hover:text-mrbob-yellow"
       >
-        Use list
+        {useListLabel}
       </button>
     </div>
   ) : (
@@ -65,7 +67,7 @@ export default function GuestCountField({
           {n}
         </option>
       ))}
-      <option value={OTHER_VALUE}>Other (type manually)</option>
+      <option value={OTHER_VALUE}>{otherManualLabel}</option>
     </select>
   );
 }

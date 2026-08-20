@@ -1,9 +1,9 @@
 import Image from "next/image";
-import Link from "next/link";
+import LocalizedLink from "@/components/LocalizedLink";
 import Parallax from "@/components/motion/Parallax";
 import HeroBackground from "@/components/home/HeroBackground";
 
-export default function Hero() {
+export default function Hero({ dict }) {
   return (
     <section className="relative h-[100svh] min-h-[560px] overflow-hidden bg-mrbob-black text-white">
       {/* Backdrop drifts slower than the page, which is what sells the depth. */}
@@ -28,51 +28,50 @@ export default function Hero() {
             frame instead of fading in after a delay. Everything past it
             still gets the usual animate-rise treatment. */}
         <p className="mb-6 text-[0.7rem] uppercase tracking-[0.35em] text-mrbob-yellow sm:text-xs">
-          Grill. Pour. Savor.
+          {dict.eyebrow}
         </p>
 
         <h1 className="text-5xl font-light tracking-normal sm:text-6xl md:text-7xl">
-          The Best <span className="text-mrbob-yellow">Pork Ribs</span> in Town
+          {dict.titleBefore} <span className="text-mrbob-yellow">{dict.titleHighlight}</span> {dict.titleAfter}
         </h1>
 
         <p
           className="animate-rise mt-6 max-w-2xl text-sm leading-relaxed text-gray-200 sm:text-base"
           style={{ animationDelay: "120ms" }}
         >
-          Hand-cut steaks, tomahawk chops, and our signature ribs off the
-          grill, poured alongside a curated wine list in Nusa Dua, Bali.
+          {dict.subtitle}
         </p>
 
         <div
           className="animate-rise mt-10 flex flex-col gap-3 sm:flex-row sm:gap-4"
           style={{ animationDelay: "240ms" }}
         >
-          <Link
+          <LocalizedLink
             href="/reservation"
             className="btn-primary u-press px-8 py-3 text-sm tracking-widest"
           >
-            RESERVE TABLE
-          </Link>
-          <Link
+            {dict.reserveCta}
+          </LocalizedLink>
+          <LocalizedLink
             href="/menu/food"
             className="btn-outline u-press px-8 py-3 text-sm tracking-widest"
           >
-            VIEW MENU
-          </Link>
+            {dict.menuCta}
+          </LocalizedLink>
         </div>
       </div>
 
       {/* Positioning lives on the wrapper so the entrance and idle animations
           each own a transform without fighting the centring. */}
       <div className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2">
-        <Link
+        <LocalizedLink
           href="#welcome"
           aria-label="Scroll to content"
           className="animate-rise block p-2"
           style={{ animationDelay: "700ms" }}
         >
           <span className="animate-cue block h-10 w-px bg-gradient-to-b from-white/0 via-white/70 to-white/0" />
-        </Link>
+        </LocalizedLink>
       </div>
     </section>
   );
