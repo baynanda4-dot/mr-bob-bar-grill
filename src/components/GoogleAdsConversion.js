@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { GOOGLE_ADS_CONVERSION_ID, GOOGLE_ADS_CONVERSION_LABEL } from "@/lib/site";
 
 // Fires the Google Ads "Mengirim formulir lead" conversion event once, on
 // mount. Only ever rendered from a thank-you page (see ThankYou.js's
@@ -10,7 +11,11 @@ import { useEffect } from "react";
 export default function GoogleAdsConversion() {
   useEffect(() => {
     if (typeof window.gtag !== "function") return;
-    window.gtag("event", "ads_conversion_Mengirim_formulir_lead_1", {});
+    window.gtag("event", "conversion", {
+      send_to: `${GOOGLE_ADS_CONVERSION_ID}/${GOOGLE_ADS_CONVERSION_LABEL}`,
+      value: 1.0,
+      currency: "IDR",
+    });
   }, []);
 
   return null;
